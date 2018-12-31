@@ -1,0 +1,45 @@
+export default {
+  Fire: 'fire',
+  Nature: 'nature',
+  Light: 'light',
+  Earth: 'earth',
+
+  Basic: 'basic',
+  Advanced: 'advanced',
+  Elite: 'elite',
+  Ultimate: 'ultimate',
+
+  Zenron: 'zenron',
+  Jane: 'jane',
+  Thoben: 'thoben',
+  Tierra: 'tierra',
+  Myris: 'myris',
+  Asgard: 'asgard',
+  VanRaven: 'vanRaven',
+  Ray: 'ray',
+  Lua: 'lua',
+
+  Damagespell: 'damageSpell',
+  ShieldSpell: 'shieldSpell',
+  HealSpell: 'healSpell',
+  OvertimeSpell: 'overtimeSpell',
+
+  Fast: 'fast',
+  Normal: 'normal',
+  Slow: 'slow',
+
+  Self: 'self',
+  Enemy: 'enemy',
+  AllPlayers: 'allPlayers',
+
+  Arena1: 'one',
+  Arena2: 'two',
+  Arena3: 'three',
+  Arena4: 'four',
+  Arena5: 'five',
+  Arena6: 'six',
+  Arena7: 'seven',
+  Arena8: 'eight',
+  Arena9: 'nine',
+  Arena10: 'ten',
+}
