@@ -1,8 +1,24 @@
 export default {
-  Fire: 'fire',
-  Nature: 'nature',
-  Light: 'light',
-  Earth: 'earth',
+  Fire: {
+    code: 'fire',
+    name: 'Fire',
+    display: ':fire: Fire',
+  },
+  Nature: {
+    code: 'nature',
+    name: 'Nature',
+    display: ':leaves: Nature',
+  },
+  Light: {
+    code: 'light',
+    name: 'Light',
+    display: ':star2: Light',
+  },
+  Earth: {
+    code: 'earth',
+    name: 'Earth',
+    display: ':chestnut: Earth',
+  },
 
   Basic: 'Basic',
   Advanced: 'Advanced',

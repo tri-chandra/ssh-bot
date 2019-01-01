@@ -23,7 +23,7 @@ class Spell {
     this.overTime = spell.overTime;
     this.tokens = spell.tokens;
 
-    this.sprite = `${this.element}/${this.code}.jpg`;
+    this.sprite = `${this.element.code}/${this.code}.jpg`;
   }
 
   getUpgradeAmount() {}
