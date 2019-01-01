@@ -4,10 +4,10 @@ export default {
   Light: 'light',
   Earth: 'earth',
 
-  Basic: 'basic',
-  Advanced: 'advanced',
-  Elite: 'elite',
-  Ultimate: 'ultimate',
+  Basic: 'Basic',
+  Advanced: 'Advanced',
+  Elite: 'Elite',
+  Ultimate: 'Ultimate',
 
   Zenron: 'zenron',
   Jane: 'jane',
@@ -24,10 +24,10 @@ export default {
   HealSpell: 'healSpell',
   OvertimeSpell: 'overtimeSpell',
 
-  Instant: 'instant',
-  Fast: 'fast',
-  Normal: 'normal',
-  Slow: 'slow',
+  Instant: 'Instant',
+  Fast: 'Fast',
+  Normal: 'Nnormal',
+  Slow: 'Slow',
 
   Self: 'self',
   Enemy: 'enemy',
