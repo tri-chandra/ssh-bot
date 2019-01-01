@@ -1,18 +1,21 @@
 import Spell from '../../models/Spell';
+import Token from '../tokens';
 import C from '../../models/Constants';
 
 class StoneShield extends Spell {
   constructor(level) {
     super({
-      name: 'StoneShield',
-      type: C.damageSpell,
+      name: 'Stone Shield',
+      code: 'stoneShield',
+      type: C.OvertimeSpell,
       tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      element: C.Earth,
+      shield: 32,
+      onCast: 'You get a weakness token on your playfield.',
+      tokens: [Token.Weakness],
+      unlockAt: [
+        { hero: C.Ray, level: C.Arena1 },
+      ]
     });
   }
 }

@@ -10,7 +10,7 @@ class NatureRevenge extends Spell {
       tier: C.Elite,
       element: C.Nature,
       breakPower: 43,
-      damage: 700,
+      fixedDamage: 700,
       speed: C.Fast,
       onHit: 'Deals as much damage as you have lost from the last hit, but no more than %dmg%',
       unlockAt: [

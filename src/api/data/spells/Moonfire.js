@@ -5,14 +5,20 @@ class Moonfire extends Spell {
   constructor(level) {
     super({
       name: 'Moonfire',
+      code: 'moonfire',
       type: C.damageSpell,
       tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      element: C.Light,
+      damage: 5,
+      speed: C.Fast,
+      count: 2,
+      onHit: 'You get a light mana on your playfield.',
+      unlockAt: [
+        { hero: C.Thoben, level: C.Arena1 },
+        { hero: C.Tierra, level: C.Arena1 },
+        { hero: C.Ray, level: C.Arena1 },
+        { hero: C.Lua, level: C.Arena9 },
+      ]
     });
   }
 }

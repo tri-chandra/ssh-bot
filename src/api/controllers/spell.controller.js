@@ -9,7 +9,7 @@ const levelCap = 15;
 function unlockToString(objs, discord) {
   let retval = '';
   objs.forEach(item => {
-    retval += `  ${discord.client.emojis.find(em => em.name === item.hero)}:${item.level}:`;
+    retval += `  ${discord.client.emojis.find(em => em.name === item.hero.toLocaleLowerCase())}:${item.level}:`;
   });
 
   return retval;
@@ -25,7 +25,7 @@ function scaleToLevel(n, level) {
 
 function scaleDescription(text, level, spell) {
   text = text.split('%lvl%').join(level);
-  text = text.split('%dmg%').join(scaleToLevel(spell.damage, level));
+  text = text.split('%dmg%').join(scaleToLevel(spell.fixedDamage, level));
 
   return text;
 }

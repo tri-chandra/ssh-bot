@@ -11,6 +11,7 @@ class Spell {
     this.shield = spell.shield;
     this.element = spell.element;
     this.damage = spell.damage;
+    this.fixedDamage = spell.fixedDamage;
     this.heal = spell.heal;
     this.speed = spell.speed;
     this.count = spell.count;

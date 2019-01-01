@@ -42,7 +42,7 @@ export default {
 
   Instant: 'Instant',
   Fast: 'Fast',
-  Normal: 'Nnormal',
+  Normal: 'Normal',
   Slow: 'Slow',
 
   Self: 'self',
