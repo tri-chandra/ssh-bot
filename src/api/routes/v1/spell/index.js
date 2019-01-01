@@ -3,7 +3,7 @@ import SpellController from '../../../controllers/spell.controller';
 async function route(discord, tokens) {
   if (!tokens) return;
 
-  let command = tokens.join('').split('\'s').join('');
+  let command = tokens.join('').split('\'s').join('').split('\'').join('');
   let level = 1;
   if (new RegExp(/l[0-1][0-9]$/).test(command)) {
     level = command.substring(command.length - 2);

@@ -4,15 +4,18 @@ import C from '../../models/Constants';
 class NatureRevenge extends Spell {
   constructor(level) {
     super({
-      name: 'NatureRevenge',
+      name: 'Nature\'s Revenge',
+      code: 'naturesRevenge',
       type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      tier: C.Elite,
+      element: C.Nature,
+      breakPower: 43,
+      damage: 700,
+      speed: C.Fast,
+      onHit: 'Deals as much damage as you have lost from the last hit, but no more than %dmg%',
+      unlockAt: [
+        { hero: C.Zenron, level: C.Arena4 }
+      ]
     });
   }
 }

@@ -4,15 +4,18 @@ import C from '../../models/Constants';
 class HealingSpring extends Spell {
   constructor(level) {
     super({
-      name: 'HealingSpring',
-      type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      name: 'Healing Spring',
+      code: 'healingSpring',
+      type: C.OvertimeSpell,
+      tier: C.Elite,
+      element: C.Nature,
+      heal: 8,
+      resistance: 8,
+      count: 10,
+      overTime: 'Restores some of your energy.',
+      unlockAt: [
+        { hero: C.Zenron, level: C.Arena5 }
+      ]
     });
   }
 }

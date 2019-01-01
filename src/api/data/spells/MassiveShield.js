@@ -4,15 +4,15 @@ import C from '../../models/Constants';
 class MassiveShield extends Spell {
   constructor(level) {
     super({
-      name: 'MassiveShield',
-      type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      name: 'Massive Shield',
+      code: 'massiveShield',
+      type: C.OvertimeSpell,
+      tier: C.Elite,
+      element: C.Nature,
+      shield: 54,
+      unlockAt: [
+        { hero: C.Zenron, level: C.Arena1 }
+      ]
     });
   }
 }

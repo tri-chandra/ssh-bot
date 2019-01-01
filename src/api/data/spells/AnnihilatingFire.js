@@ -4,15 +4,17 @@ import C from '../../models/Constants';
 class AnnihilatingFire extends Spell {
   constructor(level) {
     super({
-      name: 'AnnihilatingFire',
+      name: 'Annihilating Fire',
+      code: 'annihilatingFire',
       type: C.damageSpell,
-      tier: C.Basic,
+      tier: C.Advanced,
       element: C.Fire,
-      damage: 20,
+      damage: 55,
       speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      onCast: 'Sets you back to basic spells.',
+      unlockAt: [
+        { hero: C.Zenron, level: C.Arena4 }
+      ]
     });
   }
 }

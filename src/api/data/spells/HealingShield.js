@@ -4,15 +4,16 @@ import C from '../../models/Constants';
 class HealingShield extends Spell {
   constructor(level) {
     super({
-      name: 'HealingShield',
-      type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      name: 'Healing Shield',
+      code: 'healingShield',
+      type: C.OvertimeSpell,
+      tier: C.Elite,
+      element: C.Nature,
+      shield: 46,
+      onBlock: 'Restores your energy in the amount you have blocked.',
+      unlockAt: [
+        { hero: C.Zenron, level: C.Arena9 }
+      ]
     });
   }
 }

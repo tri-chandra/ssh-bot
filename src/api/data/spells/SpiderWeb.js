@@ -4,15 +4,16 @@ import C from '../../models/Constants';
 class SpiderWeb extends Spell {
   constructor(level) {
     super({
-      name: 'SpiderWeb',
-      type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      name: 'Spider Web',
+      code: 'spiderWeb',
+      type: C.OvertimeSpell,
+      tier: C.Elite,
+      element: C.Nature,
+      shield: 81,
+      onBlock: 'Only blocks one attack.',
+      unlockAt: [
+        { hero: C.Zenron, level: C.Arena1 }
+      ]
     });
   }
 }

@@ -11,7 +11,7 @@ export default {
     const ultimateSpells = Hero.spellMapper(hero, C.Ultimate).map(item => item.name).join(', ');
 
     if (!basicSpells) {
-      discord.reply(`Hero ${hero} is unknown. Type \`!help spells\` for more information.`)
+      discord.reply(`the hero ${hero} is unknown. Type \`!help spells\` for more information.`);
       return;
     }
 

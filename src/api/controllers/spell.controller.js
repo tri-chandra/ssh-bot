@@ -16,7 +16,7 @@ function unlockToString(objs, discord) {
 }
 
 function scaleToLevel(n, level) {
-  for (let i = 1; i < level; i++) {
+  for (let i = 1; i < level && i < levelCap; i++) {
     n *= upgradeMultiplier;
   }
 
@@ -31,6 +31,7 @@ function scaleDescription(text, level, spell) {
 }
 
 function getUpgradeCostStep1(tier, level) {
+  if (level > 15) level = 15;
   return Spells.upgradeCost[tier][level].toLocaleString('en-US', { useGrouping: true });
 }
 
@@ -62,6 +63,11 @@ export default {
         key => Spells[key]
       );
     const [spell] = spells;
+
+    if (!spell) {
+      discord.reply('the spell is unknown. Type `!help spell` for more information.');
+      return;
+    }
 
     let fields = [];
     spell.tier && fields.push({ name: 'Tier', value: spell.tier, inline: true });

@@ -5,14 +5,15 @@ class Magmabomb extends Spell {
   constructor(level) {
     super({
       name: 'Magmabomb',
+      code: 'magmabomb',
       type: C.damageSpell,
-      tier: C.Basic,
+      tier: C.Elite,
       element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      damage: 52,
+      speed: C.Slow,
+      unlockAt: [
+        { hero: C.Zenron, level: C.Arena1 }
+      ]
     });
   }
 }

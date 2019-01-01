@@ -4,15 +4,17 @@ import C from '../../models/Constants';
 class BurningSlam extends Spell {
   constructor(level) {
     super({
-      name: 'BurningSlam',
+      name: 'Burning Slam',
+      code: 'burningSlam',
       type: C.damageSpell,
-      tier: C.Basic,
+      tier: C.Ultimate,
       element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      breakPower: 34,
+      speed: C.Fast,
+      onHit: 'Deals as much damage to your opponent as you have energy.',
+      unlockAt: [
+        { hero: C.Zenron, level: C.Arena9 }
+      ]
     });
   }
 }

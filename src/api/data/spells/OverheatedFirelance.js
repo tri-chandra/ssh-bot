@@ -4,15 +4,17 @@ import C from '../../models/Constants';
 class OverheatedFirelance extends Spell {
   constructor(level) {
     super({
-      name: 'OverheatedFirelance',
+      name: 'Overheated Firelance',
+      code: 'overheatedFirelance',
       type: C.damageSpell,
-      tier: C.Basic,
+      tier: C.Advanced,
       element: C.Fire,
-      damage: 20,
+      damage: 40,
       speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      onCast: 'Does NOT charge your spell charge bar.',
+      unlockAt: [
+        { hero: C.Zenron, level: C.Arena5 }
+      ]
     });
   }
 }

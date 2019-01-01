@@ -4,15 +4,17 @@ import C from '../../models/Constants';
 class DoubleMagmabomb extends Spell {
   constructor(level) {
     super({
-      name: 'DoubleMagmabomb',
+      name: 'Double Magmabomb',
+      code: 'doubleMagmabomb',
       type: C.damageSpell,
-      tier: C.Basic,
+      tier: C.Ultimate,
       element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      damage: 49,
+      speed: C.Slow,
+      count: 2,
+      unlockAt: [
+        { hero: C.Zenron, level: C.Arena1 }
+      ]
     });
   }
 }

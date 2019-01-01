@@ -4,15 +4,16 @@ import C from '../../models/Constants';
 class FireMeteor extends Spell {
   constructor(level) {
     super({
-      name: 'FireMeteor',
+      name: 'Fire Meteor',
+      code: 'fireMeteor',
       type: C.damageSpell,
-      tier: C.Basic,
+      tier: C.Ultimate,
       element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      damage: 78,
+      speed: C.Slow,
+      unlockAt: [
+        { hero: C.Zenron, level: C.Arena1 }
+      ]
     });
   }
 }

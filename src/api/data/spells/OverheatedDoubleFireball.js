@@ -4,15 +4,18 @@ import C from '../../models/Constants';
 class OverheatedDoubleFireball extends Spell {
   constructor(level) {
     super({
-      name: 'OverheatedDoubleFireball',
+      name: 'Overheated Double Fireball',
+      code: 'overheatedDoubleFireball',
       type: C.damageSpell,
-      tier: C.Basic,
+      tier: C.Advanced,
       element: C.Fire,
-      damage: 20,
+      damage: 24,
       speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      count: 2,
+      onCast: 'Does NOT charge your spell charge bar.',
+      unlockAt: [
+        { hero: C.Zenron, level: C.Arena6 }
+      ]
     });
   }
 }

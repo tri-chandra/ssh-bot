@@ -5,14 +5,16 @@ class Inferno extends Spell {
   constructor(level) {
     super({
       name: 'Inferno',
+      code: 'inferno',
       type: C.damageSpell,
-      tier: C.Basic,
+      tier: C.Ultimate,
       element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      damage: 52,
+      speed: C.Instant,
+      onCast: 'Doubles the power for each additional inferno spell that is matched into this spell.',
+      unlockAt: [
+        { hero: C.Zenron, level: C.Arena5 }
+      ]
     });
   }
 }

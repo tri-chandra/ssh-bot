@@ -24,6 +24,7 @@ export default {
   HealSpell: 'healSpell',
   OvertimeSpell: 'overtimeSpell',
 
+  Instant: 'instant',
   Fast: 'fast',
   Normal: 'normal',
   Slow: 'slow',

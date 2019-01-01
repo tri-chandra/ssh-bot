@@ -4,15 +4,16 @@ import C from '../../models/Constants';
 class SuperNovaVision extends Spell {
   constructor(level) {
     super({
-      name: 'SuperNovaVision',
-      type: C.damageSpell,
-      tier: C.Basic,
+      name: 'Super Nova Vision',
+      code: 'superNovaVision',
+      type: C.OvertimeSpell,
+      tier: C.Elite,
       element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      resistance: 28,
+      onTimeout: 'You get the ultimate spell from your spell deck with level %lvl% on your playfield.',
+      unlockAt: [
+        { hero: C.Zenron, level: C.Arena7 }
+      ]
     });
   }
 }

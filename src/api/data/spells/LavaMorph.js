@@ -4,15 +4,16 @@ import C from '../../models/Constants';
 class LavaMorph extends Spell {
   constructor(level) {
     super({
-      name: 'LavaMorph',
-      type: C.damageSpell,
-      tier: C.Basic,
+      name: 'Lava Morph',
+      code: 'lavaMorph',
+      type: C.OvertimeSpell,
+      tier: C.Advanced,
       element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      resistance: 21,
+      onTimeout: 'Replaces one element on your playfield with a random fire spell with level %lvl%.',
+      unlockAt: [
+        { hero: C.Zenron, level: C.Arena8 }
+      ]
     });
   }
 }

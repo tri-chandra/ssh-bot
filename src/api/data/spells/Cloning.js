@@ -5,14 +5,15 @@ class Cloning extends Spell {
   constructor(level) {
     super({
       name: 'Cloning',
-      type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      code: 'cloning',
+      type: C.OvertimeSpell,
+      tier: C.Advanced,
+      element: C.Nature,
+      resistance: 19,
+      onTimeout: 'Clones the spell with the highest category on your playfield. The spell has level %lvl%.',
+      unlockAt: [
+        { hero: C.Zenron, level: C.Arena4 }
+      ]
     });
   }
 }
