@@ -17,7 +17,8 @@ class Spell {
     this.count = spell.count;
     this.target = spell.target;
 
-    this.onblock = spell.onBlock;
+    this.onBlock = spell.onBlock;
+    this.onBreak = spell.onBreak;
     this.onCast = spell.onCast;
     this.onTimeout = spell.onTimeout;
     this.onHit = spell.onHit;

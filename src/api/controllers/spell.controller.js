@@ -82,9 +82,10 @@ export default {
     spell.target === C.AllPlayers && fields.push({ name: 'Target', value: 'All Players', inline: true });
 
     spell.type === C.OvertimeSpell && fields.push({ name: 'Type', value: ':arrows_counterclockwise: Over Time' });
-    spell.onblock && fields.push({ name: 'On Block', value: scaleDescription(spell.onblock, level, spell) });
     spell.onCast && fields.push({ name: 'On Cast', value: scaleDescription(spell.onCast, level, spell) });
     spell.onHit && fields.push({ name: 'On Hit', value: scaleDescription(spell.onHit, level, spell) });
+    spell.onBlock && fields.push({ name: 'On Block', value: scaleDescription(spell.onBlock, level, spell) });
+    spell.onBreak && fields.push({ name: 'On Break', value: scaleDescription(spell.onBreak, level, spell) });
     spell.overTime && fields.push({ name: 'Over Time', value: scaleDescription(spell.overTime, level, spell) });
     spell.onTimeout && fields.push({ name: 'On timeout', value: scaleDescription(spell.onTimeout, level, spell) });
 

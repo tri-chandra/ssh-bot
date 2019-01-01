@@ -1,18 +1,22 @@
 import Spell from '../../models/Spell';
+import Token from '../tokens';
 import C from '../../models/Constants';
 
 class RockBlast extends Spell {
   constructor(level) {
     super({
-      name: 'RockBlast',
+      name: 'Rock Blast',
+      code: 'rockBlast',
       type: C.damageSpell,
       tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
+      element: C.Earth,
+      damage: 33,
       speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      onCast: 'You get a weakness token on your playfield.',
+      tokens: [Token.Weakness],
+      unlockAt: [
+        { hero: C.Ray, level: C.Arena6 },
+      ]
     });
   }
 }
