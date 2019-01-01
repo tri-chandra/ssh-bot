@@ -21,7 +21,7 @@ class Spell {
     this.onTimeout = spell.onTimeout;
     this.onHit = spell.onHit;
     this.overTime = spell.overTime;
-    this.description = '';
+    this.tokens = spell.tokens;
 
     this.sprite = `${this.element}/${this.code}.jpg`;
   }

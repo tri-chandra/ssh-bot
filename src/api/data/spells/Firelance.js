@@ -5,14 +5,15 @@ class Firelance extends Spell {
   constructor(level) {
     super({
       name: 'Firelance',
+      code: 'firelance',
       type: C.damageSpell,
-      tier: C.Basic,
+      tier: C.Advanced,
       element: C.Fire,
-      damage: 20,
+      damage: 30,
       speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      unlockAt: [
+        { hero: C.Zenron, level: C.Arena1}
+      ]
     });
   }
 }

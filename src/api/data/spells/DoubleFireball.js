@@ -4,15 +4,17 @@ import C from '../../models/Constants';
 class DoubleFireball extends Spell {
   constructor(level) {
     super({
-      name: 'DoubleFireball',
+      name: 'Double Fireball',
+      code: 'doubleFireball',
       type: C.damageSpell,
-      tier: C.Basic,
+      tier: C.Advanced,
       element: C.Fire,
       damage: 20,
       speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      count: 2,
+      unlockAt: [
+        { hero: C.Zenron, level: C.Arena1}
+      ]
     });
   }
 }

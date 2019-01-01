@@ -43,6 +43,16 @@ function getUpgradeCostStepN(tier, level) {
   return sum.toLocaleString('en-US', { useGrouping: true });
 }
 
+function tokensToDescriptions(tokens, level) {
+  const descriptions = tokens.map((token) => {
+    let description = `${token.name}: ${token.description};`;
+    description = scaleDescription(description, level, token);
+    return description;
+  });
+
+  return descriptions.join(' ');
+}
+
 export default {
   async getSpellStats(discord, command, level) {
     const spells = Object.keys(Spells)
@@ -87,7 +97,10 @@ export default {
     const embededObj = new Discord.RichEmbed({
       thumbnail: { url: 'attachment://thumb.jpg' },
       author: { name: spell.name, icon_url: 'attachment://icon.jpg' },
-      fields
+      fields,
+      footer: spell.tokens ? {
+        text: tokensToDescriptions(spell.tokens)
+      } : undefined,
     });
     embededObj.attachFiles([
       { attachment: bufferIcon, name: 'icon.jpg' }, 

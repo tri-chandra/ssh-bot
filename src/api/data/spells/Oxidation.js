@@ -5,14 +5,15 @@ class Oxidation extends Spell {
   constructor(level) {
     super({
       name: 'Oxidation',
-      type: C.damageSpell,
-      tier: C.Basic,
+      code: 'oxidation',
+      type: C.OvertimeSpell,
+      tier: C.Advanced,
       element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      resistance: 19,
+      overTime: 'Replaces 4 non-fire mana with 4 fire mana on your playfield.',
+      unlockAt: [
+        { hero: C.Zenron, level: C.Arena1}
+      ]
     });
   }
 }

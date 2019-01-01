@@ -1,18 +1,21 @@
 import Spell from '../../models/Spell';
+import Token from '../tokens';
 import C from '../../models/Constants';
 
 class FireRage extends Spell {
   constructor(level) {
     super({
-      name: 'FireRage',
-      type: C.damageSpell,
-      tier: C.Basic,
+      name: 'Fire Rage',
+      code: 'fireRage',
+      type: C.OvertimeSpell,
+      tier: C.Advanced,
       element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      resistance: 19,
+      onTimeout: 'You get a rage token on your playfield.',
+      tokens: [Token.Rage],
+      unlockAt: [
+        { hero: C.Zenron, level: C.Arena1 }
+      ]
     });
   }
 }

@@ -5,14 +5,15 @@ class Relief extends Spell {
   constructor(level) {
     super({
       name: 'Relief',
-      type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      code: 'relief',
+      type: C.HealSpell,
+      tier: C.Advanced,
+      element: C.Nature,
+      heal: 11,
+      onCast: 'Destroys a negative token on your playfield.',
+      unlockAt: [
+        { hero: C.Zenron, level: C.Arena3 }
+      ]
     });
   }
 }

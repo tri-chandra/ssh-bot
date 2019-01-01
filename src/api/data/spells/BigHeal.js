@@ -4,15 +4,15 @@ import C from '../../models/Constants';
 class BigHeal extends Spell {
   constructor(level) {
     super({
-      name: 'BigHeal',
-      type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      name: 'Big Heal',
+      code: 'bigHeal',
+      type: C.HealSpell,
+      tier: C.Advanced,
+      element: C.Nature,
+      damage: 15,
+      unlockAt: [
+        { hero: C.Zenron, level: C.Arena1}
+      ]
     });
   }
 }
