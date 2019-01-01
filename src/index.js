@@ -13,11 +13,11 @@ client.on('message', msg => {
   const tokens = content.toLocaleLowerCase().substring(1).split(/[\s]+/);
 
   if (content.charAt(0) !== prefix) return;
-  if (userId !== owner) {
-    msg.reply('Sorry, only the owner can play with the bot :innocent:');
+  // if (userId !== owner) {
+  //   msg.reply('Sorry, only the owner can play with the bot :innocent:');
 
-    return;
-  }
+  //   return;
+  // }
 
   router.route(msg, tokens);
 
