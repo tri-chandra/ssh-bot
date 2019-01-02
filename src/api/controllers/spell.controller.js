@@ -8,7 +8,7 @@ const levelCap = 15;
 
 function unlockToString(objs, discord) {
   let retval = '';
-  objs.forEach(item => {
+  objs.forEach((item) => {
     retval += `  ${discord.client.emojis.find(em => em.name === item.hero.toLocaleLowerCase())}:${item.level}:`;
   });
 
@@ -16,28 +16,29 @@ function unlockToString(objs, discord) {
 }
 
 function scaleToLevel(n, level) {
-  for (let i = 1; i < level && i < levelCap; i++) {
-    n *= upgradeMultiplier;
+  let total = n;
+  for (let i = 1; i < level && i < levelCap; i = i + 1) {
+    total *= upgradeMultiplier;
   }
 
-  return Math.round(n);
+  return Math.round(total);
 }
 
 function scaleDescription(text, level, spell) {
-  text = text.split('%lvl%').join(level);
-  text = text.split('%dmg%').join(scaleToLevel(spell.fixedDamage, level));
+  let result = text.split('%lvl%').join(level);
+  result = result.split('%dmg%').join(scaleToLevel(spell.fixedDamage, level));
 
-  return text;
+  return result;
 }
 
 function getUpgradeCostStep1(tier, level) {
-  if (level > 15) level = 15;
-  return Spells.upgradeCost[tier][level].toLocaleString('en-US', { useGrouping: true });
+  let n = (level > 15 ? 15 : level);
+  return Spells.upgradeCost[tier][n].toLocaleString('en-US', { useGrouping: true });
 }
 
 function getUpgradeCostStepN(tier, level) {
   let sum = 0;
-  for (let i = 2; i <= level && i <= levelCap; i++) {
+  for (let i = 2; i <= level && i <= levelCap; i = i + 1) {
     sum += Spells.upgradeCost[tier][i];
   }
 
@@ -56,8 +57,7 @@ function tokensToDescriptions(tokens, level) {
 
 export default {
   async getSpellStats(discord, command, level) {
-    const spells = Object.keys(Spells)
-      .filter(
+    const spells = Object.keys(Spells).filter(
         key => key.toLocaleLowerCase().includes(`:${command}`)
       ).map(
         key => Spells[key]

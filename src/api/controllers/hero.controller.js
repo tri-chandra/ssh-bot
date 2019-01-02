@@ -28,13 +28,13 @@ export default {
         { name: 'Advanced Spells:', value: advancedSpells },
         { name: 'Elite Spells:', value: eliteSpells },
         { name: 'Ultimate Spells:', value: ultimateSpells },
-      ]
+      ],
     });
     embededObj.attachFiles([
-      { attachment: bufferIcon, name: 'icon.jpg' }, 
-      { attachment: bufferThumb, name: 'thumb.jpg' }
+      { attachment: bufferIcon, name: 'icon.jpg' },
+      { attachment: bufferThumb, name: 'thumb.jpg' },
     ]);
 
     discord.channel.send(embededObj);
   }
-}
+};

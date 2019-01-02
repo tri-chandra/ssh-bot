@@ -119,6 +119,18 @@ yarn docs
 ```
 
 ## Docker
+```bash
+# build docker image
+docker build -t <username>/ssh-bot .
+
+# run container
+docker run -p 3000:3000 -e NODE_ENV='development' \
+-e PORT='3000' \
+-e DISCORD_TOKEN='xxx' \
+-e PREFIX='!' \
+-e OWNER='000' \
+<username>/ssh-bot
+```
 
 ```bash
 # run container locally
