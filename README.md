@@ -130,6 +130,9 @@ docker run -p 3000:3000 -e NODE_ENV='development' \
 -e PREFIX='!' \
 -e OWNER='000' \
 <username>/ssh-bot
+
+# OR
+kubectl run --port=3000 --env="NODE_ENV=development;PORT=3000;DISCORD_TOKEN=xxx;PREFIX=!;OWNER=000" --image=tchandra/ssh-bot ssh-bot
 ```
 
 ```bash
