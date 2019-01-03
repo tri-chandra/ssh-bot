@@ -1,4 +1,5 @@
 import Spell from '../../models/Spell';
+import Token from '../tokens';
 import C from '../../models/Constants';
 
 class MagneticAura extends Spell {
