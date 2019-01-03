@@ -4,15 +4,17 @@ import C from '../../models/Constants';
 class FireFlash extends Spell {
   constructor(level) {
     super({
-      name: 'FireFlash',
+      name: 'Fire Flash',
+      code: 'fireFlash',
       type: C.damageSpell,
       tier: C.Basic,
       element: C.Fire,
-      damage: 20,
+      damage: 13,
       speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      onHit: "If it breaks a spell another Fire Flash spell is fired.",
+      unlockAt: [
+        { hero: C.Jane, level: C.Arena7},
+      ]
     });
   }
 }

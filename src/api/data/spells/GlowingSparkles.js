@@ -4,15 +4,17 @@ import C from '../../models/Constants';
 class GlowingSparkles extends Spell {
   constructor(level) {
     super({
-      name: 'GlowingSparkles',
-      type: C.damageSpell,
+      name: 'Glowing Sparkles',
+      code: 'glowingSparkles',
+      type: C.Damagespell,
       tier: C.Basic,
       element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      damage: 6,
+      speed: C.Fast,
+      count: 4,
+      unlockAt: [
+        { hero: C.Jane, level: C.Arena1}
+      ]
     });
   }
 }

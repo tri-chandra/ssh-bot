@@ -4,15 +4,17 @@ import C from '../../models/Constants';
 class ParalysingDart extends Spell {
   constructor(level) {
     super({
-      name: 'ParalysingDart',
-      type: C.damageSpell,
+      name: 'Paralysing Dart',
+      code: 'paralysingDart',
+      type: C.Damagespell,
       tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      element: C.Nature,
+      breakPower: 17,
+      speed: C.Fast,
+      onHit: "Destorys a basic or advanced attack spell on the opponent's playfield.",
+      unlockAt:[
+       { hero: C.Jane, level: C.Arena1}
+      ]
     });
   }
 }
