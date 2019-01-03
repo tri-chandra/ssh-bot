@@ -5,14 +5,15 @@ class Dawn extends Spell {
   constructor(level) {
     super({
       name: 'Dawn',
-      type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      code: 'dawn',
+      type: C.HealSpell,
+      tier: C.Advanced,
+      element: C.Light,
+      heal: 12,
+      onCast: 'You get a light mana on your playfield.',
+      unlockAt: [
+        { hero: C.Ray, level: C.Arena1 },
+      ]
     });
   }
 }

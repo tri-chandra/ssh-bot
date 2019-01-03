@@ -13,6 +13,7 @@ class HeroicGuard extends Spell {
       onblock: 'You get a light mana on your playfield.',
       unlockAt: [
         { hero: C.Tierra, level: C.Arena1},
+        { hero: C.Ray, level: C.Arena8 },
       ]
     });
   }

@@ -4,15 +4,17 @@ import C from '../../models/Constants';
 class OrbOfLight extends Spell {
   constructor(level) {
     super({
-      name: 'OrbOfLight',
+      name: 'Orb of Light',
+      code: 'orbOfLight',
       type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      tier: C.Advanced,
+      element: C.Light,
+      damage: 22,
+      speed: C.Fast,
+      onHit: 'You get a light mana on your playfield.',
+      unlockAt: [
+        { hero: C.Ray, level: C.Arena1 },
+      ]
     });
   }
 }

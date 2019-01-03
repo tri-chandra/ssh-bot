@@ -1,18 +1,21 @@
 import Spell from '../../models/Spell';
+import Token from '../tokens';
 import C from '../../models/Constants';
 
 class Overcharge extends Spell {
   constructor(level) {
     super({
       name: 'Overcharge',
-      type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      code: 'overcharge',
+      type: C.OvertimeSpell,
+      tier: C.Advanced,
+      element: C.Light,
+      resistance: 21,
+      onTimeout: '50% chance to get a random ultimate spell with level 1 on your playfield. Otherwise you get a blindness token.',
+      tokens: [Token.Blindness],
+      unlockAt: [
+        { hero: C.Ray, level: C.Arena8 },
+      ]
     });
   }
 }

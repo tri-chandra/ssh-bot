@@ -1,18 +1,22 @@
 import Spell from '../../models/Spell';
+import Token from '../tokens';
 import C from '../../models/Constants';
 
 class BlindingFlash extends Spell {
   constructor(level) {
     super({
-      name: 'BlindingFlash',
+      name: 'Blinding Flash',
+      code: 'blindingFlash',
       type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      tier: C.Advanced,
+      element: C.Light,
+      damage: 12,
+      speed: C.Fast,
+      onHit: 'You opponent gets a Blinding token.',
+      tokens: [Token.Blindness],
+      unlockAt: [
+        { hero: C.Ray, level: C.Arena6 },
+      ]
     });
   }
 }

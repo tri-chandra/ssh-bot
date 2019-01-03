@@ -4,15 +4,16 @@ import C from '../../models/Constants';
 class EarthPrism extends Spell {
   constructor(level) {
     super({
-      name: 'EarthPrism',
-      type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      name: 'Earth Prism',
+      code: 'earthPrism',
+      type: C.OvertimeSpell,
+      tier: C.Advanced,
+      element: C.Light,
+      resistance: 18,
+      overTime: 'You get 3 earth mana on your playfield.',
+      unlockAt: [
+        { hero: C.Ray, level: C.Arena8 },
+      ]
     });
   }
 }

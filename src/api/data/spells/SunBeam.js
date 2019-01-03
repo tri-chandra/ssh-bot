@@ -4,15 +4,18 @@ import C from '../../models/Constants';
 class SunBeam extends Spell {
   constructor(level) {
     super({
-      name: 'SunBeam',
-      type: C.damageSpell,
+      name: 'Sun Beam',
+      code: 'sunBeam',
+      type: C.OvertimeSpell,
       tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      element: C.Light,
+      damage: 4,
+      resistance: 3,
+      count: 5,
+      onHit: '50% chance to get a light mana on your playfield.',
+      unlockAt: [
+        { hero: C.Ray, level: C.Arena9 },
+      ]
     });
   }
 }

@@ -4,15 +4,18 @@ import C from '../../models/Constants';
 class MagneticAura extends Spell {
   constructor(level) {
     super({
-      name: 'MagneticAura',
-      type: C.damageSpell,
+      name: 'Magnetic Aura',
+      code: 'magneticAura',
+      type: C.HealSpell,
       tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      element: C.Earth,
+      heal: 14,
+      onCast: 'You get a weakness token on your playfield.',
+      onCast: 'Healing power is x2 for each Elite or Ultimate spell on your playfield.',
+      tokens: [Token.Weakness],
+      unlockAt: [
+        { hero: C.Ray, level: C.Arena9 },
+      ]
     });
   }
 }
