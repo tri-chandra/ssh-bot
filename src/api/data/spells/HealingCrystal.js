@@ -1,4 +1,5 @@
 import Spell from '../../models/Spell';
+import Token from '../tokens';
 import C from '../../models/Constants';
 
 class HealingCrystal extends Spell {
@@ -11,9 +12,10 @@ class HealingCrystal extends Spell {
       element: C.Earth,
       resistance: 35,
       onCast: 'You get a weakness token on your playfield',
-      ontimeout: 'Restore 50% of your already lost energy, but no more than 350',
+      onTimeout: 'Restore 50% of your already lost energy, but no more than 350',
+      tokens: [Token.Weakness],
       unlockAt: [
-        { hero: C.Ray, level: C.Arena1},
+        { hero: C.Ray, level: C.Arena9},
       ]
     });
   }

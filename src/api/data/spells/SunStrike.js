@@ -4,15 +4,17 @@ import C from '../../models/Constants';
 class SunStrike extends Spell {
   constructor(level) {
     super({
-      name: 'SunStrike',
+      name: 'Sun Strike',
+      code: 'sunStrike',
       type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      tier: C.Elite,
+      element: C.Light,
+      damage: 36,
+      speed: C.Fast,
+      onHit: 'You get a light mana on your playfield.',
+      unlockAt: [
+        { hero: C.Ray, level: C.Arena1 },
+      ]
     });
   }
 }

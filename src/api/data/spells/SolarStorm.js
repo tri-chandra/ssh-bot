@@ -4,15 +4,18 @@ import C from '../../models/Constants';
 class SolarStorm extends Spell {
   constructor(level) {
     super({
-      name: 'SolarStorm',
-      type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
+      name: 'Solar Storm',
+      code: 'solarStorm',
+      type: C.OvertimeSpell,
+      tier: C.Ultimate,
+      element: C.Light,
       damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      resistance: 20,
+      count: 5,
+      onHit: 'You get a light mana on your playfield.',
+      unlockAt: [
+        { hero: C.Ray, level: C.Arena1 },
+      ]
     });
   }
 }

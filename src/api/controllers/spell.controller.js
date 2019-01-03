@@ -21,7 +21,7 @@ function scaleToLevel(n, level) {
     total *= upgradeMultiplier;
   }
 
-  return Math.round(total);
+  return Math.round(total).toLocaleString('en-US', { useGrouping: true });;
 }
 
 function scaleDescription(text, level, spell) {

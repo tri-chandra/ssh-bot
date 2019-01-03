@@ -1,18 +1,21 @@
 import Spell from '../../models/Spell';
+import Token from '../tokens';
 import C from '../../models/Constants';
 
 class HealingSands extends Spell {
   constructor(level) {
     super({
-      name: 'HealingSands',
-      type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      name: 'Healing Sands',
+      code: 'healingSands',
+      type: C.HealSpell,
+      tier: C.Elite,
+      element: C.Earth,
+      heal: 28,
+      onCast: 'You get a weakness token on your playfield.',
+      tokens: [Token.Weakness],
+      unlockAt: [
+        { hero: C.Ray, level: C.Arena8 },
+      ]
     });
   }
 }

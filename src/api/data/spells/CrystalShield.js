@@ -1,18 +1,21 @@
 import Spell from '../../models/Spell';
+import Token from '../tokens';
 import C from '../../models/Constants';
 
 class CrystalShield extends Spell {
   constructor(level) {
     super({
-      name: 'CrystalShield',
-      type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      name: 'Crystal Shield',
+      code: 'crystalShield',
+      type: C.OvertimeSpell,
+      tier: C.Elite,
+      element: C.Earth,
+      shield: 68,
+      onCast: 'You get a weakness token on your playfield.',
+      tokens: [Token.Weakness],
+      unlockAt: [
+        { hero: C.Ray, level: C.Arena6 },
+      ]
     });
   }
 }
