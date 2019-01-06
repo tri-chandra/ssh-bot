@@ -5,14 +5,17 @@ class Corrosion extends Spell {
   constructor(level) {
     super({
       name: 'Corrosion',
-      type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      code: 'corrosion',
+      type: C.OvertimeSpell,
+      tier: C.Ultimate,
+      element: C.Nature,
+      resistance: 74,
+      fixedDamage: 40,
+      target: C.AllPlayers,
+      overTime: 'Destroys 15 non-nature elements on both playfields. Each destroyed elements deals %dmg% damage.',
+      unlockAt: [
+        { hero: C.Asgard, level: C.Arena5 },
+      ]
     });
   }
 }

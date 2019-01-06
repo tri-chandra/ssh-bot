@@ -1,18 +1,24 @@
 import Spell from '../../models/Spell';
+import Token from '../tokens';
 import C from '../../models/Constants';
 
 class CrystalStriking extends Spell {
   constructor(level) {
     super({
-      name: 'CrystalStriking',
+      name: 'Crystal Striking',
+      code: 'crystalStriking',
       type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
+      tier: C.Elite,
+      element: C.Earth,
       damage: 20,
+      count: 3,
       speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      onCast: 'You get a weakness token on your playfield.',
+      onHit: 'Destroys one of the topmost elements on the opponent\'s playfield.',
+      tokens: [Token.Weakness],
+      unlockAt: [
+        { hero: C.Asgard, level: C.Arena4 },
+      ]
     });
   }
 }

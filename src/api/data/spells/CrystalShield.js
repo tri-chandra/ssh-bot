@@ -14,6 +14,7 @@ class CrystalShield extends Spell {
       onCast: 'You get a weakness token on your playfield.',
       tokens: [Token.Weakness],
       unlockAt: [
+        { hero: C.Asgard, level: C.Arena6 },
         { hero: C.Ray, level: C.Arena6 },
       ]
     });

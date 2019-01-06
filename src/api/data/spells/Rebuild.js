@@ -1,18 +1,21 @@
 import Spell from '../../models/Spell';
+import Token from '../tokens';
 import C from '../../models/Constants';
 
 class Rebuild extends Spell {
   constructor(level) {
     super({
       name: 'Rebuild',
-      type: C.damageSpell,
+      code: 'rebuild',
+      type: C.HealSpell,
       tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      element: C.Earth,
+      heal: 17,
+      onCast: 'You get a weakness token on your playfield.',
+      tokens: [Token.Weakness],
+      unlockAt: [
+        { hero: C.Asgard, level: C.Arena1 },
+      ]
     });
   }
 }

@@ -1,20 +1,22 @@
 import Spell from '../../models/Spell';
 import C from '../../models/Constants';
 
-class Oblivioncloud extends Spell {
+class OblivionCloud extends Spell {
   constructor(level) {
     super({
-      name: 'Oblivioncloud',
+      name: 'Oblivion Cloud',
+      code: 'oblivionCloud',
       type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      tier: C.Ultimate,
+      element: C.Nature,
+      breakPower: 42,
+      speed: C.Slow,
+      onHit: 'Sets your opponent bacck to basic spells.',
+      unlockAt: [
+        { hero: C.Asgard, level: C.Arena9 },
+      ]
     });
   }
 }
 
-export default Oblivioncloud;
+export default OblivionCloud;

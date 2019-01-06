@@ -1,4 +1,5 @@
 import Spell from '../../models/Spell';
+import Token from '../tokens';
 import C from '../../models/Constants';
 
 class Impale extends Spell {
@@ -6,13 +7,16 @@ class Impale extends Spell {
     super({
       name: 'Impale',
       type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
+      tier: C.Elite,
+      element: C.Earth,
+      damage: 39,
       speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      onCast: 'You get a weakness token on your playfield.',
+      onHit: 'Destroys the bottom row on the opponent\'s playfield.',
+      tokens: [Token.Weakness],
+      unlockAt: [
+        { hero: C.Asgard, level: C.Arena5 },
+      ]
     });
   }
 }
