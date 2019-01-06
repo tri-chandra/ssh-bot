@@ -4,15 +4,17 @@ import C from '../../models/Constants';
 class PowerSwipe extends Spell {
   constructor(level) {
     super({
-      name: 'PowerSwipe',
+      name: 'Power Swipe',
+      code: 'powerSwipe',
       type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      tier: C.Elite,
+      element: C.Light,
+      damage: 21,
+      speed: C.Fast,
+      onCast: "Damage power is x3 if you have more energy than your opponent.",
+      unlockAt: [
+        { hero: C.Thoben, level: C.Arena8}
+      ]
     });
   }
 }

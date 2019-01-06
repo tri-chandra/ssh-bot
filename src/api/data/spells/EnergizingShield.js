@@ -4,15 +4,17 @@ import C from '../../models/Constants';
 class EnergizingShield extends Spell {
   constructor(level) {
     super({
-      name: 'EnergizingShield',
-      type: C.damageSpell,
+      name: 'Energizing Shield',
+      code: 'energizingShield',
+      type: C.OvertimeSpell,
       tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      fixedDamage: 30,
+      element: C.Nature,
+      shield: 15,
+      onBlock: "You get an energize token on your playfield that increases the power of healing spells by %dmg%.",
+      unlockAt: [
+        { hero: C.Thoben, level: C.Arena4}
+      ]
     });
   }
 }

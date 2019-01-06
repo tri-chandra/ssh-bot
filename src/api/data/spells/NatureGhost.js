@@ -4,15 +4,16 @@ import C from '../../models/Constants';
 class NatureGhost extends Spell {
   constructor(level) {
     super({
-      name: 'NatureGhost',
-      type: C.damageSpell,
+      name: 'Nature Ghost',
+      code: 'natureGhost',
+      type: C.HealSpell,
       tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      element: C.Nature,
+      heal: 6,
+      onCast: "You get a nature mana on your playfield.",
+      unlockAt: [
+        { hero: C.Thoben, level: C.Arena8}
+      ]
     });
   }
 }

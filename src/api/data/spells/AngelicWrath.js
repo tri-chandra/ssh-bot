@@ -4,15 +4,17 @@ import C from '../../models/Constants';
 class AngelicWrath extends Spell {
   constructor(level) {
     super({
-      name: 'AngelicWrath',
+      name: 'Angelic Wrath',
+      code: 'angelicWrath',
       type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      tier: C.Ultimate,
+      element: C.Light,
+      damage: 56,
+      speed: C.Fast,
+      onHit: "You get a light mana on your playfield.",
+      unlockAt: [
+        { hero: C.Thoben, level: C.Arena1}
+      ]
     });
   }
 }

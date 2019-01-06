@@ -11,7 +11,7 @@ class Overcharge extends Spell {
       tier: C.Advanced,
       element: C.Light,
       resistance: 21,
-      onTimeout: '50% chance to get a random ultimate spell with level 1 on your playfield. Otherwise you get a blindness token.',
+      onTimeout: '50% chance to get a random ultimate spell with level %lvl% on your playfield. Otherwise you get a blindness token.',
       tokens: [Token.Blindness],
       unlockAt: [
         { hero: C.Ray, level: C.Arena8 },

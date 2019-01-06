@@ -4,15 +4,16 @@ import C from '../../models/Constants';
 class NaturePrism extends Spell {
   constructor(level) {
     super({
-      name: 'NaturePrism',
-      type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      name: 'Nature Prism',
+      code: 'naturePrism',
+      type: C.OvertimeSpell,
+      tier: C.Advanced,
+      element: C.Light,
+      resistance: 18,
+      overTime: "You get 3 nature mana on your playfield.",
+      unlockAt: [
+        { hero: C.Thoben, level: C.Arena6}
+      ]
     });
   }
 }

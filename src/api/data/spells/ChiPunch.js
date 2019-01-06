@@ -4,15 +4,17 @@ import C from '../../models/Constants';
 class ChiPunch extends Spell {
   constructor(level) {
     super({
-      name: 'ChiPunch',
+      name: 'Chi Punch',
+      code: 'chiPunch',
       type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      tier: C.Advanced,
+      element: C.Light,
+      damage: 24,
+      speed: C.Fast,
+      onHit: "Replaces a light or nature mana with a chi token.",
+      unlockAt: [
+        { hero: C.Thoben, level: C.Arena6}
+      ]
     });
   }
 }

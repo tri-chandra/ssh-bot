@@ -4,15 +4,16 @@ import C from '../../models/Constants';
 class InnerFocus extends Spell {
   constructor(level) {
     super({
-      name: 'InnerFocus',
-      type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      name: 'Inner Focus',
+      code: 'innerFocus',
+      type: C.OvertimeSpell,
+      tier: C.Elite,
+      element: C.Nature,
+      resistance: 41,
+      onTimeout: "Replaces all light or nature mana with chi tokens.",
+      unlockAt: [
+        { hero: C.Thoben, level: C.Arena9}
+      ]
     });
   }
 }

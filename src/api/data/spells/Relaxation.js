@@ -5,14 +5,15 @@ class Relaxation extends Spell {
   constructor(level) {
     super({
       name: 'Relaxation',
-      type: C.damageSpell,
+      code: 'relaxation',
+      type: C.HealSpell,
       tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      element: C.Nature,
+      heal: 8,
+      onCast: "Replaces a light or nature mana with a Chi token.",
+      unlockAt: [
+        { hero: C.Thoben, level: C.Arena7}
+      ]
     });
   }
 }

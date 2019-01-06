@@ -5,14 +5,17 @@ class Absorbtion extends Spell {
   constructor(level) {
     super({
       name: 'Absorbtion',
-      type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      code: 'absorbtion',
+      type: C.HealSpell,
+      tier: C.Advanced,
+      element: C.Nature,
+      heal: 19,
+      resistance: 19,
+      count: 3,
+      overTime: "Converts 3 nature elements to energy.",
+      unlockAt: [
+        { hero: C.Thoben, level: C.Arena3}
+      ]
     });
   }
 }

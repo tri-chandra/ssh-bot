@@ -5,14 +5,15 @@ class Meditation extends Spell {
   constructor(level) {
     super({
       name: 'Meditation',
-      type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      code: 'meditation',
+      type: C.HealSpell,
+      tier: C.Advanced,
+      element: C.Nature,
+      heal: 13,
+      onCast: "Replaces 2 light or nature mana with chi tokens.",
+      unlockAt: [
+        { hero: C.Thoben, level: C.Arena8}
+      ]
     });
   }
 }

@@ -4,15 +4,16 @@ import C from '../../models/Constants';
 class SkyGuard extends Spell {
   constructor(level) {
     super({
-      name: 'SkyGuard',
-      type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      name: 'Sky Guard',
+      code: 'skyGuard',
+      type: C.OvertimeSpell,
+      tier: C.Elite,
+      element: C.Light,
+      shield: 44,
+      onBlock: "You get a random attack spell with level %lvl% from your spell deck on your playfield.",
+      unlockAt: [
+        { hero: C.Thoben, level: C.Arena5}
+      ]
     });
   }
 }

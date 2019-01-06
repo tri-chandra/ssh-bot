@@ -4,15 +4,16 @@ import C from '../../models/Constants';
 class AdvancedChiBlock extends Spell {
   constructor(level) {
     super({
-      name: 'AdvancedChiBlock',
-      type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      name: 'Advanced ChiBlock',
+      code: 'advancedChiBlock',
+      type: C.OvertimeSpell,
+      tier: C.Advanced,
+      element: C.Nature,
+      shield: 34,
+      onBlock: "Replaces a light or nature mana with a chi token.",
+      unlockAt: [
+        { hero: C.Thoben, level: C.Arena7}
+      ]
     });
   }
 }

@@ -5,14 +5,15 @@ class Sunbath extends Spell {
   constructor(level) {
     super({
       name: 'Sunbath',
-      type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      code: 'sunbath',
+      type: C.OvertimeSpell,
+      tier: C.Advanced,
+      element: C.Light,
+      resistance: 21,
+      overTime: "Replaces 3 non-light spells with random light spells with level %lvl% on your playfield.",
+      unlockAt: [
+        { hero: C.Thoben, level: C.Arena5}
+      ]
     });
   }
 }

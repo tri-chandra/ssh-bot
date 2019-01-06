@@ -14,6 +14,7 @@ class OrbOfLight extends Spell {
       onHit: 'You get a light mana on your playfield.',
       unlockAt: [
         { hero: C.Ray, level: C.Arena1 },
+        { hero: C.Thoben, level: C.Arena1 },
       ]
     });
   }
