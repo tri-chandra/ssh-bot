@@ -6,6 +6,7 @@ class EarthForce extends Spell {
   constructor(level) {
     super({
       name: 'EarthForce',
+      code: 'earthForce',
       type: C.OvertimeSpell,
       tier: C.Advanced,
       element: C.Earth,

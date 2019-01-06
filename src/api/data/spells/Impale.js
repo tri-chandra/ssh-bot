@@ -6,6 +6,7 @@ class Impale extends Spell {
   constructor(level) {
     super({
       name: 'Impale',
+      code: 'impale',
       type: C.damageSpell,
       tier: C.Elite,
       element: C.Earth,

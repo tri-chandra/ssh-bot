@@ -6,6 +6,7 @@ class Stoning extends Spell {
   constructor(level) {
     super({
       name: 'Stoning',
+      code: 'stoning',
       type: C.damageSpell,
       tier: C.Advanced,
       element: C.Earth,
