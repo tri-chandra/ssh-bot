@@ -12,7 +12,7 @@ class FireArrow extends Spell {
       element: C.Fire,
       damage: 12,
       speed: C.Fast,
-      onHit: 'Your opponent gets a bleed token that deals 50 damage over time.',
+      onHit: 'Your opponent gets a bleed token that deals %dmg% damage over time.',
       tokens: [Token.Bleed],
       unlockAt: [
         { hero: C.Jane, level: C.Arena3}

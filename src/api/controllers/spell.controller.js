@@ -107,7 +107,7 @@ export default {
       author: { name: spell.name, icon_url: 'attachment://icon.jpg' },
       fields,
       footer: spell.tokens ? {
-        text: tokensToDescriptions(spell.tokens)
+        text: tokensToDescriptions(spell.tokens, level)
       } : undefined,
     });
     embededObj.attachFiles([
