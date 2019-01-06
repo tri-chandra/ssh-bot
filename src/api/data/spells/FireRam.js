@@ -5,14 +5,16 @@ class FireRam extends Spell {
   constructor(level) {
     super({
       name: 'FireRam',
+      code: 'fireRam',
       type: C.damageSpell,
-      tier: C.Basic,
+      tier: C.Advanced,
       element: C.Fire,
-      damage: 20,
+      damage: 15,
       speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      onHit: "Destroys shield spell on the opponent's playfield.",
+      unlockAt: [
+        { hero: C.Jane, level: C.Arena1}
+      ]
     });
   }
 }

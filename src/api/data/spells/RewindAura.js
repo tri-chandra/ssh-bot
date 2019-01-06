@@ -4,15 +4,17 @@ import C from '../../models/Constants';
 class RewindAura extends Spell {
   constructor(level) {
     super({
-      name: 'RewindAura',
-      type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      name: 'Rewind Aura',
+      code: 'rewindAura',
+      type: C.OvertimeSpell,
+      tier: C.Advanced,
+      element: C.Nature,
+      resistance: 17,
+      overTime: "Stops the timer of all tokens on BOTH playfields.",
+      onTimeout: "Resets the timer of all tokens on BOTH playfields.",
+      unlockAt: [
+        { hero: C.Jane, level: C.Arena8}
+      ]
     });
   }
 }

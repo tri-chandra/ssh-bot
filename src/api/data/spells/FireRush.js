@@ -4,15 +4,16 @@ import C from '../../models/Constants';
 class FireRush extends Spell {
   constructor(level) {
     super({
-      name: 'FireRush',
-      type: C.damageSpell,
-      tier: C.Basic,
+      name: 'Fire Rush',
+      code: 'fireRush',
+      type: C.OvertimeSpell,
+      tier: C.Advanced,
       element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      resistance: 24,
+      onTimeout: "You get a fury token on your playfield.",
+      unlockAt: [
+        { hero: C.Jane, level: C.Arena4}
+      ]
     });
   }
 }

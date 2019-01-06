@@ -11,7 +11,8 @@ class MassiveHeal extends Spell {
       element: C.Nature,
       heal: 22,
       unlockAt: [
-        { hero: C.Zenron, level: C.Arena1 }
+        { hero: C.Zenron, level: C.Arena1 },
+        { hero: C.Jane, level: C.Arena1 }
       ]
     });
   }

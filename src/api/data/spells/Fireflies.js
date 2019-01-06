@@ -5,14 +5,16 @@ class Fireflies extends Spell {
   constructor(level) {
     super({
       name: 'Fireflies',
+      code: 'fireflies',
       type: C.damageSpell,
-      tier: C.Basic,
+      tier: C.Elite,
       element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      damage: 3,
+      speed: C.Fast,
+      count: 20,
+      unlockAt: [
+        { hero: C.Jane, level: C.Arena7}
+      ]
     });
   }
 }

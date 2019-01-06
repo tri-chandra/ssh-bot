@@ -4,15 +4,17 @@ import C from '../../models/Constants';
 class DragonBreath extends Spell {
   constructor(level) {
     super({
-      name: 'DragonBreath',
+      name: "Dragon's Breath",
+      code: 'dragonsBreath',
       type: C.damageSpell,
-      tier: C.Basic,
+      tier: C.Ultimate,
       element: C.Fire,
-      damage: 20,
+      damage: 43,
       speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      onHit: "Destroys all elements on the opponent's playfield.",
+      unlockAt: [
+        { hero: C.Jane, level: C.Arena1}
+      ]
     });
   }
 }

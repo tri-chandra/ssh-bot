@@ -12,7 +12,8 @@ class Oxidation extends Spell {
       resistance: 19,
       overTime: 'Replaces 4 non-fire mana with 4 fire mana on your playfield.',
       unlockAt: [
-        { hero: C.Zenron, level: C.Arena1}
+        { hero: C.Zenron, level: C.Arena1},
+        { hero: C.Jane, level: C.Arena1}
       ]
     });
   }

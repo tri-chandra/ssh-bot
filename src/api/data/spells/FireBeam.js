@@ -4,15 +4,17 @@ import C from '../../models/Constants';
 class FireBeam extends Spell {
   constructor(level) {
     super({
-      name: 'FireBeam',
-      type: C.damageSpell,
-      tier: C.Basic,
+      name: 'Fire Beam',
+      code: 'fireBeam',
+      type: C.OvertimeSpell,
+      tier: C.Advanced,
       element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      resistance: 9,
+      damage: 9,
+      count: 5,
+      unlockAt: [
+        { hero: C.Jane, level: C.Arena1}
+      ]
     });
   }
 }

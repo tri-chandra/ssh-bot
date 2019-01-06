@@ -4,15 +4,17 @@ import C from '../../models/Constants';
 class ScorpioSting extends Spell {
   constructor(level) {
     super({
-      name: 'ScorpioSting',
+      name: 'Scorpio Sting',
+      code: 'scorpioSting',
       type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      tier: C.Elite,
+      element: C.Nature,
+      breakPower: 43,
+      speed: C.Fast,
+      onHit: "Destroys an element and all connected elements of the same color on the opponent's playfield.",
+      unlockAt: [
+        { hero: C.Jane, level: C.Arena9}
+      ]
     });
   }
 }

@@ -11,7 +11,8 @@ class MassiveShield extends Spell {
       element: C.Nature,
       shield: 54,
       unlockAt: [
-        { hero: C.Zenron, level: C.Arena1 }
+        { hero: C.Zenron, level: C.Arena1 },
+        { hero: C.Jane, level: C.Arena1 }
       ]
     });
   }

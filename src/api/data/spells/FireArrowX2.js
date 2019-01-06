@@ -4,15 +4,19 @@ import C from '../../models/Constants';
 class FireArrowX2 extends Spell {
   constructor(level) {
     super({
-      name: 'FireArrowX2',
+      name: 'Fire Arrow X2',
+      code: 'fireArrowX2',
       type: C.damageSpell,
-      tier: C.Basic,
+      tier: C.Advanced,
       element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      damage: 12,
+      fixedDamage: 50,
+      speed: C.Fast,
+      count: 2,
+      onHit: "Your opponents gets a bleed token that deals %dmg% damage over time.",
+      unlockAt: [
+        { hero: C.Jane, level: C.Arena3}
+      ]
     });
   }
 }

@@ -4,15 +4,17 @@ import C from '../../models/Constants';
 class FireChain extends Spell {
   constructor(level) {
     super({
-      name: 'FireChain',
+      name: 'Fire Chain',
+      code: 'fireChain',
       type: C.damageSpell,
-      tier: C.Basic,
+      tier: C.Elite,
       element: C.Fire,
-      damage: 20,
+      damage: 32,
       speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      onHit: "Destroys one column on the opponent's playfield.",
+      unlockAt: [
+        { hero: C.Jane, level: C.Arena5}
+      ]
     });
   }
 }

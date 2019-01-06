@@ -5,14 +5,15 @@ class Pyroblast extends Spell {
   constructor(level) {
     super({
       name: 'Pyroblast',
+      code: 'pyroblast',
       type: C.damageSpell,
-      tier: C.Basic,
+      tier: C.Advanced,
       element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      damage: 26,
+      speed: C.Fast,
+      unlockAt: [
+        { hero: C.Jane, level: C.Arena1}
+      ]
     });
   }
 }

@@ -5,14 +5,15 @@ class Regeneration extends Spell {
   constructor(level) {
     super({
       name: 'Regeneration',
-      type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      code: 'regeneration',
+      type: C.OvertimeSpell,
+      tier: C.Advanced,
+      element: C.Nature,
+      resistance: 16,
+      overTime: "Destroys 5 negative tokens on your playfield.",
+      unlockAt: [
+        { hero: C.Jane, level: C.Arena3}
+      ]
     });
   }
 }

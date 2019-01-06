@@ -4,15 +4,17 @@ import C from '../../models/Constants';
 class BlazingSpiral extends Spell {
   constructor(level) {
     super({
-      name: 'BlazingSpiral',
+      name: 'Blazing Spiral',
+      code: 'none',
       type: C.damageSpell,
-      tier: C.Basic,
+      tier: C.Elite,
       element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      damage: 12,
+      speed: C.Fast,
+      onCast: "You get another Blazing Spiral spell on your playfield that is one level higher.",
+      unlockAt: [
+        { hero: C.Jane, level: C.Arena3}
+      ]
     });
   }
 }
