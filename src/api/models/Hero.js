@@ -1,7 +1,8 @@
 import Spells from '../data/spells';
 
 class Hero {
-  constructor(name, title, elements, spells) {
+  constructor(code, name, title, elements, spells) {
+    this.code = code;
     this.name = name;
     this.title = title;
     this.elements = elements;
