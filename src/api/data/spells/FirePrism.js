@@ -4,15 +4,16 @@ import C from '../../models/Constants';
 class FirePrism extends Spell {
   constructor(level) {
     super({
-      name: 'FirePrism',
-      type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      name: 'Fire Prism',
+      code: 'firePrism',
+      type: C.OvertimeSpell,
+      tier: C.Advanced,
+      element: C.Light,
+      resistance: 18,
+      overTime: "You get 3 fire mana on your playfield.",
+      unlockAt: [
+        { hero: C.Tierra, level: C.Arena5}
+      ]
     });
   }
 }

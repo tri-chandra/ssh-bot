@@ -1,5 +1,6 @@
 import Spell from '../../models/Spell';
 import C from '../../models/Constants';
+import Token from '../tokens';
 
 class Meditation extends Spell {
   constructor(level) {
@@ -11,6 +12,7 @@ class Meditation extends Spell {
       element: C.Nature,
       heal: 13,
       onCast: "Replaces 2 light or nature mana with chi tokens.",
+      tokens: [Token.Chi],
       unlockAt: [
         { hero: C.Thoben, level: C.Arena8}
       ]

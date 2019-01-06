@@ -1,5 +1,6 @@
 import Spell from '../../models/Spell';
 import C from '../../models/Constants';
+import Token from '../tokens';
 
 class FireArrowX4 extends Spell {
   constructor(level) {
@@ -14,6 +15,7 @@ class FireArrowX4 extends Spell {
       speed: C.Fast,
       count: 4,
       onHit: "Your opponent gets a bleed token that deals %dmg% damage over time.",
+      tokens: [Token.Bleed],
       unlockAt: [
         { hero: C.Jane, level: C.Arena4}
       ]

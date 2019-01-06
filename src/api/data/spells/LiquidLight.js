@@ -4,15 +4,16 @@ import C from '../../models/Constants';
 class LiquidLight extends Spell {
   constructor(level) {
     super({
-      name: 'LiquidLight',
-      type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      name: 'Liquid Light',
+      code: 'liquidLight',
+      type: C.OvertimeSpell,
+      tier: C.Advanced,
+      element: C.Light,
+      resistance: 14,
+      overTime: "Removes 5 non-light elements from your playfield and you get an elite or ultimate light spell with level %lvl% from your spell deck.",
+      unlockAt: [
+        { hero: C.Tierra, level: C.Arena7}
+      ]
     });
   }
 }

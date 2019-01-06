@@ -1,5 +1,6 @@
 import Spell from '../../models/Spell';
 import C from '../../models/Constants';
+import Token from '../tokens';
 
 class PoisonArrow extends Spell {
   constructor(level) {
@@ -13,6 +14,7 @@ class PoisonArrow extends Spell {
       fixedDamage: 250,
       speed: C.Fast,
       onHit: "Deals %dmg% damage for each bleed token on the opponent's playfield.",
+      tokens: [Token.Bleed],
       unlockAt: [
         { hero: C.Jane, level: C.Arena9}
       ]

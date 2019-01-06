@@ -4,15 +4,18 @@ import C from '../../models/Constants';
 class DivineGlint extends Spell {
   constructor(level) {
     super({
-      name: 'DivineGlint',
+      name: 'Divine Glint',
+      code: 'divineGlint',
       type: C.damageSpell,
       tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      element: C.Light,
+      damage: 5,
+      speed: C.Fast,
+      count: 3,
+      onHit: "Charges your spell charge bar by 1.",
+      unlockAt: [
+        { hero: C.Tierra, level: C.Arena5}
+      ]
     });
   }
 }

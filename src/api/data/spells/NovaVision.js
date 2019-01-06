@@ -13,7 +13,8 @@ class NovaVision extends Spell {
       damage: 1000,
       onTimeout: 'You get 2 basic or advanced fire spells with level %lvl% from your spell deck on your playfield.',
       unlockAt: [
-        { hero: C.Zenron, level: C.Arena8}
+        { hero: C.Zenron, level: C.Arena8},
+        { hero: C.Tierra, level: C.Arena7}
       ]
     });
   }

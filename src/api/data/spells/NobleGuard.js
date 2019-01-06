@@ -13,7 +13,8 @@ class NobleGuard extends Spell {
       onBlock: 'You get a light mana on your playfield',
       unlockAt: [
         { hero: C.Ray, level: C.Arena8 },
-        { hero: C.Thoben, level: C.Arena8 }
+        { hero: C.Thoben, level: C.Arena8 },
+        { hero: C.Tierra, level: C.Arena8 }
       ]
     });
   }

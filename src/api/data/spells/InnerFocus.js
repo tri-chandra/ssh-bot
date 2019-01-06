@@ -1,5 +1,6 @@
 import Spell from '../../models/Spell';
 import C from '../../models/Constants';
+import Token from '../tokens';
 
 class InnerFocus extends Spell {
   constructor(level) {
@@ -11,6 +12,7 @@ class InnerFocus extends Spell {
       element: C.Nature,
       resistance: 41,
       onTimeout: "Replaces all light or nature mana with chi tokens.",
+      tokens: [Token.Chi],
       unlockAt: [
         { hero: C.Thoben, level: C.Arena9}
       ]

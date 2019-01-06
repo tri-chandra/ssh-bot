@@ -12,7 +12,8 @@ class LavaMorph extends Spell {
       resistance: 21,
       onTimeout: 'Replaces one element on your playfield with a random fire spell with level %lvl%.',
       unlockAt: [
-        { hero: C.Zenron, level: C.Arena8 }
+        { hero: C.Zenron, level: C.Arena8 },
+        { hero: C.Tierra, level: C.Arena8 }
       ]
     });
   }

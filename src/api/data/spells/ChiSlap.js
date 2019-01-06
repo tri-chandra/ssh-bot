@@ -1,5 +1,6 @@
 import Spell from '../../models/Spell';
 import C from '../../models/Constants';
+import Token from '../tokens';
 
 class ChiSlap extends Spell {
   constructor(level) {
@@ -11,6 +12,7 @@ class ChiSlap extends Spell {
       element: C.Light,
       damage: 14,
       onHit: "Replaces a light or nature mana with a chi token.",
+      tokens: [Token.Chi],
       unlockAt: [
         { hero: C.Thoben, level: C.Arena9}
       ]

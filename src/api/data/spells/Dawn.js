@@ -12,6 +12,7 @@ class Dawn extends Spell {
       heal: 12,
       onCast: 'You get a light mana on your playfield.',
       unlockAt: [
+        { hero: C.Tierra, level: C.Arena1 },
         { hero: C.Ray, level: C.Arena1 },
       ]
     });

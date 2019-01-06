@@ -4,15 +4,18 @@ import C from '../../models/Constants';
 class AdvancedGlassSpears extends Spell {
   constructor(level) {
     super({
-      name: 'AdvancedGlassSpears',
+      name: 'Advanced Glass Spears',
+      code: 'advancedGlassSpears',
       type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      tier: C.Advanced,
+      element: C.Light,
+      damage: 12,
+      speed: C.Fast,
+      count: 2,
+      onHit: "You get a light mana on your playfield.",
+      unlockAt: [
+        { hero: C.Tierra, level: C.Arena5}
+      ]
     });
   }
 }

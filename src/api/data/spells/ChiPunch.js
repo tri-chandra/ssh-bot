@@ -1,5 +1,6 @@
 import Spell from '../../models/Spell';
 import C from '../../models/Constants';
+import Token from '../tokens';
 
 class ChiPunch extends Spell {
   constructor(level) {
@@ -12,6 +13,7 @@ class ChiPunch extends Spell {
       damage: 24,
       speed: C.Fast,
       onHit: "Replaces a light or nature mana with a chi token.",
+      tokens: [Token.Chi],
       unlockAt: [
         { hero: C.Thoben, level: C.Arena6}
       ]

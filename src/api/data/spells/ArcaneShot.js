@@ -4,15 +4,17 @@ import C from '../../models/Constants';
 class ArcaneShot extends Spell {
   constructor(level) {
     super({
-      name: 'ArcaneShot',
+      name: 'Arcane Shot',
+      code: 'arcaneShot',
       type: C.damageSpell,
       tier: C.Basic,
       element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      damage: 9,
+      speed: C.Fast,
+      onCast: "Charges your spell charge bar twice as much.",
+      unlockAt: [
+        { hero: C.Tierra, level: C.Arena3}
+      ]
     });
   }
 }

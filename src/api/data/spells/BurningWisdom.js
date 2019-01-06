@@ -4,15 +4,16 @@ import C from '../../models/Constants';
 class BurningWisdom extends Spell {
   constructor(level) {
     super({
-      name: 'BurningWisdom',
-      type: C.damageSpell,
+      name: 'Burning Wisdom',
+      code: 'burningWisdom',
+      type: C.OvertimeSpell,
       tier: C.Basic,
       element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      resistance: 13,
+      onTimeout: "You get a fire spell with level %lvl% from your spell deck on your playfield.",
+      unlockAt: [
+        { hero: C.Tierra, level: C.Arena8}
+      ]
     });
   }
 }

@@ -1,5 +1,6 @@
 import Spell from '../../models/Spell';
 import C from '../../models/Constants';
+import Token from '../tokens';
 
 class BasicChiBlock extends Spell {
   constructor(level) {
@@ -11,6 +12,7 @@ class BasicChiBlock extends Spell {
       element: C.Nature,
       shield: 21,
       onBlock: "Replaces a light or nature mana with a chi token",
+      tokens: [Token.Chi],
       unlockAt: [
         { hero: C.Thoben, level: C.Arena5}
       ]

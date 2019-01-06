@@ -4,15 +4,17 @@ import C from '../../models/Constants';
 class GlassSpear extends Spell {
   constructor(level) {
     super({
-      name: 'GlassSpear',
+      name: 'Glass Spear',
+      code: 'glassSpear',
       type: C.damageSpell,
       tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      element: C.Light,
+      damage: 12,
+      speed: C.Fast,
+      onHit: "You get a light mana on your playfield.",
+      unlockAt: [
+        { hero: C.Tierra, level: C.Arena5}
+      ]
     });
   }
 }
