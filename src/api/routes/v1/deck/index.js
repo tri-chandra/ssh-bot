@@ -1,6 +1,6 @@
 import Jimp from 'jimp';
 
-import assembleDeckSnap from '../../../../renderer/functions/assembleDeckSnap';
+import DeckController from '../../../controllers/deck.controller';
 
 import Zenron from '../../../models/Zenron';
 import Jane from '../../../models/Jane';
@@ -39,7 +39,7 @@ async function route(discord, tokens) {
   }
 
   if (hero) {
-    const img = await (await assembleDeckSnap(hero, hashcode)).getBufferAsync(Jimp.MIME_PNG);
+    const img = await (await DeckController.getDeck(hero, hashcode)).getBufferAsync(Jimp.MIME_PNG);
     discord.channel.send('', {
       files: [img],
     });
