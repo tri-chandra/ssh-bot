@@ -12,8 +12,9 @@ class AngelicGuard extends Spell {
       shield: 48,
       onBlock: 'You get a light mana on your playfield.',
       unlockAt: [
-        { hero: C.Ray, level: C.Arena1 },
         { hero: C.Thoben, level: C.Arena3 },
+        { hero: C.Tierra, level: C.Arena1 },
+        { hero: C.Ray, level: C.Arena1 },
       ]
     });
   }

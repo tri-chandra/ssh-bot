@@ -13,7 +13,8 @@ class DoubleMagmabomb extends Spell {
       speed: C.Slow,
       count: 2,
       unlockAt: [
-        { hero: C.Zenron, level: C.Arena1 }
+        { hero: C.Zenron, level: C.Arena1 },
+        { hero: C.Tierra, level: C.Arena1 },
       ]
     });
   }

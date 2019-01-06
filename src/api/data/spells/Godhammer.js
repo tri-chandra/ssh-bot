@@ -7,13 +7,15 @@ class Godhammer extends Spell {
       name: 'Godhammer',
       code: 'godhammer',
       type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      tier: C.Elite,
+      element: C.Light,
+      breakPower: 23,
+      speed: C.Fast,
+      target: C.AllPlayers,
+      onHit: "Clears everything on BOTH playfields. Your spell charge bar gets filled for each cleared element.",
+      unlockAt: [
+        { hero: C.Tierra, level: C.Arena9 }
+      ]
     });
   }
 }

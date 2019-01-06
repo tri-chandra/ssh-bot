@@ -1,18 +1,23 @@
 import Spell from '../../models/Spell';
 import C from '../../models/Constants';
+import Token from '../tokens';
 
 class FieryFlare extends Spell {
   constructor(level) {
     super({
-      name: 'FieryFlare',
+      name: 'Fiery Flare',
+      code: 'fieryFlare',
       type: C.damageSpell,
-      tier: C.Basic,
+      tier: C.Elite,
       element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      damage: 28,
+      fixedDamage: 50,
+      speed: C.Fast,
+      onHit: "Your opponent gets 2 fire mark tokens. Each has a 25% chance to deal %dmg% damage if your opponent takes a hit.",
+      tokens: [Token.FireMark],
+      unlockAt: [
+        { hero: C.Tierra, level: C.Arena8 }
+      ]
     });
   }
 }

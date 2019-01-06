@@ -13,7 +13,8 @@ class Magmabomb extends Spell {
       speed: C.Slow,
       unlockAt: [
         { hero: C.Zenron, level: C.Arena1 },
-        { hero: C.Jane, level: C.Arena1 }
+        { hero: C.Jane, level: C.Arena1 },
+        { hero: C.Tierra, level: C.Arena1 },
       ]
     });
   }

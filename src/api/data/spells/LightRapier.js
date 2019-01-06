@@ -4,15 +4,17 @@ import C from '../../models/Constants';
 class LightRapier extends Spell {
   constructor(level) {
     super({
-      name: 'LightRapier',
+      name: 'Light Rapier',
+      code: 'lightRapier',
       type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      tier: C.Elite,
+      element: C.Light,
+      damage: 24,
+      speed: C.Fast,
+      onHit: 'You get another Light Rapier spell on your playfield.',
+      unlockAt: [
+        { hero: C.Tierra, level: C.Arena4 }
+      ]
     });
   }
 }

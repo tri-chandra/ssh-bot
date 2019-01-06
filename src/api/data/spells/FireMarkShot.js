@@ -1,18 +1,22 @@
 import Spell from '../../models/Spell';
 import C from '../../models/Constants';
+import Token from '../tokens';
 
 class FireMarkShot extends Spell {
   constructor(level) {
     super({
-      name: 'FireMarkShot',
+      name: 'Fire Mark Shot',
+      code: 'fireMarkShot',
       type: C.damageSpell,
-      tier: C.Basic,
+      tier: C.Ultimate,
       element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      damage: 32,
+      speed: C.Fast,
+      onCast: "Damage power is x5 if your opponent has more than 2 fire mark tokens on the playfield.",
+      tokens: [Token.FireMark],
+      unlockAt: [
+        { hero: C.Tierra, level: C.Arena9 }
+      ]
     });
   }
 }
