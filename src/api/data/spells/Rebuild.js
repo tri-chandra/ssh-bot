@@ -15,6 +15,7 @@ class Rebuild extends Spell {
       tokens: [Token.Weakness],
       unlockAt: [
         { hero: C.Asgard, level: C.Arena1 },
+        { hero: C.VanRaven, level: C.Arena9 },
       ]
     });
   }

@@ -16,6 +16,7 @@ class Sandstorm extends Spell {
       tokens: [Token.Weakness],
       unlockAt: [
         { hero: C.Asgard, level: C.Arena4 },
+        { hero: C.VanRaven, level: C.Arena5 },
         { hero: C.Ray, level: C.Arena6 },
       ]
     });

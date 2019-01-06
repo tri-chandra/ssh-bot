@@ -1,18 +1,23 @@
 import Spell from '../../models/Spell';
+import Token from '../tokens';
 import C from '../../models/Constants';
 
 class HunterNet extends Spell {
   constructor(level) {
     super({
-      name: 'HunterNet',
+      name: 'Hunter\'s Net',
+      code: 'huntersNet',
       type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      tier: C.Advanced,
+      element: C.Earth,
+      breakPower: 16,
+      speed: C.Slow,
+      onCast: 'You get a weakness token on your playfield.',
+      onHit: 'Your opponent gets a cystal net token.',
+      tokens: [Token.Weakness, Token.CrystalNet],
+      unlockAt: [
+        { hero: C.VanRaven, level: C.Arena6 },
+      ]
     });
   }
 }

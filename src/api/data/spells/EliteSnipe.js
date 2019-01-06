@@ -4,15 +4,18 @@ import C from '../../models/Constants';
 class EliteSnipe extends Spell {
   constructor(level) {
     super({
-      name: 'EliteSnipe',
+      name: 'Elite Snipe',
+      code: 'eliteSnipe',
       type: C.damageSpell,
-      tier: C.Basic,
+      tier: C.Elite,
       element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      breakPower: 10,
+      fixedDamage: 275,
+      speed: C.Fast,
+      onHit: 'Destroys an elite spell on the opponent\'s playfield and then deals %dmg% damage.',
+      unlockAt: [
+        { hero: C.VanRaven, level: C.Arena8 },
+      ]
     });
   }
 }

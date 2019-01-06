@@ -12,9 +12,9 @@ class ArcFire extends Spell {
       damage: 17,
       speed: C.Fast,
       unlockAt: [
-        { hero: C.Zenron, level: C.Arena1},
-        { hero: C.Jane, level: C.Arena1},
-        { hero: C.VanRaven, level: C.Arena1},
+        { hero: C.Zenron, level: C.Arena1 },
+        { hero: C.Jane, level: C.Arena1 },
+        { hero: C.VanRaven, level: C.Arena1 },
       ]
     });
   }

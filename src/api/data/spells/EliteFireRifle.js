@@ -4,15 +4,19 @@ import C from '../../models/Constants';
 class EliteFireRifle extends Spell {
   constructor(level) {
     super({
-      name: 'EliteFireRifle',
+      name: 'Elite Fire Rifle',
+      code: 'eliteFireRifle',
       type: C.damageSpell,
-      tier: C.Basic,
+      tier: C.Elite,
       element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
+      breakPower: 15,
+      fixedDamage: 425,
+      speed: C.Fast,
       count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      onHit: 'Chance to deal %dmg%. Chance is 10% for each connected fire element',
+      unlockAt: [
+        { hero: C.VanRaven, level: C.Arena7 },
+      ]
     });
   }
 }

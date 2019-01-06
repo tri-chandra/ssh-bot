@@ -1,18 +1,24 @@
 import Spell from '../../models/Spell';
+import Token from '../tokens';
 import C from '../../models/Constants';
 
 class HunterTrap extends Spell {
   constructor(level) {
     super({
-      name: 'HunterTrap',
+      name: 'Hunter\'s Trap',
+      code: 'huntersTrap',
       type: C.damageSpell,
       tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
+      element: C.Earth,
+      breakPower: 12,
+      fixedDamage: 200,
       speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      onCast: 'You get a weakness token on your playfield.',
+      onHit: 'Your opponent gets a trap token that deals %dmg% damage if it reaches the bottom row.',
+      tokens: [Token.Weakness, Token.Trap],
+      unlockAt: [
+        { hero: C.VanRaven, level: C.Arena5 },
+      ]
     });
   }
 }

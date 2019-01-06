@@ -4,15 +4,18 @@ import C from '../../models/Constants';
 class TokenSnipe extends Spell {
   constructor(level) {
     super({
-      name: 'TokenSnipe',
+      name: 'Token Snipe',
+      code: 'tokenSnipe',
       type: C.damageSpell,
       tier: C.Basic,
       element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      breakPower: 5,
+      fixedDamage: 100,
+      speed: C.Fast,
+      onHit: 'Destroys a healing spell on the opponent\'s playfield and then deals %dmg% damage.',
+      unlockAt: [
+        { hero: C.VanRaven, level: C.Arena9 },
+      ]
     });
   }
 }

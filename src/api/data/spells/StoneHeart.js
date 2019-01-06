@@ -14,6 +14,7 @@ class StoneHeart extends Spell {
       onCast: 'You get a weakness token on your playfield.',
       tokens: [Token.Weakness],
       unlockAt: [
+        { hero: C.VanRaven, level: C.Arena1 },
         { hero: C.Ray, level: C.Arena7 },
       ]
     });

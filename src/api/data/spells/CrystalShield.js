@@ -15,6 +15,7 @@ class CrystalShield extends Spell {
       tokens: [Token.Weakness],
       unlockAt: [
         { hero: C.Asgard, level: C.Arena6 },
+        { hero: C.VanRaven, level: C.Arena6 },
         { hero: C.Ray, level: C.Arena6 },
       ]
     });
