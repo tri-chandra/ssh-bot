@@ -80,6 +80,7 @@ export default {
     spell.count && fields.push({ name: ':slot_machine: Count', value: spell.count, inline: true });
     spell.speed && fields.push({ name: ':zap: Speed', value: spell.speed, inline: true });    
     spell.target === C.AllPlayers && fields.push({ name: 'Target', value: 'All Players', inline: true });
+    spell.target === C.RandomPlayers && fields.push({ name: 'Target', value: 'Random Player', inline: true });
 
     spell.type === C.OvertimeSpell && fields.push({ name: 'Type', value: ':arrows_counterclockwise: Over Time' });
     spell.onCast && fields.push({ name: 'On Cast', value: scaleDescription(spell.onCast, level, spell) });

@@ -48,6 +48,7 @@ export default {
   Self: 'self',
   Enemy: 'enemy',
   AllPlayers: 'allPlayers',
+  RandomPlayer: 'randomPlayer',
 
   Arena1: 'one',
   Arena2: 'two',
