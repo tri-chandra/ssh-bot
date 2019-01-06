@@ -4,15 +4,19 @@ import C from '../../models/Constants';
 class FireStorm extends Spell {
   constructor(level) {
     super({
-      name: 'FireStorm',
+      name: 'Fire Storm',
+      code: 'fireStorm',
       type: C.damageSpell,
-      tier: C.Basic,
+      tier: C.Advanced,
       element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      damage: 27,
+      speed: C.Instant,
+      target: C.AllPlayers,
+      onHit: 'Destroys 2 tokens on BOTH playfields.',
+      unlockAt: [
+        { hero: C.Myris, level: C.Arena6 },
+        { hero: C.VanRaven, level: C.Arena7 },
+      ]
     });
   }
 }

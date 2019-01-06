@@ -4,15 +4,16 @@ import C from '../../models/Constants';
 class ToxicShield extends Spell {
   constructor(level) {
     super({
-      name: 'ToxicShield',
-      type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      name: 'Toxic Shield',
+      code: 'toxicShield',
+      type: C.OvertimeSpell,
+      tier: C.Ultimate,
+      element: C.Nature,
+      shield: 60,
+      onBlock: 'Fires a damage projectile at your opponent that deals damage in the amount you have blocked.',
+      unlockAt: [
+        { hero: C.Myris, level: C.Arena1 },
+      ]
     });
   }
 }

@@ -4,15 +4,16 @@ import C from '../../models/Constants';
 class UltimateFirePhoenix extends Spell {
   constructor(level) {
     super({
-      name: 'UltimateFirePhoenix',
+      name: 'Ultimate Fire Phoenix',
+      code: 'ultimateFirePhoenix',
       type: C.damageSpell,
-      tier: C.Basic,
+      tier: C.Advanced,
       element: C.Fire,
-      damage: 20,
+      damage: 68,
       speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      unlockAt: [
+        { hero: C.Jane, level: C.Arena5 }
+      ]
     });
   }
 }

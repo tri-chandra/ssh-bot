@@ -13,7 +13,8 @@ class FireChain extends Spell {
       speed: C.Normal,
       onHit: "Destroys one column on the opponent's playfield.",
       unlockAt: [
-        { hero: C.Jane, level: C.Arena5}
+        { hero: C.Jane, level: C.Arena5 },
+        { hero: C.Myris, level: C.Arena1 },
       ]
     });
   }

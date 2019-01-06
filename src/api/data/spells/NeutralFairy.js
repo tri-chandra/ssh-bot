@@ -12,7 +12,8 @@ class NeutralFairy extends Spell {
       heal: 45,
       target: C.Random,
       unlockAt: [
-        { hero: C.Thoben, level: C.Arena4}
+        { hero: C.Thoben, level: C.Arena4 },
+        { hero: C.Myris, level: C.Arena7 },
       ]
     });
   }

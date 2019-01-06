@@ -4,15 +4,18 @@ import C from '../../models/Constants';
 class SnakeSummon extends Spell {
   constructor(level) {
     super({
-      name: 'SnakeSummon',
-      type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      name: 'Snake Summon',
+      code: 'snakeSummon',
+      type: C.OvertimeSpell,
+      tier: C.Ultimate,
+      element: C.Nature,
+      resistance: 30,
+      breakPower: 29,
+      fixedDamage: 1000,
+      onTimeout: 'Summons a snake that attacks your opponent and deals %dmg%.',
+      unlockAt: [
+        { hero: C.Myris, level: C.Arena5 },
+      ]
     });
   }
 }

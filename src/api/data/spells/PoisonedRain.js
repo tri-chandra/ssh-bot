@@ -1,18 +1,23 @@
 import Spell from '../../models/Spell';
+import Token from '../tokens';
 import C from '../../models/Constants';
 
 class PoisonedRain extends Spell {
   constructor(level) {
     super({
-      name: 'PoisonedRain',
-      type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      name: 'Poisoned Rain',
+      code: 'poisonedRain',
+      type: C.OvertimeSpell,
+      tier: C.Ultimate,
+      element: C.Nature,
+      resistance: 58,
+      fixedDamage: 1000,
+      onTimeout: 'BOTH players get a poison token that deals %dmg% damage.',
+      target: C.AllPlayers,
+      tokens: [Token.Poison],
+      unlockAt: [
+        { hero: C.Myris, level: C.Arena9 },
+      ]
     });
   }
 }

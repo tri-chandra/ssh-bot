@@ -1,18 +1,23 @@
 import Spell from '../../models/Spell';
+import Token from '../tokens';
 import C from '../../models/Constants';
 
 class Explosion extends Spell {
   constructor(level) {
     super({
       name: 'Explosion',
+      code: 'explosion',
       type: C.damageSpell,
-      tier: C.Basic,
+      tier: C.Ultimate,
       element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      damage: 85,
+      speed: C.Instant,
+      target: C.AllPlayers,
+      onHit: 'Fills BOTH playfields with bleed tokens.',
+      tokens: [Token.Bleed],
+      unlockAt: [
+        { hero: C.Myris, level: C.Arena7},
+      ]
     });
   }
 }

@@ -12,7 +12,8 @@ class Firelance extends Spell {
       damage: 30,
       speed: C.Normal,
       unlockAt: [
-        { hero: C.Zenron, level: C.Arena1}
+        { hero: C.Zenron, level: C.Arena1 },
+        { hero: C.Myris, level: C.Arena1 },
       ]
     });
   }

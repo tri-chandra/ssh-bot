@@ -13,7 +13,8 @@ class Extinguish extends Spell {
       onCast: "Destorys a token on your playfield if extinguish is connected to at least 2 elements.",
       unlockAt: [
         { hero: C.Jane, level: C.Arena6},
-        { hero: C.Thoben, level: C.Arena4}
+        { hero: C.Thoben, level: C.Arena4},
+        { hero: C.Thoben, level: C.Arena9},
       ]
     });
   }

@@ -14,7 +14,8 @@ class Absorbtion extends Spell {
       count: 3,
       overTime: "Converts 3 nature elements to energy.",
       unlockAt: [
-        { hero: C.Thoben, level: C.Arena3}
+        { hero: C.Thoben, level: C.Arena3 },
+        { hero: C.Myris, level: C.Arena9 },
       ]
     });
   }

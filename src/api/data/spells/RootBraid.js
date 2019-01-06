@@ -12,7 +12,8 @@ class RootBraid extends Spell {
       shield: 36,
       onblock: 'Only blocks one attack.',
       unlockAt: [
-        { hero: C.Zenron, level: C.Arena3}
+        { hero: C.Zenron, level: C.Arena3},
+        { hero: C.Myris, level: C.Arena6},
       ]
     });
   }

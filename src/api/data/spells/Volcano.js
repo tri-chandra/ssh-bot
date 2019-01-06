@@ -12,7 +12,8 @@ class Volcano extends Spell {
       resistance: 23,
       overTime: 'You get 12 fire mana at random positions on your playfield. Existing elements are replaced.',
       unlockAt: [
-        { hero: C.Zenron, level: C.Arena3 }
+        { hero: C.Zenron, level: C.Arena3 },
+        { hero: C.Myris, level: C.Arena5 },
       ]
     });
   }

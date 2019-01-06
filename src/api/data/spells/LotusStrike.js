@@ -1,18 +1,22 @@
 import Spell from '../../models/Spell';
+import Token from '../tokens';
 import C from '../../models/Constants';
 
 class LotusStrike extends Spell {
   constructor(level) {
     super({
-      name: 'LotusStrike',
+      name: 'Lotus Strike',
+      code: 'lotusStrike',
       type: C.damageSpell,
       tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      element: C.Nature,
+      breakPower: 15,
+      speed: C.Fast,
+      onHit: 'Your opponent gets a sickness token.',
+      tokens: [Token.Sickness],
+      unlockAt: [
+        { hero: C.Myris, level: C.Arena7},
+      ]
     });
   }
 }

@@ -5,14 +5,15 @@ class Naturalize extends Spell {
   constructor(level) {
     super({
       name: 'Naturalize',
-      type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      code: 'naturalize',
+      type: C.OvertimeSpell,
+      tier: C.Advanced,
+      element: C.Nature,
+      resistance: 19,
+      overTime: 'Replaces 4 non-nature mana with 4 nature mana on your playfields.',
+      unlockAt: [
+        { hero: C.Myris, level: C.Arena6 },
+      ]
     });
   }
 }

@@ -4,15 +4,18 @@ import C from '../../models/Constants';
 class BurningBoomerang extends Spell {
   constructor(level) {
     super({
-      name: 'BurningBoomerang',
+      name: 'Burning Boomerang',
+      code: 'burningBoomerang',
       type: C.damageSpell,
       tier: C.Basic,
       element: C.Fire,
-      damage: 20,
+      damage: 12,
       speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      onBlock: 'You get the Burning Boomerang spell back on your playfield.',
+      unlockAt: [
+        { hero: C.Tierra, level: C.Arena6},
+        { hero: C.Myris, level: C.Arena4},
+      ]
     });
   }
 }

@@ -14,6 +14,7 @@ class FireFlash extends Spell {
       onHit: "If it breaks a spell another Fire Flash spell is fired.",
       unlockAt: [
         { hero: C.Jane, level: C.Arena7},
+        { hero: C.Myris, level: C.Arena5},
       ]
     });
   }

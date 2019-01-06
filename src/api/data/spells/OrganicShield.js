@@ -4,15 +4,16 @@ import C from '../../models/Constants';
 class OrganicShield extends Spell {
   constructor(level) {
     super({
-      name: 'OrganicShield',
-      type: C.damageSpell,
+      name: 'Organic Shield',
+      code: 'organicShield',
+      type: C.OvertimeSpell,
       tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      element: C.Nature,
+      shield: 15,
+      onTimeout: 'You get another Organic Shield spell on your playfield.',
+      unlockAt: [
+        { hero: C.Myris, level: C.Arena5},
+      ]
     });
   }
 }

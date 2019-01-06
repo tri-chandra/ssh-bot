@@ -13,7 +13,8 @@ class FireRam extends Spell {
       speed: C.Normal,
       onHit: "Destroys shield spell on the opponent's playfield.",
       unlockAt: [
-        { hero: C.Jane, level: C.Arena1}
+        { hero: C.Jane, level: C.Arena1},
+        { hero: C.Myris, level: C.Arena4},
       ]
     });
   }

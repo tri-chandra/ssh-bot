@@ -4,15 +4,17 @@ import C from '../../models/Constants';
 class EliteFirePhoenix extends Spell {
   constructor(level) {
     super({
-      name: 'EliteFirePhoenix',
+      name: 'Elite Fire Phoenix',
+      code: 'eliteFirePhoenix',
       type: C.damageSpell,
-      tier: C.Basic,
+      tier: C.Advanced,
       element: C.Fire,
-      damage: 20,
+      damage: 14,
       speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      onHit: "You get an Ultimate Fire Phoenix on your playfield.",
+      unlockAt: [
+        { hero: C.Jane, level: C.Arena5}
+      ]
     });
   }
 }

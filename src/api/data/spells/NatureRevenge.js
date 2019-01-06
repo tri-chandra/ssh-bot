@@ -14,7 +14,8 @@ class NatureRevenge extends Spell {
       speed: C.Fast,
       onHit: 'Deals as much damage as you have lost from the last hit, but no more than %dmg%',
       unlockAt: [
-        { hero: C.Zenron, level: C.Arena4 }
+        { hero: C.Zenron, level: C.Arena4 },
+        { hero: C.Myris, level: C.Arena6 },
       ]
     });
   }

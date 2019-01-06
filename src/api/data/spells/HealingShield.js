@@ -12,7 +12,8 @@ class HealingShield extends Spell {
       shield: 46,
       onBlock: 'Restores your energy in the amount you have blocked.',
       unlockAt: [
-        { hero: C.Zenron, level: C.Arena9 }
+        { hero: C.Zenron, level: C.Arena9 },
+        { hero: C.Myris, level: C.Arena4 },
       ]
     });
   }

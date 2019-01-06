@@ -14,7 +14,8 @@ class HealingSpring extends Spell {
       count: 10,
       overTime: 'Restores some of your energy.',
       unlockAt: [
-        { hero: C.Zenron, level: C.Arena5 }
+        { hero: C.Zenron, level: C.Arena5 },
+        { hero: C.Myris, level: C.Arena5 },
       ]
     });
   }

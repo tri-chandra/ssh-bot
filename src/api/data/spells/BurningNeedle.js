@@ -14,6 +14,7 @@ class BurningNeedle extends Spell {
       onHit: "Breaks the opponent's shield.",
       unlockAt: [
         { hero: C.Jane, level: C.Arena8},
+        { hero: C.Myris, level: C.Arena8},
       ]
     });
   }

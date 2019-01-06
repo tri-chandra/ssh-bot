@@ -4,15 +4,16 @@ import C from '../../models/Constants';
 class CounterBlaze extends Spell {
   constructor(level) {
     super({
-      name: 'CounterBlaze',
+      name: 'Counter Blaze',
+      code: 'counterBlaze',
       type: C.damageSpell,
-      tier: C.Basic,
+      tier: C.Advanced,
       element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      damage: 16,
+      onHit: 'Destroys the most recent dropped spell on the opponent\'s playfield.',
+      unlockAt: [
+        { hero: C.Myris, level: C.Arena4},
+      ]
     });
   }
 }
