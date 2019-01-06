@@ -12,7 +12,7 @@ class HeatUp extends Spell {
       element: C.Fire,
       resistance: 14,
       fixedDamage: 15,
-      onTimeout: "You get a heat token on your playfield that increases the power of a fire spell by %dmg%.",
+      onTimeout: 'You get a heat token on your playfield that increases the power of a fire spell by %dmg%.',
       tokens: [Token.Heat],
       unlockAt: [
         { hero: C.Jane, level: C.Arena6}

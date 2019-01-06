@@ -10,7 +10,7 @@ class LifeCocoon extends Spell {
       tier: C.Basic,
       element: C.Nature,
       heal: 9,
-      onCast: "Increases your max energy if you are fully healed.",
+      onCast: 'Increases your max energy if you are fully healed.',
       unlockAt: [
         { hero: C.Thoben, level: C.Arena3}
       ]

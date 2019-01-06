@@ -10,7 +10,7 @@ class Purify extends Spell {
       tier: C.Advanced,
       element: C.Light,
       resistance: 19,
-      overTime: "Replaces 4 non-light mana with light mana on your playfield.",
+      overTime: 'Replaces 4 non-light mana with light mana on your playfield.',
       unlockAt: [
         { hero: C.Tierra, level: C.Arena6},
         { hero: C.Lua, level: C.Arena8},

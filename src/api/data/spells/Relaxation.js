@@ -11,7 +11,7 @@ class Relaxation extends Spell {
       tier: C.Basic,
       element: C.Nature,
       heal: 8,
-      onCast: "Replaces a light or nature mana with a Chi token.",
+      onCast: 'Replaces a light or nature mana with a Chi token.',
       tokens: [Token.Chi],
       unlockAt: [
         { hero: C.Thoben, level: C.Arena7}

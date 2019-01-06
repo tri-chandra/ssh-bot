@@ -10,8 +10,9 @@ class FirePhoenix extends Spell {
       tier: C.Advanced,
       element: C.Fire,
       damage: 9,
+      fixedDamage: 14,
       speed: C.Normal,
-      onHit: "You get an Elite Fire Phoenix on your playfield.\n(On Hit Elite Fire Phoenix) You get an Ultimate Fire Phoenix on your playfield.",
+      onHit: "You get an Elite Fire Phoenix with power %dmg% on your playfield.",
       unlockAt: [
         { hero: C.Jane, level: C.Arena5}
       ]

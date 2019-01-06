@@ -11,7 +11,7 @@ class ZenPulse extends Spell {
       element: C.Nature,
       resistance: 29,
       fixedDamage: 1000,
-      overTime: "Sets the energy of your opponent to 1 but reduces it no more than by %dmg%.",
+      overTime: 'Sets the energy of your opponent to 1 but reduces it no more than by %dmg%.',
       unlockAt: [
         { hero: C.Thoben, level: C.Arena9}
       ]

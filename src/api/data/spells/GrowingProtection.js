@@ -10,7 +10,7 @@ class GrowingProtection extends Spell {
       tier: C.Elite,
       element: C.Nature,
       shield: 9,
-      overTime: "Shield power increases by x10 over time.",
+      overTime: 'Shield power increases by x10 over time.',
       unlockAt: [
         { hero: C.Lua, level: C.Arena8 }
       ]

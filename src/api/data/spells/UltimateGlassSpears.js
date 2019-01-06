@@ -12,7 +12,7 @@ class UltimateGlassSpears extends Spell {
       damage: 12,
       speed: C.Fast,
       count: 6,
-      onHit: "You get a light mana on your playfield.",
+      onHit: 'You get a light mana on your playfield.',
       unlockAt: [
         { hero: C.Tierra, level: C.Arena6 }
       ]

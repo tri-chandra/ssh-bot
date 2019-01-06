@@ -13,7 +13,7 @@ class PoisonArrow extends Spell {
       breakPower: 13,
       fixedDamage: 250,
       speed: C.Fast,
-      onHit: "Deals %dmg% damage for each bleed token on the opponent's playfield.",
+      onHit: 'Deals %dmg% damage for each bleed token on the opponent\'s playfield.',
       tokens: [Token.Bleed],
       unlockAt: [
         { hero: C.Jane, level: C.Arena9}

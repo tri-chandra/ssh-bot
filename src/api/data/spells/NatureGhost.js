@@ -10,7 +10,7 @@ class NatureGhost extends Spell {
       tier: C.Basic,
       element: C.Nature,
       heal: 6,
-      onCast: "You get a nature mana on your playfield.",
+      onCast: 'You get a nature mana on your playfield.',
       unlockAt: [
         { hero: C.Thoben, level: C.Arena8},
         { hero: C.Myris, level: C.Arena8},

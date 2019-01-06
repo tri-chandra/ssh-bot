@@ -10,8 +10,8 @@ class LightUp extends Spell {
       tier: C.Basic,
       element: C.Light,
       resistance: 9,
-      onBreak: "Depletes your spell charge bar.",
-      onTimeout: "Fills your spell charge bar and unlocks the next spell category.",
+      onBreak: 'Depletes your spell charge bar.',
+      onTimeout: 'Fills your spell charge bar and unlocks the next spell category.',
       unlockAt: [
         { hero: C.Thoben, level: C.Arena5}
       ]

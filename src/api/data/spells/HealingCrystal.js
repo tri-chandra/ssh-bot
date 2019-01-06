@@ -11,8 +11,9 @@ class HealingCrystal extends Spell {
       tier: C.Elite,
       element: C.Earth,
       resistance: 35,
+      fixedDamage: 350,
       onCast: 'You get a weakness token on your playfield',
-      onTimeout: 'Restore 50% of your already lost energy, but no more than 350',
+      onTimeout: 'Restore 50% of your already lost energy, but no more than %dmg%.',
       tokens: [Token.Weakness],
       unlockAt: [
         { hero: C.Ray, level: C.Arena9},

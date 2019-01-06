@@ -11,7 +11,7 @@ class InnerFocus extends Spell {
       tier: C.Elite,
       element: C.Nature,
       resistance: 41,
-      onTimeout: "Replaces all light or nature mana with chi tokens.",
+      onTimeout: 'Replaces all light or nature mana with chi tokens.',
       tokens: [Token.Chi],
       unlockAt: [
         { hero: C.Thoben, level: C.Arena9}

@@ -13,7 +13,7 @@ class Pierce extends Spell {
       speed: C.Normal,
       count: 2,
       fixedDamage: 100,
-      onHit: "10% chance of deal %dmg% damage to your opponent",
+      onHit: '10% chance of deal %dmg% damage to your opponent.',
       unlockAt: [
         { hero: C.Jane, level: C.Arena3}
       ]

@@ -12,7 +12,7 @@ class EliteGlassSpears extends Spell {
       damage: 12,
       speed: C.Fast,
       count: 4,
-      onHit: "You get a light mana on your playfield.",
+      onHit: 'You get a light mana on your playfield.',
       unlockAt: [
         { hero: C.Tierra, level: C.Arena7 }
       ]

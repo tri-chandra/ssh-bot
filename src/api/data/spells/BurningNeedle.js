@@ -11,7 +11,7 @@ class BurningNeedle extends Spell {
       element: C.Fire,
       damage: 12,
       speed: C.Fast,
-      onHit: "Breaks the opponent's shield.",
+      onHit: 'Breaks the opponent\'s shield.',
       unlockAt: [
         { hero: C.Jane, level: C.Arena8 },
         { hero: C.Myris, level: C.Arena8 },

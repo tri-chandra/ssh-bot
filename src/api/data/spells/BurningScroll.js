@@ -10,7 +10,7 @@ class BurningScroll extends Spell {
       tier: C.Basic,
       element: C.Fire,
       resistance: 13,
-      overTime: "Clones 2 fire spells from your playfield. Cloned spells have level %lvl%",
+      overTime: 'Clones 2 fire spells from your playfield. Cloned spells have level %lvl%.',
       unlockAt: [
         { hero: C.Tierra, level: C.Arena9}
       ]

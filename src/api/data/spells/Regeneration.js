@@ -10,7 +10,7 @@ class Regeneration extends Spell {
       tier: C.Advanced,
       element: C.Nature,
       resistance: 16,
-      overTime: "Destroys 5 negative tokens on your playfield.",
+      overTime: 'Destroys 5 negative tokens on your playfield.',
       unlockAt: [
         { hero: C.Jane, level: C.Arena3 },
         { hero: C.Thoben, level: C.Arena4 },

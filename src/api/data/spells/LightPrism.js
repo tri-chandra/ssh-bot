@@ -10,7 +10,7 @@ class LightPrism extends Spell {
       tier: C.Advanced,
       element: C.Light,
       resistance: 18,
-      overTime: "You get 3 light mana on your playfield.",
+      overTime: 'You get 3 light mana on your playfield.',
       unlockAt: [
         { hero: C.Tierra, level: C.Arena7}
       ]

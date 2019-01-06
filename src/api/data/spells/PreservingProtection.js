@@ -10,7 +10,7 @@ class PreservingProtection extends Spell {
       tier: C.Basic,
       element: C.Nature,
       shield: 20,
-      onBlock: "Restores your energy in the amount you have blocked.",
+      onBlock: 'Restores your energy in the amount you have blocked.',
       unlockAt: [
         { hero: C.Lua, level: C.Arena7 }
       ]

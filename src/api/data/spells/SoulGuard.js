@@ -10,7 +10,7 @@ class SoulGuard extends Spell {
       tier: C.Advanced,
       element: C.Light,
       shield: 23,
-      onBlock: "You get a random attack spell with level %lvl% from your spell deck on your playfield.",
+      onBlock: 'You get a random attack spell with level %lvl% from your spell deck on your playfield.',
       unlockAt: [
         { hero: C.Thoben, level: C.Arena4}
       ]

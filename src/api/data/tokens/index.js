@@ -3,7 +3,7 @@ import Token from './Token';
 export default {
   Bleed: new Token(
     'Bleed token',
-    'Deals %dmg% damage over time. Efffecct happens when the token is on the playfield',
+    'Deals %dmg% damage over time. Effect happens when the token is on the playfield',
     50,
   ),
   Blindness: new Token(
@@ -28,17 +28,17 @@ export default {
   ),
   FireMark: new Token(
     'Fire Mark token',
-    'If the owner takes damage the token timer is reset and there is a 25% chance that the owner takes %dmg% damage. Efffecct happens when the token is on the playfield',
+    'If the owner takes damage the token timer is reset and there is a 25% chance that the owner takes %dmg% damage. Effect happens when the token is on the playfield',
     50,
   ),
   Fury: new Token(
     'Fury token',
-    'Removes the cast time of a spell. Token timer is reset is a fire spell is cast. Efffecct happens when the token is on the playfield',
+    'Removes the cast time of a spell. Token timer is reset is a fire spell is cast. Effect happens when the token is on the playfield',
     0,
   ),
   Ghost: new Token(
     'Ghost token',
-    'If another ghost token is adjacent the tokentimer stops. Effect happens when the token is on the playfield',
+    'If another ghost token is adjacent the token timer stops. Effect happens when the token is on the playfield',
     0,
   ),
   Heat: new Token(
@@ -48,7 +48,7 @@ export default {
   ),
   Immortality: new Token(
     'Immortality token',
-    'Protects from dying. Token timer starts if the player\'s energy is down to zero. Effects happens when the token is on the playfield',
+    'Protects from dying. Token timer starts if the player\'s energy is down to zero. Effect happens when the token is on the playfield',
     0,
   ),
   Instability: new Token(

@@ -11,7 +11,7 @@ class SpiritualCleansing extends Spell {
       element: C.Light,
       heal: 14,
       resistance: 14,
-      overTime: "Converts 3 tokens to engergy.",
+      overTime: 'Converts 3 tokens to engergy.',
       unlockAt: [
         { hero: C.Lua, level: C.Arena9 }
       ]

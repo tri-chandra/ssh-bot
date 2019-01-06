@@ -13,7 +13,7 @@ class GhostWhisper extends Spell {
       fixedDamage: 45,
       breakPower: 20,
       speed: C.Normal,
-      onHit: "Deals %dmg% damage for each ghost token on the opponent's playfield and your opponent gets a ghost token.",
+      onHit: 'Deals %dmg% damage for each ghost token on the opponent\'s playfield and your opponent gets a ghost token.',
       tokens: [Token.Ghost],
       unlockAt: [
         { hero: C.Lua, level: C.Arena7 }

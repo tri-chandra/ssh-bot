@@ -10,7 +10,7 @@ class LiquidLight extends Spell {
       tier: C.Advanced,
       element: C.Light,
       resistance: 14,
-      overTime: "Removes 5 non-light elements from your playfield and you get an elite or ultimate light spell with level %lvl% from your spell deck.",
+      overTime: 'Removes 5 non-light elements from your playfield and you get an elite or ultimate light spell with level %lvl% from your spell deck.',
       unlockAt: [
         { hero: C.Tierra, level: C.Arena7}
       ]

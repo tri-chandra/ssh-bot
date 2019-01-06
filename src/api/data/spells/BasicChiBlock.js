@@ -11,7 +11,7 @@ class BasicChiBlock extends Spell {
       tier: C.Basic,
       element: C.Nature,
       shield: 21,
-      onBlock: "Replaces a light or nature mana with a chi token",
+      onBlock: "Replaces a light or nature mana with a chi token.",
       tokens: [Token.Chi],
       unlockAt: [
         { hero: C.Thoben, level: C.Arena5}

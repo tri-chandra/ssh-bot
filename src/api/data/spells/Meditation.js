@@ -11,7 +11,7 @@ class Meditation extends Spell {
       tier: C.Advanced,
       element: C.Nature,
       heal: 13,
-      onCast: "Replaces 2 light or nature mana with chi tokens.",
+      onCast: 'Replaces 2 light or nature mana with chi tokens.',
       tokens: [Token.Chi],
       unlockAt: [
         { hero: C.Thoben, level: C.Arena8}

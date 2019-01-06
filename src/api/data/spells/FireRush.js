@@ -11,7 +11,7 @@ class FireRush extends Spell {
       tier: C.Advanced,
       element: C.Fire,
       resistance: 24,
-      onTimeout: "You get a fury token on your playfield.",
+      onTimeout: 'You get a fury token on your playfield.',
       tokens: [Token.Fury],
       unlockAt: [
         { hero: C.Jane, level: C.Arena4}

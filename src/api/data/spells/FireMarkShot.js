@@ -12,7 +12,7 @@ class FireMarkShot extends Spell {
       element: C.Fire,
       damage: 32,
       speed: C.Fast,
-      onCast: "Damage power is x5 if your opponent has more than 2 fire mark tokens on the playfield.",
+      onCast: 'Damage power is x5 if your opponent has more than 2 fire mark tokens on the playfield.',
       tokens: [Token.FireMark],
       unlockAt: [
         { hero: C.Tierra, level: C.Arena9 }

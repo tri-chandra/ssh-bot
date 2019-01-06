@@ -10,7 +10,7 @@ class ProtectionRitual extends Spell {
       tier: C.Advanced,
       element: C.Nature,
       shield: 96,
-      onCast: "You lose 50% of your remaining engergy.",
+      onCast: 'You lose 50% of your remaining energy.',
       unlockAt: [
         { hero: C.Lua, level: C.Arena9 }
       ]

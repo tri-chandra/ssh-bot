@@ -10,7 +10,7 @@ class Sunbath extends Spell {
       tier: C.Advanced,
       element: C.Light,
       resistance: 21,
-      overTime: "Replaces 3 non-light spells with random light spells with level %lvl% on your playfield.",
+      overTime: 'Replaces 3 non-light spells with random light spells with level %lvl% on your playfield.',
       unlockAt: [
         { hero: C.Thoben, level: C.Arena5}
       ]

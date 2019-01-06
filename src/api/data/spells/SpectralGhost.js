@@ -11,7 +11,7 @@ class SpectralGhost extends Spell {
       element: C.Light,
       damage: 11,
       speed: C.Fast,
-      onHit: "You get the Spectral Ghost spell back on your playfield.",
+      onHit: 'You get the Spectral Ghost spell back on your playfield.',
       unlockAt: [
         { hero: C.Tierra, level: C.Arena4}
       ]

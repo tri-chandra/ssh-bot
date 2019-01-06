@@ -10,7 +10,7 @@ class NaturePrism extends Spell {
       tier: C.Advanced,
       element: C.Light,
       resistance: 18,
-      overTime: "You get 3 nature mana on your playfield.",
+      overTime: 'You get 3 nature mana on your playfield.',
       unlockAt: [
         { hero: C.Thoben, level: C.Arena6}
       ]

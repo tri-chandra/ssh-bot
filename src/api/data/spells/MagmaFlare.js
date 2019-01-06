@@ -13,7 +13,7 @@ class MagmaFlare extends Spell {
       damage: 8,
       fixedDamage: 50,
       speed: C.Fast,
-      onHit: "Your opponent gets a fire mark token. It has a 25% chance to deal %dmg% if your opponent takes a hit.",
+      onHit: 'Your opponent gets a fire mark token. It has a 25% chance to deal %dmg% if your opponent takes a hit.',
       tokens: [Token.FireMark],
       unlockAt: [
         { hero: C.Tierra, level: C.Arena8}

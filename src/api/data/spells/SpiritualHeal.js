@@ -12,7 +12,7 @@ class SpiritualHeal extends Spell {
       element: C.Light,
       heal: 5,
       fixedDamage: 3,
-      onCast: "You get a spirit token with a strength of %dmg% on your playfield.",
+      onCast: 'You get a spirit token with a strength of %dmg% on your playfield.',
       tokens: [Token.Spirit],
       unlockAt: [
         { hero: C.Lua, level: C.Arena9 }

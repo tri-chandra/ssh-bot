@@ -11,7 +11,7 @@ class FireFlash extends Spell {
       element: C.Fire,
       damage: 13,
       speed: C.Normal,
-      onHit: "If it breaks a spell another Fire Flash spell is fired.",
+      onHit: 'If it breaks a spell another Fire Flash spell is fired.',
       unlockAt: [
         { hero: C.Jane, level: C.Arena7 },
         { hero: C.Myris, level: C.Arena5 },

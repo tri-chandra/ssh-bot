@@ -11,7 +11,7 @@ class SpiritualCircle extends Spell {
       tier: C.Basic,
       element: C.Light,
       resistance: 12,
-      overTime: "You get 2 spirit tokens with a strenght of %dmg% on your playfield.",
+      overTime: 'You get 2 spirit tokens with a strenght of %dmg% on your playfield.',
       tokens: [Token.Spirit],
       unlockAt: [
         { hero: C.Lua, level: C.Arena9 }

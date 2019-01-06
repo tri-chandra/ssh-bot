@@ -11,7 +11,7 @@ class ParalysingDart extends Spell {
       element: C.Nature,
       breakPower: 17,
       speed: C.Fast,
-      onHit: "Destorys a basic or advanced attack spell on the opponent's playfield.",
+      onHit: 'Destorys a basic or advanced attack spell on the opponent\'s playfield.',
       unlockAt:[
        { hero: C.Jane, level: C.Arena1 },
        { hero: C.Asgard, level: C.Arena8 }

@@ -10,7 +10,7 @@ class SunGuard extends Spell {
       tier: C.Ultimate,
       element: C.Light,
       shield: 75,
-      onBlock: "You get a random ultimate spell with level %lvl% on your playfield. returns the first blocked spell to the opponent's playfield.",
+      onBlock: 'You get a random ultimate spell with level %lvl% on your playfield. returns the first blocked spell to the opponent\'s playfield.',
       unlockAt: [
         { hero: C.Thoben, level: C.Arena4}
       ]

@@ -12,7 +12,7 @@ class ChiPunch extends Spell {
       element: C.Light,
       damage: 24,
       speed: C.Fast,
-      onHit: "Replaces a light or nature mana with a chi token.",
+      onHit: 'Replaces a light or nature mana with a chi token.',
       tokens: [Token.Chi],
       unlockAt: [
         { hero: C.Thoben, level: C.Arena6}

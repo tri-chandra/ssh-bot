@@ -13,7 +13,7 @@ class FieryFlare extends Spell {
       damage: 28,
       fixedDamage: 50,
       speed: C.Fast,
-      onHit: "Your opponent gets 2 fire mark tokens. Each has a 25% chance to deal %dmg% damage if your opponent takes a hit.",
+      onHit: 'Your opponent gets 2 fire mark tokens. Each has a 25% chance to deal %dmg% damage if your opponent takes a hit.',
       tokens: [Token.FireMark],
       unlockAt: [
         { hero: C.Tierra, level: C.Arena8 }

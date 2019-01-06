@@ -10,7 +10,7 @@ class SoulLink extends Spell {
       tier: C.Advanced,
       element: C.Light,
       resistance: 25,
-      overTime: "All damage you take while the Soul Link spell is active is dealt twice to your opponent.",
+      overTime: 'All damage you take while the Soul Link spell is active is dealt twice to your opponent.',
       unlockAt: [
         { hero: C.Thoben, level: C.Arena3}
       ]

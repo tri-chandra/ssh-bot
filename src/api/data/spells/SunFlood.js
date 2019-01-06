@@ -11,7 +11,7 @@ class SunFlood extends Spell {
       element: C.Light,
       damage: 37,
       speed: C.Fast,
-      onHit: "You get another Sun Flood spell on your playfield.",
+      onHit: 'You get another Sun Flood spell on your playfield.',
       unlockAt: [
         { hero: C.Tierra, level: C.Arena4 }
       ]

@@ -10,7 +10,8 @@ class HealingGraze extends Spell {
       tier: C.Basic,
       element: C.Nature,
       heal: 7,
-      onCast: "Heal power is x10 if your energy is below 100.",
+      fixedDamage: 100,
+      onCast: 'Heal power is x10 if your energy is below %dmg%.',
       unlockAt: [
         { hero: C.Lua, level: C.Arena8 }
       ]

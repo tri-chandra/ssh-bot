@@ -12,7 +12,7 @@ class BlindingFlash extends Spell {
       element: C.Light,
       damage: 12,
       speed: C.Fast,
-      onHit: 'You opponent gets a Blinding token.',
+      onHit: 'Your opponent gets a Blinding token.',
       tokens: [Token.Blindness],
       unlockAt: [
         { hero: C.Ray, level: C.Arena6 },

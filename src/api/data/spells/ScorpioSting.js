@@ -11,7 +11,7 @@ class ScorpioSting extends Spell {
       element: C.Nature,
       breakPower: 43,
       speed: C.Fast,
-      onHit: "Destroys an element and all connected elements of the same color on the opponent's playfield.",
+      onHit: 'Destroys an element and all connected elements of the same color on the opponent\'s playfield.',
       unlockAt: [
         { hero: C.Jane, level: C.Arena9 },
         { hero: C.Asgard, level: C.Arena9 },
