@@ -5,7 +5,8 @@ import C from '../../models/Constants';
 class EarthForce extends Spell {
   constructor(level) {
     super({
-      name: 'EarthForce',
+      name: 'Earth Force',
+      code: 'earthForce',
       type: C.OvertimeSpell,
       tier: C.Advanced,
       element: C.Earth,
