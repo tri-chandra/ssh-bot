@@ -2,24 +2,24 @@ import Spell from '../../models/Spell';
 import Token from '../tokens';
 import C from '../../models/Constants';
 
-class Stoning extends Spell {
+class Sandstorm extends Spell {
   constructor(level) {
     super({
-      name: 'Stoning',
-      code: 'stoning',
-      type: C.damageSpell,
+      name: 'Sandstorm',
+      code: 'sandstorm',
+      type: C.OvertimeSpell,
       tier: C.Advanced,
       element: C.Earth,
-      damage: 23,
-      speed: C.Normal,
+      resistance: 23,
       onCast: 'You get a weakness token on your playfield.',
-      onHit: 'You opponent gets a stunned token.',
-      tokens: [Token.Weakness, Token.Stunned],
+      overTime: 'Replaces 5 non-earth mana with 5 earth mana on your playfield.',
+      tokens: [Token.Weakness],
       unlockAt: [
         { hero: C.Asgard, level: C.Arena4 },
+        { hero: C.Ray, level: C.Arena6 },
       ]
     });
   }
 }
 
-export default Stoning;
+export default Sandstorm;
