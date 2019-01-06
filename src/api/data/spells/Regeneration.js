@@ -15,6 +15,7 @@ class Regeneration extends Spell {
         { hero: C.Jane, level: C.Arena3 },
         { hero: C.Thoben, level: C.Arena4 },
         { hero: C.Myris, level: C.Arena7 },
+        { hero: C.Asgard, level: C.Arena5 },
       ]
     });
   }

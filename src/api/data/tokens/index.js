@@ -76,6 +76,11 @@ export default {
     'Increases the power of all spells by +%dmg% for each adjacent other spirit token. Effect happens when the token is on the playfield',
     3,
   ),
+  Strength: new Token(
+    'Strength token',
+    'Doubles the power of an earth spell. Needs to be matched with an earth spell to activate its effect.',
+    0
+  ),
   Stunned: new Token(
     'Stunned token',
     'Makes casting spells painfully slow. Effect happens when the token is on the playfield',

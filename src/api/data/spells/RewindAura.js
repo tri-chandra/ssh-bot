@@ -13,7 +13,8 @@ class RewindAura extends Spell {
       overTime: "Stops the timer of all tokens on BOTH playfields.",
       onTimeout: "Resets the timer of all tokens on BOTH playfields.",
       unlockAt: [
-        { hero: C.Jane, level: C.Arena8}
+        { hero: C.Jane, level: C.Arena8 },
+        { hero: C.Asgard, level: C.Arena9 },
       ]
     });
   }

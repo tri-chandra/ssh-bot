@@ -15,6 +15,7 @@ class MassiveShield extends Spell {
         { hero: C.Jane, level: C.Arena1 },
         { hero: C.Thoben, level: C.Arena1 },
         { hero: C.Myris, level: C.Arena1 },
+        { hero: C.Asgard, level: C.Arena1 },
       ]
     });
   }

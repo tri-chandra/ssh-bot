@@ -1,18 +1,22 @@
 import Spell from '../../models/Spell';
+import Token from '../tokens';
 import C from '../../models/Constants';
 
 class TerraRavage extends Spell {
   constructor(level) {
     super({
-      name: 'TerraRavage',
+      name: 'Terra Ravage',
+      code: 'terraRavage',
       type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      tier: C.Elite,
+      element: C.Earth,
+      damage: 65,
+      speed: C.Slow,
+      onCast: 'You get a weakness token on your playfield.',
+      tokens: [Token.Weakness],
+      unlockAt: [
+        { hero: C.Asgard, level: C.Arena1 },
+      ]
     });
   }
 }

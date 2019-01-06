@@ -4,15 +4,17 @@ import C from '../../models/Constants';
 class EntanglingVines extends Spell {
   constructor(level) {
     super({
-      name: 'EntanglingVines',
+      name: 'Entangling Vines',
+      code: 'entanglingVines',
       type: C.damageSpell,
       tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      element: C.Nature,
+      breakPower: 10,
+      speed: C.Slow,
+      onHit: 'Depletes your opponent\'s spell charge bar.',
+      unlockAt: [
+        { hero: C.Asgard, level: C.Arena5 },
+      ]
     });
   }
 }

@@ -4,15 +4,17 @@ import C from '../../models/Constants';
 class HealingRitual extends Spell {
   constructor(level) {
     super({
-      name: 'HealingRitual',
-      type: C.damageSpell,
+      name: 'Healing Ritual',
+      code: 'healingRitual',
+      type: C.OvertimeSpell,
       tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      element: C.Nature,
+      resistance: 18,
+      fixedDamage: 500,
+      onTimeout: 'Restores as much of your energy as you have lost from the last hit, but no more than %dmg%.',
+      unlockAt: [
+        { hero: C.Asgard, level: C.Arena1 },
+      ]
     });
   }
 }

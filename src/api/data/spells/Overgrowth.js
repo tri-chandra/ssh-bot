@@ -5,14 +5,15 @@ class Overgrowth extends Spell {
   constructor(level) {
     super({
       name: 'Overgrowth',
-      type: C.damageSpell,
+      code: 'overgrowth',
+      type: C.OvertimeSpell,
       tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      element: C.Nature,
+      resistance: 15,
+      onTimeout: 'Replaces 2 tokens on your playfield with nature mana.',
+      unlockAt: [
+        { hero: C.Asgard, level: C.Arena6 },
+      ]
     });
   }
 }

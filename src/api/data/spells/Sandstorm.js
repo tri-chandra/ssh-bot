@@ -15,6 +15,7 @@ class Sandstorm extends Spell {
       overTime: 'Replaces 5 non-earth mana with 5 earth mana on your playfield.',
       tokens: [Token.Weakness],
       unlockAt: [
+        { hero: C.Asgard, level: C.Arena4 },
         { hero: C.Ray, level: C.Arena6 },
       ]
     });

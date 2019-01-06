@@ -135,7 +135,7 @@ import NatureRevenge from './NatureRevenge';
 import NeutralFairy from './NeutralFairy';
 import NobleGuard from './NobleGuard';
 import NovaVision from './NovaVision';
-import Oblivioncloud from './Oblivioncloud';
+import OblivionCloud from './OblivionCloud';
 import ObsidianCrush from './ObsidianCrush';
 import OrbOfLight from './OrbOfLight';
 import OrganicShield from './OrganicShield';
@@ -467,7 +467,7 @@ const asgard = {
   [`${C.Asgard}:${C.Ultimate}:earthbreaker`]: new Earthbreaker(),
   [`${C.Asgard}:${C.Ultimate}:corrosion`]: new Corrosion(),
   [`${C.Asgard}:${C.Ultimate}:eruption`]: new Eruption(),
-  [`${C.Asgard}:${C.Ultimate}:oblivionCloud`]: new Oblivioncloud(),
+  [`${C.Asgard}:${C.Ultimate}:oblivionCloud`]: new OblivionCloud(),
 };
 
 const vanRaven = {

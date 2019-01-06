@@ -1,18 +1,22 @@
 import Spell from '../../models/Spell';
+import Token from '../tokens';
 import C from '../../models/Constants';
 
 class RootPoison extends Spell {
   constructor(level) {
     super({
-      name: 'RootPoison',
+      name: 'Root Poison',
+      code: 'rootPoison',
       type: C.damageSpell,
       tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
+      element: C.Nature,
+      breakPower: 13,
       speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      onHit: 'Your opponent gets an instability token.',
+      tokens: [Token.Instability],
+      unlockAt: [
+        { hero: C.Asgard, level: C.Arena8 },
+      ]
     });
   }
 }
