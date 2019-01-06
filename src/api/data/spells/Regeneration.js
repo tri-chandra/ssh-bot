@@ -14,7 +14,7 @@ class Regeneration extends Spell {
       unlockAt: [
         { hero: C.Jane, level: C.Arena3 },
         { hero: C.Thoben, level: C.Arena4 },
-        { hero: C.Thoben, level: C.Arena7 },
+        { hero: C.Myris, level: C.Arena7 },
       ]
     });
   }

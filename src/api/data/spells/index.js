@@ -597,11 +597,11 @@ const lua = {
 };
 
 export default {
+  ...myris,
   ...zenron,
   ...jane,
   ...thoben,
-  ...tierra,
-  ...myris,
+  ...tierra,  
   ...asgard,
   ...vanRaven,
   ...ray,

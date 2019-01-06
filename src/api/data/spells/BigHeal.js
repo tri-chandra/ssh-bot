@@ -9,7 +9,7 @@ class BigHeal extends Spell {
       type: C.HealSpell,
       tier: C.Advanced,
       element: C.Nature,
-      damage: 15,
+      heal: 15,
       unlockAt: [
         { hero: C.Zenron, level: C.Arena1},
         { hero: C.Jane, level: C.Arena1},

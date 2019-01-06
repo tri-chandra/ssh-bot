@@ -11,9 +11,9 @@ class Enlightment extends Spell {
       element: C.Light,
       heal: 6,
       onCast: "You get a light mana on your playfield.",
-      unlockAt: [
-        { hero: C.Ray, level: C.Arena6 },
+      unlockAt: [        
         { hero: C.Thoben, level: C.Arena7 },
+        { hero: C.Ray, level: C.Arena6 },
       ]
     });
   }

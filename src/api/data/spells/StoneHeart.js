@@ -6,7 +6,7 @@ class StoneHeart extends Spell {
   constructor(level) {
     super({
       name: 'Stone Heart',
-      name: 'stoneHeart',
+      code: 'stoneHeart',
       type: C.HealSpell,
       tier: C.Advanced,
       element: C.Earth,
