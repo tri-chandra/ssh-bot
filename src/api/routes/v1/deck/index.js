@@ -1,6 +1,7 @@
+import Jimp from 'jimp';
+
 import assembleDeckSnap from '../../../../renderer/functions/assembleDeckSnap';
 
-import Jimp from 'jimp';
 import Zenron from '../../../models/Zenron';
 import Jane from '../../../models/Jane';
 import Thoben from '../../../models/Thoben';
@@ -14,7 +15,7 @@ import Asgard from '../../../models/Asgard';
 async function route(discord, tokens) {
   if (!tokens) return;
 
-  const [command, ...rest] = tokens;
+  const [command, hashcode, ...rest] = tokens;
 
   let hero;
   if (['zenron'].includes(command)) {
@@ -38,7 +39,7 @@ async function route(discord, tokens) {
   }
 
   if (hero) {
-    const img = await (await assembleDeckSnap(hero, '', rest.join(' '))).getBufferAsync(Jimp.MIME_PNG);
+    const img = await (await assembleDeckSnap(hero, hashcode)).getBufferAsync(Jimp.MIME_PNG);
     discord.channel.send('', {
       files: [img],
     });

@@ -6,7 +6,7 @@ class Sandstorm extends Spell {
   constructor(level) {
     super({
       name: 'Sandstorm',
-      name: 'sandstorm',
+      code: 'sandstorm',
       type: C.OvertimeSpell,
       tier: C.Advanced,
       element: C.Earth,

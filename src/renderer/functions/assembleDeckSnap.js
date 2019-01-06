@@ -34,12 +34,24 @@ export default async function run(hero, deckHash) {
   const heroImgPath = `./src/renderer/output/images/heroes/deck-background/${hero.code}.png`;
   const bg = await Jimp.read(heroImgPath);
 
-  const [basic1, basic2, basic3] = hero.spells.basic.map(s => s.sprite);
-  const [adv1, adv2, adv3] = hero.spells.advanced.map(s => s.sprite);
-  const [elite1, elite2] = hero.spells.elite.map(s => s.sprite);
-  const [, , ult1] = hero.spells.ultimate.map(s => s.sprite);
+  const basics = hero.spells.basic.map(s => s.sprite);
+  const advs = hero.spells.advanced.map(s => s.sprite);
+  const elites = hero.spells.elite.map(s => s.sprite);
+  const ults = hero.spells.ultimate.map(s => s.sprite);
 
-  const result = await appendSpells(bg, [basic1, basic2, basic3, adv1, adv2, adv3, elite1, elite2, ult1], 1);
+  const spells = [
+    basics[deckHash.charCodeAt(0) - 97],
+    basics[deckHash.charCodeAt(1) - 97],
+    basics[deckHash.charCodeAt(2) - 97],
+    advs[deckHash.charCodeAt(3) - 97],
+    advs[deckHash.charCodeAt(4) - 97],
+    advs[deckHash.charCodeAt(5) - 97],
+    elites[deckHash.charCodeAt(6) - 97],
+    elites[deckHash.charCodeAt(7) - 97],
+    ults[deckHash.charCodeAt(8) - 97],
+  ];
+
+  const result = await appendSpells(bg, spells, 1);
   // result = await appendSpells(result, [adv1, adv2, adv3], 2);
   // result = await appendSpells(result, [elite1, elite2], 3);
   // result = await appendSpells(result, [ult1], 4);
