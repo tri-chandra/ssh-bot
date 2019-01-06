@@ -4,15 +4,16 @@ import C from '../../models/Constants';
 class HealingGraze extends Spell {
   constructor(level) {
     super({
-      name: 'HealingGraze',
-      type: C.damageSpell,
+      name: 'Healing Graze',
+      code: 'healingGraze',
+      type: C.HealSpell,
       tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      element: C.Nature,
+      heal: 7,
+      onCast: "Heal power is x10 if your energy is below 100.",
+      unlockAt: [
+        { hero: C.Lua, level: C.Arena8 }
+      ]
     });
   }
 }

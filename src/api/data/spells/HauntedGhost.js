@@ -1,18 +1,23 @@
 import Spell from '../../models/Spell';
 import C from '../../models/Constants';
+import Token from '../tokens';
 
 class HauntedGhost extends Spell {
   constructor(level) {
     super({
-      name: 'HauntedGhost',
+      name: 'Haunted Ghost',
+      code: 'hauntedGhost',
       type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
+      tier: C.Ultimate,
+      element: C.Light,
+      breakPower: 68,
+      fixedDamage: 350,
       speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      onHit: "Deals %dmg% damage for each ghost token on the opponent's playfield and your opponent gets a ghost token.",
+      tokens: [Token.Spirit],
+      unlockAt: [
+        { hero: C.Lua, level: C.Arena7 }
+      ]
     });
   }
 }

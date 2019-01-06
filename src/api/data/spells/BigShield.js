@@ -16,6 +16,7 @@ class BigShield extends Spell {
         { hero: C.Thoben, level: C.Arena1 },
         { hero: C.Myris, level: C.Arena1 },
         { hero: C.Asgard, level: C.Arena1 },
+        { hero: C.Lua, level: C.Arena1 },
       ]
     });
   }

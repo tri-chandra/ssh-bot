@@ -16,6 +16,7 @@ class Extinguish extends Spell {
         { hero: C.Thoben, level: C.Arena4 },
         { hero: C.Myris, level: C.Arena9 },
         { hero: C.Asgard, level: C.Arena4 },
+        { hero: C.Lua, level: C.Arena7 },
       ]
     });
   }

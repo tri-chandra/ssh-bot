@@ -1,19 +1,22 @@
 import Spell from '../../models/Spell';
 import C from '../../models/Constants';
+import Token from '../tokens';
 
 class SpiritualTouch extends Spell {
   constructor(level) {
     super({
       name: 'Spiritual Touch',
-      name: 'spiritualtouch',
-      type: C.damageSpell,
+      code: 'spiritualtouch',
+      type: C.Damagespell,
       tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
+      element: C.Light,
+      breakPower: 15,
       speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      onHit: "Removes a mana from the opponent's playfield and you get a spirit token with a strength of %dmg% on your playfield.",
+      tokens: [Token.Spirit],
+      unlockAt: [
+        { hero: C.Lua, level: C.Arena9 }
+      ]
     });
   }
 }

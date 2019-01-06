@@ -4,15 +4,17 @@ import C from '../../models/Constants';
 class SpiritualCleansing extends Spell {
   constructor(level) {
     super({
-      name: 'SpiritualCleansing',
-      type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      name: 'Spiritual Cleansing',
+      code: 'spiritualCleansing',
+      type: C.HealSpell,
+      tier: C.Advanced,
+      element: C.Light,
+      heal: 14,
+      resistance: 14,
+      overTime: "Converts 3 tokens to engergy.",
+      unlockAt: [
+        { hero: C.Lua, level: C.Arena9 }
+      ]
     });
   }
 }

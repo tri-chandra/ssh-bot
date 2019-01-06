@@ -4,15 +4,17 @@ import C from '../../models/Constants';
 class SpiritualUnleash extends Spell {
   constructor(level) {
     super({
-      name: 'SpiritualUnleash',
+      name: 'Spiritual Unleash',
+      code: 'spiritualUnleash',
       type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      tier: C.Ultimate,
+      element: C.Light,
+      damage: 1,
+      speed: C.Fast,
+      onHit: "Fires a damage projectile for each token on your playfield. Each successive attack doubles the damange.",
+      unlockAt: [
+        { hero: C.Lua, level: C.Arena9 }
+      ]
     });
   }
 }

@@ -16,6 +16,7 @@ class Absorbtion extends Spell {
       unlockAt: [
         { hero: C.Thoben, level: C.Arena3 },
         { hero: C.Myris, level: C.Arena9 },
+        { hero: C.Lua, level: C.Arena7 },
       ]
     });
   }

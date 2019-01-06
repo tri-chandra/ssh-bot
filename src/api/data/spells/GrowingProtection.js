@@ -4,15 +4,16 @@ import C from '../../models/Constants';
 class GrowingProtection extends Spell {
   constructor(level) {
     super({
-      name: 'GrowingProtection',
-      type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      name: 'Growing Protection',
+      code: 'growingProtection',
+      type: C.OvertimeSpell,
+      tier: C.Elite,
+      element: C.Nature,
+      shield: 9,
+      overTime: "Shield power increases by x10 over time.",
+      unlockAt: [
+        { hero: C.Lua, level: C.Arena8 }
+      ]
     });
   }
 }

@@ -1,18 +1,21 @@
 import Spell from '../../models/Spell';
 import C from '../../models/Constants';
+import Token from '../tokens';
 
 class SpiritualCircle extends Spell {
   constructor(level) {
     super({
-      name: 'SpiritualCircle',
-      type: C.damageSpell,
+      name: 'Spiritual Circle',
+      code: 'spiritualCircle',
+      type: C.OvertimeSpell,
       tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      element: C.Light,
+      resistance: 12,
+      overTime: "You get 2 spirit tokens with a strenght of %dmg% on your playfield.",
+      tokens: [Token.Spirit],
+      unlockAt: [
+        { hero: C.Lua, level: C.Arena9 }
+      ]
     });
   }
 }

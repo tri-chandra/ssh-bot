@@ -1,18 +1,23 @@
 import Spell from '../../models/Spell';
 import C from '../../models/Constants';
+import Token from '../tokens';
 
 class CursedRitual extends Spell {
   constructor(level) {
     super({
-      name: 'CursedRitual',
-      type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      name: 'Cursed Ritual',
+      code: 'cursedRitual',
+      type: C.OvertimeSpell,
+      tier: C.Ultimate,
+      element: C.Nature,
+      resistance: 65,
+      fixedDamage: 500,
+      onCast: "Both players get an immortallity token.",
+      overTime: "Both players lose %dmg% engery.",
+      tokens: [Token.Immortality],
+      unlockAt: [
+        { hero: C.Lua, level: C.Arena8 }
+      ]
     });
   }
 }

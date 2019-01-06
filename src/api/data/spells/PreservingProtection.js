@@ -4,15 +4,16 @@ import C from '../../models/Constants';
 class PreservingProtection extends Spell {
   constructor(level) {
     super({
-      name: 'PreservingProtection',
-      type: C.damageSpell,
+      name: 'Preserving Protection',
+      code: 'preservingProtection',
+      type: C.OvertimeSpell,
       tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      element: C.Nature,
+      shield: 20,
+      onBlock: "Restores your energy in the amount you have blocked.",
+      unlockAt: [
+        { hero: C.Lua, level: C.Arena7 }
+      ]
     });
   }
 }

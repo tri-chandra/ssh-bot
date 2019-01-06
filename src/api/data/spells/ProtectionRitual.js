@@ -4,15 +4,16 @@ import C from '../../models/Constants';
 class ProtectionRitual extends Spell {
   constructor(level) {
     super({
-      name: 'ProtectionRitual',
-      type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      name: 'Protection Ritual',
+      code: 'protectionRitual',
+      type: C.OvertimeSpell,
+      tier: C.Advanced,
+      element: C.Nature,
+      shield: 96,
+      onCast: "You lose 50% of your remaining engergy.",
+      unlockAt: [
+        { hero: C.Lua, level: C.Arena9 }
+      ]
     });
   }
 }

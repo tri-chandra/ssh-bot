@@ -14,6 +14,7 @@ class Dawn extends Spell {
       unlockAt: [
         { hero: C.Tierra, level: C.Arena1 },
         { hero: C.Ray, level: C.Arena1 },
+        { hero: C.Lua, level: C.Arena8 },
       ]
     });
   }

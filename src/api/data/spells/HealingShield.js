@@ -14,6 +14,7 @@ class HealingShield extends Spell {
       unlockAt: [
         { hero: C.Zenron, level: C.Arena9 },
         { hero: C.Myris, level: C.Arena4 },
+        { hero: C.Lua, level: C.Arena9 },
       ]
     });
   }

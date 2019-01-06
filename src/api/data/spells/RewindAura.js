@@ -15,6 +15,7 @@ class RewindAura extends Spell {
       unlockAt: [
         { hero: C.Jane, level: C.Arena8 },
         { hero: C.Asgard, level: C.Arena9 },
+        { hero: C.Lua, level: C.Arena7 },
       ]
     });
   }

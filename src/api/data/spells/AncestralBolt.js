@@ -4,15 +4,17 @@ import C from '../../models/Constants';
 class AncestralBolt extends Spell {
   constructor(level) {
     super({
-      name: 'AncestralBolt',
+      name: 'Ancestral Bolt',
+      code: 'ancestralBolt',
       type: C.damageSpell,
       tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      element: C.Light,
+      damage: 10,
+      speed: C.Fast,
+      onHit: "Removes a mana from the opponent's playfield and you get a light mana on your playfield.",
+      unlockAt: [
+        { hero: C.Lua, level: C.Arena1 }
+      ]
     });
   }
 }

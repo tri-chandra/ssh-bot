@@ -12,7 +12,8 @@ class Relief extends Spell {
       heal: 11,
       onCast: 'Destroys a negative token on your playfield.',
       unlockAt: [
-        { hero: C.Zenron, level: C.Arena3 }
+        { hero: C.Zenron, level: C.Arena3 },
+        { hero: C.Lua, level: C.Arena8 }
       ]
     });
   }

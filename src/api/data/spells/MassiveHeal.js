@@ -12,7 +12,8 @@ class MassiveHeal extends Spell {
       heal: 22,
       unlockAt: [
         { hero: C.Zenron, level: C.Arena1 },
-        { hero: C.Jane, level: C.Arena1 }
+        { hero: C.Jane, level: C.Arena1 },
+        { hero: C.Lua, level: C.Arena8 }
       ]
     });
   }

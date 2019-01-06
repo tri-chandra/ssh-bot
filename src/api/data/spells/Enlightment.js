@@ -15,6 +15,7 @@ class Enlightment extends Spell {
         { hero: C.Thoben, level: C.Arena7 },
         { hero: C.Tierra, level: C.Arena5 },
         { hero: C.Ray, level: C.Arena6 },
+        { hero: C.Lua, level: C.Arena8 },
       ]
     });
   }

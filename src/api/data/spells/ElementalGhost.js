@@ -1,18 +1,23 @@
 import Spell from '../../models/Spell';
 import C from '../../models/Constants';
+import Token from '../tokens';
 
 class ElementalGhost extends Spell {
   constructor(level) {
     super({
-      name: 'ElementalGhost',
-      type: C.damageSpell,
-      tier: C.Basic,
-      element: C.Fire,
-      damage: 20,
+      name: 'Elemental Ghost',
+      code: 'elementalGhost',
+      type: C.Damagespell,
+      tier: C.Elite,
+      element: C.Light,
+      breakPower: 44,
+      fixedDamage: 200,
       speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      onHit: "Deals %dmg% damage for each ghost token on the opponent's playfield and your opponent gets a ghost token.",
+      tokens: [Token.Spirit],
+      unlockAt: [
+        { hero: C.Lua, level: C.Arena7 }
+      ]
     });
   }
 }
