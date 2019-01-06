@@ -12,8 +12,9 @@ class Pyroblast extends Spell {
       damage: 26,
       speed: C.Fast,
       unlockAt: [
-        { hero: C.Jane, level: C.Arena1},
-        { hero: C.Tierra, level: C.Arena3}, 
+        { hero: C.Jane, level: C.Arena1 },
+        { hero: C.Tierra, level: C.Arena3 }, 
+        { hero: C.VanRaven, level: C.Arena1 }, 
       ]
     });
   }

@@ -15,6 +15,7 @@ class MagneticShield extends Spell {
       onBreak: 'You get a stunned token on your playfield.',
       tokens: [Token.Weakness, Token.Stunned],
       unlockAt: [
+        { hero: C.VanRaven, level: C.Arena7 },
         { hero: C.Ray, level: C.Arena7 },
       ]
     });

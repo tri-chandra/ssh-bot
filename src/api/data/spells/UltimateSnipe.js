@@ -4,15 +4,18 @@ import C from '../../models/Constants';
 class UltimateSnipe extends Spell {
   constructor(level) {
     super({
-      name: 'UltimateSnipe',
+      name: 'Ultimate Snipe',
+      code: 'ultimateSnipe',
       type: C.damageSpell,
-      tier: C.Basic,
+      tier: C.Ultimate,
       element: C.Fire,
-      damage: 20,
-      speed: C.Normal,
-      count: 1,
-      target: C.Enemy,
-      unlockAt: C.Arena1
+      breakPower: 15,
+      fixedDamage: 500,
+      speed: C.Fast,
+      onHit: 'Destroys an ultimate spell on the opponent\'s playfield and then deals %dmg% damage.',
+      unlockAt: [
+        { hero: C.VanRaven, level: C.Arena8 },
+      ]
     });
   }
 }

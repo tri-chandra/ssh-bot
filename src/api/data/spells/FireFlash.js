@@ -13,8 +13,9 @@ class FireFlash extends Spell {
       speed: C.Normal,
       onHit: "If it breaks a spell another Fire Flash spell is fired.",
       unlockAt: [
-        { hero: C.Jane, level: C.Arena7},
-        { hero: C.Myris, level: C.Arena5},
+        { hero: C.Jane, level: C.Arena7 },
+        { hero: C.Myris, level: C.Arena5 },
+        { hero: C.VanRaven, level: C.Arena8 },
       ]
     });
   }

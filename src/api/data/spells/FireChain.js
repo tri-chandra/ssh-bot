@@ -15,6 +15,7 @@ class FireChain extends Spell {
       unlockAt: [
         { hero: C.Jane, level: C.Arena5 },
         { hero: C.Myris, level: C.Arena1 },
+        { hero: C.VanRaven, level: C.Arena9 },
       ]
     });
   }

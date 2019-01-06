@@ -12,7 +12,8 @@ class FireMeteor extends Spell {
       damage: 78,
       speed: C.Slow,
       unlockAt: [
-        { hero: C.Zenron, level: C.Arena1 }
+        { hero: C.Zenron, level: C.Arena1 },
+        { hero: C.VanRaven, level: C.Arena1 },
       ]
     });
   }

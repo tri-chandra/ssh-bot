@@ -17,6 +17,7 @@ class TitanPunch extends Spell {
       tokens: [Token.Weakness],
       unlockAt: [
         { hero: C.Asgard, level: C.Arena4 },
+        { hero: C.VanRaven, level: C.Arena8 },
       ]
     });
   }
