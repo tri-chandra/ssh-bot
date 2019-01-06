@@ -5,7 +5,7 @@ class BlazingSpiral extends Spell {
   constructor(level) {
     super({
       name: 'Blazing Spiral',
-      code: 'none',
+      code: 'blazingSpiral',
       type: C.damageSpell,
       tier: C.Elite,
       element: C.Fire,
