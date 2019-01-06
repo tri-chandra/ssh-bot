@@ -5,7 +5,7 @@ import C from './Constants';
 class Asgard extends Hero {
   constructor() {
     super(
-      'Asgard', 'the Golem',
+      'asgard', 'Asgard', 'the Golem',
       [C.Nature, C.Earth], 
       new SpellSet(
         Hero.spellMapper(C.Asgard, C.Basic),

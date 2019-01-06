@@ -12,6 +12,7 @@ const spellsImgOutputDir = `${imgOutputDir}spells/`;
 
 import resizeSpell from './renderer/tasks/resizeSpells';
 import cropHeroPortrait from './renderer/tasks/cropHeroPortrait';
+import renderDeckBackground from './renderer/tasks/renderDeckBackground';
 
 function runner(message, task, params) {
   console.info(message);
@@ -50,3 +51,16 @@ function runner(message, task, params) {
   runner('.. cropping Lua', cropHeroPortrait, [`${heroesImgDir}lua/lua`, `${heroesImgOutputDir}portrait/lua.png`]);
 })();
 
+(function renderBg() {
+  console.info('\n\nRender deck backgrounds\n');
+
+  runner('.. render background of Zenron', renderDeckBackground, ['zenron', 'Zenron', `${heroesImgDir}zenron/zenron`, `${heroesImgOutputDir}deck-background/zenron.png`])
+  runner('.. render background of Jane', renderDeckBackground, ['jane', 'Jane', `${heroesImgDir}jane/jane`, `${heroesImgOutputDir}deck-background/jane.png`])
+  runner('.. render background of Thoben', renderDeckBackground, ['thoben', 'Thoben', `${heroesImgDir}thoben/thoben`, `${heroesImgOutputDir}deck-background/thoben.png`])
+  runner('.. render background of Tierra', renderDeckBackground, ['tierra', 'Tierra', `${heroesImgDir}tierra/tierra`, `${heroesImgOutputDir}deck-background/tierra.png`])
+  runner('.. render background of Myris', renderDeckBackground, ['myris', 'Myris', `${heroesImgDir}myris/myris`, `${heroesImgOutputDir}deck-background/myris.png`])
+  runner('.. render background of Van Raven', renderDeckBackground, ['vanraven', 'Van Raven', `${heroesImgDir}vanraven/vanraven`, `${heroesImgOutputDir}deck-background/vanraven.png`])
+  runner('.. render background of Asgard', renderDeckBackground, ['asgard', 'Asgard', `${heroesImgDir}asgard/asgard`, `${heroesImgOutputDir}deck-background/asgard.png`])
+  runner('.. render background of Ray', renderDeckBackground, ['ray', 'Ray', `${heroesImgDir}ray/ray`, `${heroesImgOutputDir}deck-background/ray.png`])
+  runner('.. render background of Lua', renderDeckBackground, ['lua', 'Lua', `${heroesImgDir}lua/lua`, `${heroesImgOutputDir}deck-background/lua.png`])
+})();

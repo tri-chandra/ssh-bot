@@ -5,7 +5,7 @@ import C from './Constants';
 class Zenron extends Hero {
   constructor() {
     super(
-      'Zenron', 'The Sorcerer',
+      'zenron', 'Zenron', 'The Sorcerer',
       [C.Fire, C.Nature], 
       new SpellSet(
         Hero.spellMapper(C.Zenron, C.Basic),
