@@ -18,7 +18,11 @@ function unlockToString(objs, discord) {
 function scaleToLevel(n, level) {
   let total = n;
   for (let i = 1; i < level && i < levelCap; i = i + 1) {
-    total *= upgradeMultiplier;
+    if (total === Math.round(total*upgradeMultiplier)) {
+      total += 1;
+    } else {
+      total *= upgradeMultiplier;
+    }    
   }
 
   return Math.round(total).toLocaleString('en-US', { useGrouping: true });;
