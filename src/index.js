@@ -8,22 +8,28 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-  const content = msg.content.toLowerCase();
-  const userId = msg.author.id;
-  const tokens = content.toLocaleLowerCase().substring(1).split(/[\s]+/);
+  try {
+    const content = msg.content.toLowerCase();
+    const userId = msg.author.id;
+    const tokens = content.toLocaleLowerCase().substring(1).split(/[\s]+/);
 
-  if (content.charAt(0) !== prefix) return;
-  // if (userId !== owner) {
-  //   msg.reply('Sorry, only the owner can play with the bot :innocent:');
+    if (content.charAt(0) !== prefix) return;
+    // if (userId !== owner) {
+    //   msg.reply('Sorry, only the owner can play with the bot :innocent:');
 
-  //   return;
-  // }
+    //   return;
+    // }
 
-  router.route(msg, tokens);
+    router.route(msg, tokens);
 
-  // if (msg.content === 'ping') {
-  //   msg.reply('pong');
-  // }
+    // if (msg.content === 'ping') {
+    //   msg.reply('pong');
+    // }
+  } catch (e) {
+    console.log(e);
+  }
 });
+
+client.on('error', console.log);
 
 client.login(discordToken);
