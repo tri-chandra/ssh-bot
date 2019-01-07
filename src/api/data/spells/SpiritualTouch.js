@@ -11,6 +11,7 @@ class SpiritualTouch extends Spell {
       tier: C.Basic,
       element: C.Light,
       breakPower: 15,
+      fixedDamage: 3,
       speed: C.Normal,
       onHit: 'Removes a mana from the opponent\'s playfield and you get a spirit token with a strength of %dmg% on your playfield.',
       tokens: [Token.Spirit],
