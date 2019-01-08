@@ -50,7 +50,6 @@ export default {
     let hero = getHero(command);
 
     const author = discord.author.id;
-    const authorTag = `${discord.author.username}#${discord.author.discriminator}`;
     const target = discord.mentions.members.first() ? discord.mentions.members.first().id : undefined;
 
     if (target) {
@@ -60,7 +59,8 @@ export default {
         discord.reply('You have not set a deck for the hero. Type `!deck [hero] [deck_code]` to set a deck.');
         return;
       }
-
+      
+      const authorTag = `${discord.mentions.members.first().user.tag}`;
       const winrateString = await getWinrate(target, hero.code, hashcode);
       const jimpImg = await renderDeck(hero, hashcode, authorTag, winrateString);
       const img = await jimpImg.getBufferAsync(Jimp.MIME_PNG);
@@ -72,6 +72,7 @@ export default {
       // redis set to author
       await set(`${author}:${hero.code}`, deckHash);
 
+      const authorTag = `${discord.author.username}#${discord.author.discriminator}`;
       const hashcode = await get(`${author}:${hero.code}`);
       const winrateString = await getWinrate(author, hero.code, hashcode);
       const jimpImg = await renderDeck(hero, deckHash, authorTag, winrateString);
