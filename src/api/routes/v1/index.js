@@ -3,13 +3,17 @@ import spell from './spell';
 import spells from './spells';
 import deck from './deck';
 import help from './help';
+import win from './win';
+import lose from './lose';
 
 const routes = {
   open: open.route,
   spell: spell.route,
   spells: spells.route,
   deck: deck.route,
-  help: help.route
+  help: help.route,
+  win: win.route,
+  lose: lose.route,
   //who has [spell]
 };
 

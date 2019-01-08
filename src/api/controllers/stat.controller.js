@@ -1,5 +1,27 @@
 import { get, set } from '../services/redisProvider';
 
+function getHero(command) {
+  if (['zenron'].includes(command)) {
+    return 'zenron';
+  } else if (['jane'].includes(command)) {
+    return 'jane';
+  } else if (['thoben'].includes(command)) {
+    return 'thoben';
+  } else if (['tierra'].includes(command)) {
+    return 'tierra';
+  } else if (['vanraven', 'van', 'raven'].includes(command)) {
+    return 'vanraven';
+  } else if (['asgard'].includes(command)) {
+    return 'asgard';
+  } else if (['myris'].includes(command)) {
+    return 'myris';
+  } else if (['ray'].includes(command)) {
+    return 'ray';
+  } else if (['lua'].includes(command)) {
+    return 'lua';
+  } else return '';
+}
+
 async function getSpellRecord(user, hero, spellCode) {
   let spell = await get(`${user}:${hero}:${spellCode}`);
 
@@ -9,142 +31,57 @@ async function getSpellRecord(user, hero, spellCode) {
   return spell;
 }
 
-function calcSpellRecord(record, win, lost) {
-  return {
-    win: record.win + win,
-    lost: record.lost + lost
-  };
-}
+async function updateSpellRecord(user, hero, spellCode, win, lost) {
+  const record = await getSpellRecord(user, hero, spellCode);
+  record.win += win;
+  record.lost += lost;
 
-function updateSpellRecord(user, hero, spellCode, record) {
   return set(`${user}:${hero}:${spellCode}`, JSON.stringify(record));
 }
 
 export default {
   async win(discord, hero) {
+    hero = getHero(hero);
     const author = discord.author.id;
-    const deckString = await get(`${target}:${hero.code}`);
+    const deckString = await get(`${author}:${hero}`);
 
-    updateSpellRecord(
-      author, hero, spellCode,
-      calcSpellRecord((getSpellRecord(author, hero, deckString), 1, 0))
-    );
+    if (!deckString) {
+      discord.reply('You have not set a deck for the hero. Type `!deck [hero] [deck_code]` to set a deck.');
+      retur;
+    }
 
-    let spellCode = `b${deckString[0]}`;
-    updateSpellRecord(
-      author, hero, spellCode,
-      calcSpellRecord((getSpellRecord(author, hero, spellCode), 1, 0))
-    );
-    
-    spellCode = `b${deckString[0]}`;
-    updateSpellRecord(
-      author, hero, spellCode,
-      calcSpellRecord((getSpellRecord(author, hero, spellCode), 1, 0))
-    );
+    updateSpellRecord(author, hero, deckString, 1, 0);
 
-    spellCode = `b${deckString[0]}`;
-    updateSpellRecord(
-      author, hero, spellCode,
-      calcSpellRecord((getSpellRecord(author, hero, spellCode), 1, 0))
-    );
-
-    spellCode = `a${deckString[0]}`;
-    updateSpellRecord(
-      author, hero, spellCode,
-      calcSpellRecord((getSpellRecord(author, hero, spellCode), 1, 0))
-    );
-
-    spellCode = `a${deckString[0]}`;
-    updateSpellRecord(
-      author, hero, spellCode,
-      calcSpellRecord((getSpellRecord(author, hero, spellCode), 1, 0))
-    );
-
-    spellCode = `a${deckString[0]}`;
-    updateSpellRecord(
-      author, hero, spellCode,
-      calcSpellRecord((getSpellRecord(author, hero, spellCode), 1, 0))
-    );
-
-    spellCode = `e${deckString[0]}`;
-    updateSpellRecord(
-      author, hero, spellCode,
-      calcSpellRecord((getSpellRecord(author, hero, spellCode), 1, 0))
-    );
-
-    spellCode = `e${deckString[0]}`;
-    updateSpellRecord(
-      author, hero, spellCode,
-      calcSpellRecord((getSpellRecord(author, hero, spellCode), 1, 0))
-    );
-
-    spellCode = `u${deckString[0]}`;
-    updateSpellRecord(
-      author, hero, spellCode,
-      calcSpellRecord((getSpellRecord(author, hero, spellCode), 1, 0))
-    );
+    updateSpellRecord(author, hero, `b${deckString[0]}`, 1, 0);
+    updateSpellRecord(author, hero, `b${deckString[1]}`, 1, 0);
+    updateSpellRecord(author, hero, `b${deckString[2]}`, 1, 0);
+    updateSpellRecord(author, hero, `a${deckString[3]}`, 1, 0);
+    updateSpellRecord(author, hero, `a${deckString[4]}`, 1, 0);
+    updateSpellRecord(author, hero, `a${deckString[5]}`, 1, 0);
+    updateSpellRecord(author, hero, `e${deckString[6]}`, 1, 0);
+    updateSpellRecord(author, hero, `e${deckString[7]}`, 1, 0);
+    updateSpellRecord(author, hero, `u${deckString[8]}`, 1, 0);
   },
   async lose(discord, hero) {
+    hero = getHero(hero);    
     const author = discord.author.id;
-    const deckString = await get(`${target}:${hero.code}`);
+    const deckString = await get(`${author}:${hero}`);
 
-    updateSpellRecord(
-      author, hero, spellCode,
-      calcSpellRecord((getSpellRecord(author, hero, deckString), 0, 1))
-    );
+    if (!deckString) {
+      discord.reply('You have not set a deck for the hero. Type `!deck [hero] [deck_code]` to set a deck.');
+      return;
+    }
 
-    let spellCode = `b${deckString[0]}`;
-    updateSpellRecord(
-      author, hero, spellCode,
-      calcSpellRecord((getSpellRecord(author, hero, spellCode), 0, 1))
-    );
-    
-    spellCode = `b${deckString[0]}`;
-    updateSpellRecord(
-      author, hero, spellCode,
-      calcSpellRecord((getSpellRecord(author, hero, spellCode), 0, 1))
-    );
+    updateSpellRecord(author, hero, deckString, 0, 1);
 
-    spellCode = `b${deckString[0]}`;
-    updateSpellRecord(
-      author, hero, spellCode,
-      calcSpellRecord((getSpellRecord(author, hero, spellCode), 0, 1))
-    );
-
-    spellCode = `a${deckString[0]}`;
-    updateSpellRecord(
-      author, hero, spellCode,
-      calcSpellRecord((getSpellRecord(author, hero, spellCode), 0, 1))
-    );
-
-    spellCode = `a${deckString[0]}`;
-    updateSpellRecord(
-      author, hero, spellCode,
-      calcSpellRecord((getSpellRecord(author, hero, spellCode), 0, 1))
-    );
-
-    spellCode = `a${deckString[0]}`;
-    updateSpellRecord(
-      author, hero, spellCode,
-      calcSpellRecord((getSpellRecord(author, hero, spellCode), 0, 1))
-    );
-
-    spellCode = `e${deckString[0]}`;
-    updateSpellRecord(
-      author, hero, spellCode,
-      calcSpellRecord((getSpellRecord(author, hero, spellCode), 0, 1))
-    );
-
-    spellCode = `e${deckString[0]}`;
-    updateSpellRecord(
-      author, hero, spellCode,
-      calcSpellRecord((getSpellRecord(author, hero, spellCode), 0, 1))
-    );
-
-    spellCode = `u${deckString[0]}`;
-    updateSpellRecord(
-      author, hero, spellCode,
-      calcSpellRecord((getSpellRecord(author, hero, spellCode), 0, 1))
-    );
+    updateSpellRecord(author, hero, `b${deckString[0]}`, 0, 1);
+    updateSpellRecord(author, hero, `b${deckString[1]}`, 0, 1);
+    updateSpellRecord(author, hero, `b${deckString[2]}`, 0, 1);
+    updateSpellRecord(author, hero, `a${deckString[3]}`, 0, 1);
+    updateSpellRecord(author, hero, `a${deckString[4]}`, 0, 1);
+    updateSpellRecord(author, hero, `a${deckString[5]}`, 0, 1);
+    updateSpellRecord(author, hero, `e${deckString[6]}`, 0, 1);
+    updateSpellRecord(author, hero, `e${deckString[7]}`, 0, 1);
+    updateSpellRecord(author, hero, `u${deckString[8]}`, 0, 1);
   }
 }

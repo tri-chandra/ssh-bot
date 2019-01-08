@@ -12,48 +12,71 @@ import Ray from '../models/Ray';
 import Lua from '../models/Lua';
 import Asgard from '../models/Asgard';
 
+function getHero(command) {
+  if (['zenron'].includes(command)) {
+    return new Zenron();
+  } else if (['jane'].includes(command)) {
+    return new Jane();
+  } else if (['thoben'].includes(command)) {
+    return new Thoben();
+  } else if (['tierra'].includes(command)) {
+    return new Tierra();
+  } else if (['vanraven', 'van', 'raven'].includes(command)) {
+    return new VanRaven();
+  } else if (['asgard'].includes(command)) {
+    return new Asgard();
+  } else if (['myris'].includes(command)) {
+    return new Myris();
+  } else if (['ray'].includes(command)) {
+    return new Ray();
+  } else if (['lua'].includes(command)) {
+    return new Lua();
+  } else return null;
+}
+
+async function getWinrate(user, hero, hashcode) {
+  let winrate = await get(`${user}:${hero}:${hashcode}`);
+  let winrateString = 0;
+  if (winrate) {
+    winrate = JSON.parse(winrate);
+    winrateString = Math.round(100.0 * winrate.win / (winrate.win + winrate.lost));
+  }
+
+  return winrateString;
+}
+
 export default {
-  async getDeck(discord, command, deckHash) {
-    let hero;
-    if (['zenron'].includes(command)) {
-      hero = new Zenron();
-    } else if (['jane'].includes(command)) {
-      hero = new Jane();
-    } else if (['thoben'].includes(command)) {
-      hero = new Thoben();
-    } else if (['tierra'].includes(command)) {
-      hero = new Tierra();
-    } else if (['vanraven', 'van', 'raven'].includes(command)) {
-      hero = new VanRaven();
-    } else if (['asgard'].includes(command)) {
-      hero = new Asgard();
-    } else if (['myris'].includes(command)) {
-      hero = new Myris();
-    } else if (['ray'].includes(command)) {
-      hero = new Ray();
-    } else if (['lua'].includes(command)) {
-      hero = new Lua();
-    }
+  async getDeck(discord, command, deckHash = '') {
+    let hero = getHero(command);
 
     const author = discord.author.id;
+    const authorTag = `${discord.author.username}#${discord.author.discriminator}`;
     const target = discord.mentions.members.first() ? discord.mentions.members.first().id : undefined;
+
     if (target) {
-      // redis get
       const hashcode = await get(`${target}:${hero.code}`);
-      const img = await (await renderDeck(hero, hashcode)).getBufferAsync(Jimp.MIME_PNG);
-      const winrate = await get(`${target}:${hero.code}:${hashcode}`);
-      let winrateString = 0;
-      if (winrate) {
-        winrateString = Math.round(100.0 * winrate.win / (winrate.win + winrate.lost));
+
+      if (!hashcode) {
+        discord.reply('You have not set a deck for the hero. Type `!deck [hero] [deck_code]` to set a deck.');
+        return;
       }
-      discord.channel.send(`Winrate: ${winrateString}%`, {
+
+      const winrateString = await getWinrate(target, hero.code, hashcode);
+      const jimpImg = await renderDeck(hero, hashcode, authorTag, winrateString);
+      const img = await jimpImg.getBufferAsync(Jimp.MIME_PNG);
+
+      discord.channel.send('', {
         files: [img],
       });
     } else if (hero && deckHash.length === 9) {
       // redis set to author
-      set(`${author}:${hero.code}`, deckHash);
+      await set(`${author}:${hero.code}`, deckHash);
 
-      const img = await (await renderDeck(hero, deckHash)).getBufferAsync(Jimp.MIME_PNG);
+      const hashcode = await get(`${author}:${hero.code}`);
+      const winrateString = await getWinrate(author, hero.code, hashcode);
+      const jimpImg = await renderDeck(hero, deckHash, authorTag, winrateString);
+      const img = await jimpImg.getBufferAsync(Jimp.MIME_PNG);
+      
       discord.channel.send('', {
         files: [img],
       });

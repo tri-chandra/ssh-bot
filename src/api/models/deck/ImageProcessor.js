@@ -57,7 +57,7 @@ export async function renderBackground(hero, title, inputFile) {
     // .write(outputFile);
 }
 
-export async function renderDeck(hero, deckHash) {
+export async function renderDeck(hero, deckHash, user, winrate) {
   const descFont = await loadDescriptionFont();
   const heroImgPath = `./src/renderer/output/images/heroes/deck-background/${hero.code}.png`;
   const bg = await Jimp.read(heroImgPath);
@@ -83,5 +83,6 @@ export async function renderDeck(hero, deckHash) {
 
   return result
     .print(descFont, padding[0], headerHeight + padding[0], 'Take a look at my spell deck!')
+    .print(descFont, padding[0], headerHeight + padding[0] + padding[1], `@${user} (Win rate: ${winrate}%)`)
     .scale(0.3);
 }
