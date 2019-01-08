@@ -41,7 +41,12 @@ export default {
       // redis get
       const hashcode = await get(`${target}:${hero.code}`);
       const img = await (await renderDeck(hero, hashcode)).getBufferAsync(Jimp.MIME_PNG);
-      discord.channel.send('', {
+      const winrate = await get(`${target}:${hero.code}:${hashcode}`);
+      let winrateString = 0;
+      if (winrate) {
+        winrateString = Math.round(100.0 * winrate.win / (winrate.win + winrate.lost));
+      }
+      discord.channel.send(`Winrate: ${winrateString}%`, {
         files: [img],
       });
     } else if (hero && deckHash.length === 9) {
