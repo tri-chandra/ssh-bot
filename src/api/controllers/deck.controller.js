@@ -1,4 +1,5 @@
-import { renderDeck } from '../../api/models/deck/ImageProcessor';
+import { renderDeck } from '../models/deck/ImageProcessor';
+import { get, set } from '../services/redisProvider';
 
 export default {
   async getDeck(hero, deckHash) {

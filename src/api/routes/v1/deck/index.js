@@ -38,7 +38,12 @@ async function route(discord, tokens) {
     hero = new Lua();
   }
 
-  if (hero) {
+  const author = discord.author.id;
+  const target = discord.mentions.members.first() ? discord.mentions.members.first().id : undefined;
+  if (target) {
+    // redis get
+  } else if (hero && hashcode.length === 9) {
+    // redis set to author
     const img = await (await DeckController.getDeck(hero, hashcode)).getBufferAsync(Jimp.MIME_PNG);
     discord.channel.send('', {
       files: [img],

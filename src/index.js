@@ -1,13 +1,14 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
+
+const discordClient = new Discord.Client();
 const { discordToken, prefix, owner } = require('./config/vars');
 import router from './api/routes/v1';
 
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
+discordClient.on('ready', () => {
+  console.log(`Logged in as ${discordClient.user.tag}!`);
 });
 
-client.on('message', msg => {
+discordClient.on('message', msg => {
   try {
     const content = msg.content.toLowerCase();
     const userId = msg.author.id;
@@ -30,6 +31,15 @@ client.on('message', msg => {
   }
 });
 
-client.on('error', console.log);
+discordClient.on('error', console.log);
 
-client.login(discordToken);
+discordClient.login(discordToken);
+
+const redis = require('redis');
+const redisClient = redis.createClient();
+
+redisClient.on('connect', () => {
+  console.log('Connected to Redis.');
+})
+
+redisClient.on('error', console.log);
