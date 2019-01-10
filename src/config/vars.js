@@ -12,5 +12,6 @@ module.exports = {
   discordToken: process.env.DISCORD_TOKEN,
   prefix: process.env.PREFIX,
   owner: process.env.OWNER,
+  redis: process.env.REDIS,
   logs: process.env.NODE_ENV === 'production' ? 'combined' : 'dev',
 };
