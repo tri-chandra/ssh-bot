@@ -9,7 +9,7 @@ class EliteFireRifle extends Spell {
       type: C.damageSpell,
       tier: C.Elite,
       element: C.Fire,
-      breakPower: 15,
+      breakPower: 21,
       fixedDamage: 425,
       speed: C.Fast,
       count: 1,

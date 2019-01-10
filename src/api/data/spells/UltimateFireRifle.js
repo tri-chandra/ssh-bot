@@ -9,7 +9,7 @@ class UltimateFireRifle extends Spell {
       type: C.damageSpell,
       tier: C.Ultimate,
       element: C.Fire,
-      breakPower: 15,
+      breakPower: 34,
       fixedDamage: 625,
       speed: C.Fast,
       count: 1,
