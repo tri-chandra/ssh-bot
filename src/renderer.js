@@ -12,6 +12,7 @@ const spellsImgOutputDir = `${imgOutputDir}spells/`;
 
 import resizeSpell from './renderer/tasks/resizeSpells';
 import cropHeroPortrait from './renderer/tasks/cropHeroPortrait';
+import renderDeckBackgrounds from './renderer/tasks/renderDeckBackgrounds';
 import renderDeckBackground from './renderer/tasks/renderDeckBackground';
 
 function runner(message, task, params) {
@@ -54,13 +55,28 @@ function runner(message, task, params) {
 (function renderBg() {
   console.info('\n\nRender deck backgrounds\n');
 
-  runner('.. render background of Zenron', renderDeckBackground, ['zenron', 'Zenron', `${heroesImgDir}zenron/zenron`, `${heroesImgOutputDir}deck-background/zenron.png`])
-  runner('.. render background of Jane', renderDeckBackground, ['jane', 'Jane', `${heroesImgDir}jane/jane`, `${heroesImgOutputDir}deck-background/jane.png`])
-  runner('.. render background of Thoben', renderDeckBackground, ['thoben', 'Thoben', `${heroesImgDir}thoben/thoben`, `${heroesImgOutputDir}deck-background/thoben.png`])
-  runner('.. render background of Tierra', renderDeckBackground, ['tierra', 'Tierra', `${heroesImgDir}tierra/tierra`, `${heroesImgOutputDir}deck-background/tierra.png`])
-  runner('.. render background of Myris', renderDeckBackground, ['myris', 'Myris', `${heroesImgDir}myris/myris`, `${heroesImgOutputDir}deck-background/myris.png`])
-  runner('.. render background of Van Raven', renderDeckBackground, ['vanraven', 'Van Raven', `${heroesImgDir}vanraven/vanraven`, `${heroesImgOutputDir}deck-background/vanraven.png`])
-  runner('.. render background of Asgard', renderDeckBackground, ['asgard', 'Asgard', `${heroesImgDir}asgard/asgard`, `${heroesImgOutputDir}deck-background/asgard.png`])
-  runner('.. render background of Ray', renderDeckBackground, ['ray', 'Ray', `${heroesImgDir}ray/ray`, `${heroesImgOutputDir}deck-background/ray.png`])
-  runner('.. render background of Lua', renderDeckBackground, ['lua', 'Lua', `${heroesImgDir}lua/lua`, `${heroesImgOutputDir}deck-background/lua.png`])
+  runner('.. render background of Zenron', renderDeckBackground, ['Zenron', `${heroesImgDir}zenron/zenron`, `${heroesImgOutputDir}deck-background/zenron.png`])
+  runner('.. render background of Jane', renderDeckBackground, ['Jane', `${heroesImgDir}jane/jane`, `${heroesImgOutputDir}deck-background/jane.png`])
+  runner('.. render background of Thoben', renderDeckBackground, ['Thoben', `${heroesImgDir}thoben/thoben`, `${heroesImgOutputDir}deck-background/thoben.png`])
+  runner('.. render background of Tierra', renderDeckBackground, ['Tierra', `${heroesImgDir}tierra/tierra`, `${heroesImgOutputDir}deck-background/tierra.png`])
+  runner('.. render background of Myris', renderDeckBackground, ['Myris', `${heroesImgDir}myris/myris`, `${heroesImgOutputDir}deck-background/myris.png`])
+  runner('.. render background of Van Raven', renderDeckBackground, ['Van Raven', `${heroesImgDir}vanraven/vanraven`, `${heroesImgOutputDir}deck-background/vanraven.png`])
+  runner('.. render background of Asgard', renderDeckBackground, ['Asgard', `${heroesImgDir}asgard/asgard`, `${heroesImgOutputDir}deck-background/asgard.png`])
+  runner('.. render background of Ray', renderDeckBackground, ['Ray', `${heroesImgDir}ray/ray`, `${heroesImgOutputDir}deck-background/ray.png`])
+  runner('.. render background of Lua', renderDeckBackground, ['Lua', `${heroesImgDir}lua/lua`, `${heroesImgOutputDir}deck-background/lua.png`])
+})();
+
+(function renderSkinBg() {
+  console.info('\n\nRender deck backgrounds with skins\n');
+
+  const outputDir = `${heroesImgOutputDir}deck-background/`;
+  runner('.. render background of Zenron skin', renderDeckBackgrounds, ['Zenron', `${heroesImgDir}zenron/`, outputDir])
+  runner('.. render background of Jane skin', renderDeckBackgrounds, ['Jane', `${heroesImgDir}jane/`, outputDir])
+  runner('.. render background of Thoben skin', renderDeckBackgrounds, ['Thoben', `${heroesImgDir}thoben/`, outputDir])
+  runner('.. render background of Tierra skin', renderDeckBackgrounds, ['Tierra', `${heroesImgDir}tierra/`, outputDir])
+  runner('.. render background of Myris skin', renderDeckBackgrounds, ['Myris', `${heroesImgDir}myris/`, outputDir])
+  runner('.. render background of Van Raven skin', renderDeckBackgrounds, ['Van Raven', `${heroesImgDir}vanraven/`, outputDir])
+  runner('.. render background of Asgard skin', renderDeckBackgrounds, ['Asgard', `${heroesImgDir}asgard/`, outputDir])
+  runner('.. render background of Ray skin', renderDeckBackgrounds, ['Ray', `${heroesImgDir}ray/`, outputDir])
+  runner('.. render background of Lua skin', renderDeckBackgrounds, ['Lua', `${heroesImgDir}lua/`, outputDir])
 })();
