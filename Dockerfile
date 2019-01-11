@@ -11,4 +11,4 @@ ADD package.json yarn.lock /app/
 RUN yarn --pure-lockfile
 ADD . /app
 
-CMD ["sh", "-c", "yarn render; yarn dev"]
+CMD ["sh", "-c", "yarn start"]

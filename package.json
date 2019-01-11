@@ -13,8 +13,10 @@
   "scripts": {
     "precommitx": "yarn lint",
     "prestartx": "yarn docs",
-    "start": "cross-env NODE_ENV=production pm2 start ./src/index.js",
-    "dev": "nodemon ./src/index.js --exec babel-node --presets @babel/preset-env",
+    "logs": "pm2 logs",
+    "flush": "pm2 flush",
+    "start": "cross-env NODE_ENV=production pm2 start --interpreter babel-node ./src/index.js",
+    "dev": "nodemon ./src/index.js --exec babel-node",
     "render": "npx babel-node --presets @babel/preset-env ./src/renderer.js",
     "lint": "eslint ./src/ --ignore-path .gitignore --ignore-pattern internals/scripts",
     "lint:fix": "yarn lint --fix",
