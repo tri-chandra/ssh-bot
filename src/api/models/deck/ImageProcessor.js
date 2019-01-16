@@ -71,10 +71,11 @@ export async function renderBackgrounds(title, inputDir, outputDir) {
 
   fs.readdir(inputDir, (err, files) => {
     files.forEach(async (file) => {
+      const bgcopy = bg.clone();
       const heroImgPath = `${inputDir}${file}`;
       const heroImg = await (await Jimp.read(heroImgPath)).flip(true, false).scale(0.4);
 
-      bg
+      bgcopy
       .composite(heroImg, width - 360, headerHeight / 2)
       .print(headerFont, padding[0], padding[0], title)
       .write(`${outputDir}${file}`);
@@ -84,7 +85,9 @@ export async function renderBackgrounds(title, inputDir, outputDir) {
 
 export async function renderDeck(hero, deckHash, user, winrate) {
   const descFont = await loadDescriptionFont();
-  const heroImgPath = `./src/renderer/output/images/heroes/deck-background/${hero.code}.png`;
+  const skinList = fs.readdirSync('./src/renderer/output/images/heroes/deck-background/').filter(file => file.startsWith(hero.code));
+  const random = parseInt(Math.random() * skinList.length);
+  const heroImgPath = `./src/renderer/output/images/heroes/deck-background/${skinList[random]}`;
   const bg = await Jimp.read(heroImgPath);
 
   const basics = hero.spells.basic.map(s => s.sprite);
