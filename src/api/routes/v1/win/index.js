@@ -6,6 +6,7 @@ function route(discord, tokens) {
   let [command] = tokens;
 
   if (command) {
+    if (['vanraven', 'van', 'raven'].includes(command)) command = 'vanraven';
     StatController.win(discord, command);
   }
 }

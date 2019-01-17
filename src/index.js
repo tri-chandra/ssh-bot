@@ -22,10 +22,6 @@ discordClient.on('message', msg => {
     // }
 
     router.route(msg, tokens);
-
-    // if (msg.content === 'ping') {
-    //   msg.reply('pong');
-    // }
   } catch (e) {
     console.log(e);
   }

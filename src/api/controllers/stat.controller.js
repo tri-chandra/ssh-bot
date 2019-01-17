@@ -1,4 +1,5 @@
 import { get, set } from '../services/redisProvider';
+import { prefix } from '../../config/vars';
 
 function getHero(command) {
   if (['zenron'].includes(command)) {
@@ -46,7 +47,7 @@ export default {
     const deckString = await get(`${author}:${hero}`);
 
     if (!deckString) {
-      discord.reply('You have not set a deck for the hero. Type `!deck [hero] [deck_code]` to set a deck.');
+      discord.reply('You have not set a deck for the hero. Type `'+prefix+'deck [hero] [deck_code]` to set a deck.');
       retur;
     }
 
@@ -68,7 +69,7 @@ export default {
     const deckString = await get(`${author}:${hero}`);
 
     if (!deckString) {
-      discord.reply('You have not set a deck for the hero. Type `!deck [hero] [deck_code]` to set a deck.');
+      discord.reply('You have not set a deck for the hero. Type `'+prefix+'deck [hero] [deck_code]` to set a deck.');
       return;
     }
 

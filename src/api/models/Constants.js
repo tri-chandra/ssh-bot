@@ -31,7 +31,7 @@ export default {
   Tierra: 'tierra',
   Myris: 'myris',
   Asgard: 'asgard',
-  VanRaven: 'vanRaven',
+  VanRaven: 'vanraven',
   Ray: 'ray',
   Lua: 'lua',
 

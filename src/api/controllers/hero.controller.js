@@ -2,6 +2,7 @@ import Discord from 'discord.js';
 import Jimp from 'jimp';
 import Hero from '../models/Hero';
 import C from '../models/Constants';
+import { prefix } from '../../config/vars';
 
 export default {
   async getSpellList(discord, hero) {
@@ -11,7 +12,7 @@ export default {
     const ultimateSpells = Hero.spellMapper(hero, C.Ultimate).map(item => item.name).join(', ');
 
     if (!basicSpells) {
-      discord.reply(`the hero ${hero} is unknown. Type \`!help spells\` for more information.`);
+      discord.reply(`the hero ${hero} is unknown. Type \`${prefix}help spells\` for more information.`);
       return;
     }
 

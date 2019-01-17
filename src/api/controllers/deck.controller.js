@@ -1,6 +1,7 @@
 import Jimp from 'jimp';
 import { renderDeck } from '../models/deck/ImageProcessor';
 import { get, set } from '../services/redisProvider';
+import { prefix } from '../../config/vars';
 
 import Zenron from '../models/Zenron';
 import Jane from '../models/Jane';
@@ -56,7 +57,7 @@ export default {
       const hashcode = await get(`${target}:${hero.code}`);
 
       if (!hashcode) {
-        discord.reply('You have not set a deck for the hero. Type `!deck [hero] [deck_code]` to set a deck.');
+        discord.reply('You have not set a deck for the hero. Type `'+prefix+'deck [hero] [deck_code]` to set a deck.');
         return;
       }
       
@@ -82,7 +83,7 @@ export default {
         files: [img],
       });
     } else {
-      discord.reply('the hero is unknown. Type `!help deck` for more information.');
+      discord.reply('the hero is unknown. Type `'+prefix+'help deck` for more information.');
     }
   },
 };

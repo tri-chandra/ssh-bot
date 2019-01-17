@@ -2,6 +2,7 @@ import Discord from 'discord.js';
 import Jimp from 'jimp';
 import Spells from '../data/spells';
 import C from '../models/Constants';
+import { prefix } from '../../config/vars';
 
 const upgradeMultiplier = 1.2;
 const levelCap = 15;
@@ -69,7 +70,7 @@ export default {
     const [spell] = spells;
 
     if (!spell) {
-      discord.reply('the spell is unknown. Type `!help spell` for more information.');
+      discord.reply('the spell is unknown. Type `'+prefix+'help spell` for more information.');
       return;
     }
 
