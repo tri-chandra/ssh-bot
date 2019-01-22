@@ -6,7 +6,7 @@ class StoneSkin extends Spell {
   constructor(level) {
     super({
       name: 'Stone Skin',
-      code: 'none',
+      code: 'stoneSkin',
       type: C.HealSpell,
       tier: C.Basic,
       element: C.Earth,
