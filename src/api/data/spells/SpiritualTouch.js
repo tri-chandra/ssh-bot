@@ -6,7 +6,7 @@ class SpiritualTouch extends Spell {
   constructor(level) {
     super({
       name: 'Spiritual Touch',
-      code: 'spiritualtouch',
+      code: 'spiritualTouch',
       type: C.Damagespell,
       tier: C.Basic,
       element: C.Light,
