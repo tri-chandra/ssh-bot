@@ -10,6 +10,8 @@ function getHero(command) {
     return 'thoben';
   } else if (['tierra'].includes(command)) {
     return 'tierra';
+  } else if (['raju', 'ra', 'ra\'ju'].includes(command)) {
+    return 'raju';
   } else if (['vanraven', 'van', 'raven'].includes(command)) {
     return 'vanraven';
   } else if (['asgard'].includes(command)) {
