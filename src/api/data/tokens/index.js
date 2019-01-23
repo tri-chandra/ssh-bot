@@ -92,12 +92,12 @@ export default {
     0,
   ),
   Trap: new Token(
-    'Hunter\'s Trap',
+    'Hunter\'s trap',
     'If the token reaches the bottom row it is destroyed and deals %dmg% damage. Effect happens when the token is on the playfield.',
     200,
   ),
   Water: new Token(
-    'Water Trap',
+    'Water token',
     'Blocks a space on the playfield. Token timer starts when the token reaches the bottom row.',
     0,
   ),
