@@ -10,8 +10,9 @@ class Coalescence extends Spell {
       tier: C.Elite,
       element: C.Nature,
       resistance: 31,
+      fixedDamage: 700,
       target: C.AllPlayers,
-      ontimeout: 'Sets the energy of BOTH players to 25%.',
+      ontimeout: 'Sets the energy of BOTH players to 25%, but by no more than %dmg%.',
       unlockAt: [
         { hero: C.Myris, level: C.Arena9},
       ]

@@ -5,6 +5,7 @@ function route(discord, tokens) {
 
   let command = tokens.join('');
   if (['vanraven', 'van', 'raven'].includes(command)) command = 'vanraven';
+  else if (['raju', 'ra', 'ra\'ju'].includes(command)) command = 'raju';
   
   if (command) {
     HeroController.getSpellList(discord, command);

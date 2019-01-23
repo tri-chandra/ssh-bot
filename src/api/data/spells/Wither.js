@@ -2,25 +2,23 @@ import Spell from '../../models/Spell';
 import Token from '../tokens';
 import C from '../../models/Constants';
 
-class StoneShield extends Spell {
+class Wither extends Spell {
   constructor(level) {
     super({
-      name: 'Stone Shield',
-      code: 'stoneShield',
+      name: 'Wither',
+      code: 'wither',
       type: C.OvertimeSpell,
       tier: C.Basic,
       element: C.Earth,
-      shield: 32,
+      resistance: 20,
       onCast: 'You get a weakness token on your playfield.',
+      overTime: 'Removes 5 non-earth tokens from your playfield.',
       tokens: [Token.Weakness],
       unlockAt: [
-        { hero: C.Asgard, level: C.Arena1 },
-        { hero: C.RaJu, level: C.Arena1 },
-        { hero: C.VanRaven, level: C.Arena1 },
-        { hero: C.Ray, level: C.Arena1 },
+        { hero: C.RaJu, level: C.Arena7 },
       ]
     });
   }
 }
 
-export default StoneShield;
+export default Wither;

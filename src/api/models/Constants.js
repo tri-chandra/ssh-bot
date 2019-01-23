@@ -19,6 +19,11 @@ export default {
     name: 'Earth',
     display: ':chestnut: Earth',
   },
+  Water: {
+    code: 'water',
+    name: 'Water',
+    display: ':droplet: Water',
+  },
 
   Basic: 'Basic',
   Advanced: 'Advanced',
@@ -31,6 +36,7 @@ export default {
   Tierra: 'tierra',
   Myris: 'myris',
   Asgard: 'asgard',
+  RaJu: 'raju',
   VanRaven: 'vanraven',
   Ray: 'ray',
   Lua: 'lua',

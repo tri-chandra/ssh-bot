@@ -11,7 +11,7 @@ class SpiritualUnleash extends Spell {
       element: C.Light,
       damage: 1,
       speed: C.Fast,
-      onHit: 'Fires a damage projectile for each token on your playfield. Each successive attack doubles the damage.',
+      onHit: 'Fires an additional attack for each token on your playfield and removes the token. Each successive attack doubles the damage.',
       unlockAt: [
         { hero: C.Lua, level: C.Arena9 }
       ]

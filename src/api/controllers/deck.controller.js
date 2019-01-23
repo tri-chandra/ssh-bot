@@ -8,10 +8,12 @@ import Jane from '../models/Jane';
 import Thoben from '../models/Thoben';
 import Tierra from '../models/Tierra';
 import Myris from '../models/Myris';
+import RaJu from '../models/RaJu';
 import VanRaven from '../models/VanRaven';
 import Ray from '../models/Ray';
 import Lua from '../models/Lua';
 import Asgard from '../models/Asgard';
+import { ReplaySubject } from 'rxjs';
 
 function getHero(command) {
   if (['zenron'].includes(command)) {
@@ -22,6 +24,8 @@ function getHero(command) {
     return new Thoben();
   } else if (['tierra'].includes(command)) {
     return new Tierra();
+  } else if (['raju', 'ra', 'ra\'ju'].includes(command)) {
+    return new RaJu();
   } else if (['vanraven', 'van', 'raven'].includes(command)) {
     return new VanRaven();
   } else if (['asgard'].includes(command)) {

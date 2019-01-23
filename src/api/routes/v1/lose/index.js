@@ -7,6 +7,8 @@ function route(discord, tokens) {
 
   if (command) {
     if (['vanraven', 'van', 'raven'].includes(command)) command = 'vanraven';
+    else if (['raju', 'ra', 'ra\'ju'].includes(command)) command = 'raju';
+    
     StatController.lose(discord, command);
   }
 }

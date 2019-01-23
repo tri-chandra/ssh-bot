@@ -9,8 +9,8 @@ class BurningWisdom extends Spell {
       type: C.OvertimeSpell,
       tier: C.Basic,
       element: C.Fire,
-      resistance: 13,
-      onTimeout: 'You get a fire spell with level %lvl% from your spell deck on your playfield.',
+      resistance: 14,
+      onTimeout: 'Chance to get a fire spell with level %lvl% from your spell deck on your playfield. Chance is 25% for each connected fire element.',
       unlockAt: [
         { hero: C.Tierra, level: C.Arena8}
       ]

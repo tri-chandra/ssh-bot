@@ -15,6 +15,7 @@ class TeslaShield extends Spell {
       onBreak: 'You get a stunned token on your playfield.',
       tokens: [Token.Weakness, Token.Stunned],
       unlockAt: [
+        { hero: C.RaJu, level: C.Arena1 },
         { hero: C.VanRaven, level: C.Arena5 },
       ]
     });

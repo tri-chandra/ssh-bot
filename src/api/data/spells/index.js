@@ -5,6 +5,7 @@ import AdvancedChiBlock from './AdvancedChiBlock';
 import AdvancedFireRifle from './AdvancedFireRifle';
 import AdvancedFirstStrike from './AdvancedFirstStrike';
 import AdvancedGlassSpears from './AdvancedGlassSpears';
+import AirBlast from './AirBlast';
 import AncestralBolt from './AncestralBolt';
 import AncestralLightning from './AncestralLightning';
 import AncestralOmen from './AncestralOmen';
@@ -22,6 +23,7 @@ import BlazingSpiral from './BlazingSpiral';
 import BlessedAura from './BlessedAura';
 import BlindingAngel from './BlindingAngel';
 import BlindingFlash from './BlindingFlash';
+import Blizzard from './Blizzard';
 import Boulder from './Boulder';
 import BurningBoomerang from './BurningBoomerang';
 import BurningNeedle from './BurningNeedle';
@@ -33,6 +35,7 @@ import ChiSlap from './ChiSlap';
 import CircleOfProtection from './CircleOfProtection';
 import Cloning from './Cloning';
 import Coalescence from './Coalescence';
+import ColossalImpact from './ColossalImpact';
 import Corrosion from './Corrosion';
 import CounterBlaze from './CounterBlaze';
 import CrackingGround from './CrackingGround';
@@ -41,11 +44,15 @@ import CrystalShield from './CrystalShield';
 import CrystalStriking from './CrystalStriking';
 import CursedRitual from './CursedRitual';
 import Dawn from './Dawn';
+import DevastationTide from './DevastationTide';
+import DesertBlossom from './DesertBlossom';
 import DivineGlint from './DivineGlint';
 import DivineGuard from './DivineGuard';
 import DoubleFireball from './DoubleFireball';
 import DoubleMagmabomb from './DoubleMagmabomb';
+import DoubleSplash from './DoubleSplash';
 import DragonBreath from './DragonBreath';
+import Drizzle from './Drizzle';
 import Earthbreaker from './Earthbreaker';
 import EarthForce from './EarthForce';
 import EarthPrism from './EarthPrism';
@@ -85,6 +92,11 @@ import FireRam from './FireRam';
 import FireRush from './FireRush';
 import FireStorm from './FireStorm';
 import FlameCannon from './FlameCannon';
+import Flood from './Flood';
+import FrostArrows from './FrostArrows';
+import FrostBolts from './FrostBolts';
+import FrozenOrb from './FrozenOrb';
+import GaiaHeal from './GaiaHeal';
 import GhostWhisper from './GhostWhisper';
 import GlassSpear from './GlassSpear';
 import GlowingSparkles from './GlowingSparkles';
@@ -103,6 +115,10 @@ import HeatUp from './HeatUp';
 import HeroicGuard from './HeroicGuard';
 import HunterNet from './HunterNet';
 import HunterTrap from './HunterTrap';
+import Hydrogel from './Hydrogel';
+import IceLance from './IceLance';
+import IceShot from './IceShot';
+import IceStorm from './IceStorm';
 import Immortality from './Immortality';
 import Impale from './Impale';
 import Inferno from './Inferno';
@@ -126,8 +142,10 @@ import MagneticShield from './MagneticShield';
 import MassiveHeal from './MassiveHeal';
 import MassiveShield from './MassiveShield';
 import Meditation from './Meditation';
+import Meltdown from './Meltdown';
 import MineField from './MineField';
 import Moonfire from './Moonfire';
+import MountainEcho from './MountainEcho';
 import Naturalize from './Naturalize';
 import NatureGhost from './NatureGhost';
 import NaturePrism from './NaturePrism';
@@ -158,12 +176,15 @@ import PreservingProtection from './PreservingProtection';
 import ProtectionRitual from './ProtectionRitual';
 import Purify from './Purify';
 import Pyroblast from './Pyroblast';
+import Rain from './Rain';
 import Rebuild from './Rebuild';
 import Regeneration from './Regeneration';
 import Relaxation from './Relaxation';
 import Relief from './Relief';
 import Rewind from './Rewind';
 import RewindAura from './RewindAura';
+import Riftbreaker from './Riftbreaker';
+import Riptide from './Riptide';
 import RockBlade from './RockBlade';
 import RockBlast from './RockBlast';
 import Rockslide from './Rockslide';
@@ -172,8 +193,10 @@ import RootPoison from './RootPoison';
 import Sandstorm from './Sandstorm';
 import Scorch from './Scorch';
 import ScorpioSting from './ScorpioSting';
+import SeaShot from './SeaShot';
 import Shield from './Shield';
 import SkyGuard from './SkyGuard';
+import Slipstream from './Slipstream';
 import SnakeSummon from './SnakeSummon';
 import SolarStorm from './SolarStorm';
 import SoulGuard from './SoulGuard';
@@ -186,6 +209,8 @@ import SpiritualCleansing from './SpiritualCleansing';
 import SpiritualHeal from './SpiritualHeal';
 import SpiritualTouch from './SpiritualTouch';
 import SpiritualUnleash from './SpiritualUnleash';
+import Splash from './Splash';
+import Spray from './Spray';
 import StoneDagger from './StoneDagger';
 import Stonefall from './Stonefall';
 import StoneHeart from './StoneHeart';
@@ -202,16 +227,21 @@ import SuperNovaVision from './SuperNovaVision';
 import TerraRavage from './TerraRavage';
 import TerraSlam from './TerraSlam';
 import TeslaShield from './TeslaShield';
+import TidalCrush from './TidalCrush';
 import TitanPunch from './TitanPunch';
 import TokenSnipe from './TokenSnipe';
 import ToxicShield from './ToxicShield';
+import Tsunami from './Tsunami';
 import UltimateFirePhoenix from './UltimateFirePhoenix';
 import UltimateFireRifle from './UltimateFireRifle';
 import UltimateGlassSpears from './UltimateGlassSpears';
 import UltimateScorch from './UltimateScorch';
 import UltimateSnipe from './UltimateSnipe';
 import Vaporize from './Vaporize';
+import Void from './Void';
 import Volcano from './Volcano';
+import WaterBomb from './WaterBomb';
+import Wither from './Wither';
 import ZenPulse from './ZenPulse';
 
 const zenron = {
@@ -470,6 +500,48 @@ const asgard = {
   [`${C.Asgard}:${C.Ultimate}:oblivionCloud`]: new OblivionCloud(),
 };
 
+const raJu = {
+  [`${C.RaJu}:${C.Basic}:splash`]: new Splash(),
+  [`${C.RaJu}:${C.Basic}:stoneShield`]: new StoneShield(),
+  [`${C.RaJu}:${C.Basic}:stoneSkin`]: new StoneSkin(),
+  [`${C.RaJu}:${C.Basic}:drizzle`]: new Drizzle(),
+  [`${C.RaJu}:${C.Basic}:hydrogel`]: new Hydrogel(),
+  [`${C.RaJu}:${C.Basic}:slipstream`]: new Slipstream(),
+  [`${C.RaJu}:${C.Basic}:waterBomb`]: new WaterBomb(),
+  [`${C.RaJu}:${C.Basic}:wither`]: new Wither(),
+  [`${C.RaJu}:${C.Basic}:frozenOrb`]: new FrozenOrb(),
+  [`${C.RaJu}:${C.Basic}:riftbreaker`]: new Riftbreaker(),
+  [`${C.RaJu}:${C.Basic}:void`]: new Void(),
+  [`${C.RaJu}:${C.Basic}:gaiaHeal`]: new GaiaHeal(),
+
+  [`${C.RaJu}:${C.Advanced}:seaShot`]: new SeaShot(),
+  [`${C.RaJu}:${C.Advanced}:doubleSplash`]: new DoubleSplash(),
+  [`${C.RaJu}:${C.Advanced}:ironShield`]: new IronShield(),
+  [`${C.RaJu}:${C.Advanced}:sandstorm`]: new Sandstorm(),
+  [`${C.RaJu}:${C.Advanced}:flood`]: new Flood(),
+  [`${C.RaJu}:${C.Advanced}:airBlast`]: new AirBlast(),
+  [`${C.RaJu}:${C.Advanced}:rain`]: new Rain(),
+  [`${C.RaJu}:${C.Advanced}:spray`]: new Spray(),
+  [`${C.RaJu}:${C.Advanced}:meltdown`]: new Meltdown(),
+  [`${C.RaJu}:${C.Advanced}:frostBolts`]: new FrostBolts(),
+  [`${C.RaJu}:${C.Advanced}:blizzard`]: new Blizzard(),
+  [`${C.RaJu}:${C.Advanced}:iceShot`]: new IceShot(),
+
+  [`${C.RaJu}:${C.Elite}:tidalCrush`]: new TidalCrush(),
+  [`${C.RaJu}:${C.Elite}:crystalShield`]: new CrystalShield(),
+  [`${C.RaJu}:${C.Elite}:riptide`]: new Riptide(),
+  [`${C.RaJu}:${C.Elite}:teslaShield`]: new TeslaShield(),
+  [`${C.RaJu}:${C.Elite}:frostArrows`]: new FrostArrows(),
+  [`${C.RaJu}:${C.Elite}:colossalImpact`]: new ColossalImpact(),
+  [`${C.RaJu}:${C.Elite}:iceLance`]: new IceLance(),
+  [`${C.RaJu}:${C.Elite}:mountainEcho`]: new MountainEcho(),
+
+  [`${C.RaJu}:${C.Ultimate}:devastationTide`]: new DevastationTide(),
+  [`${C.RaJu}:${C.Ultimate}:Tsunami`]: new Tsunami(),
+  [`${C.RaJu}:${C.Ultimate}:desertBlossom`]: new DesertBlossom(),
+  [`${C.RaJu}:${C.Ultimate}:iceStorm`]: new IceStorm(),
+};
+
 const vanRaven = {
   [`${C.VanRaven}:${C.Basic}:arcFire`]: new ArcFire(),
   [`${C.VanRaven}:${C.Basic}:stoneDagger`]: new StoneDagger(),
@@ -603,6 +675,7 @@ export default {
   ...thoben,
   ...tierra,  
   ...asgard,
+  ...raJu,
   ...vanRaven,
   ...ray,
   ...lua,
