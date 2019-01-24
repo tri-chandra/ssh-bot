@@ -5,7 +5,7 @@ import C from '../../models/Constants';
 class FrostBolts extends Spell {
   constructor(level) {
     super({
-      name: 'FrostBolts',
+      name: 'Frost Bolts',
       code: 'frostBolts',
       type: C.Damagespell,
       tier: C.Advanced,
