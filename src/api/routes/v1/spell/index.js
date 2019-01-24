@@ -5,8 +5,8 @@ async function route(discord, tokens) {
 
   let command = tokens.join('').split('\'s').join('').split('\'').join('');
   let level = 1;
-  if (new RegExp(/l[0-1][0-9]$/).test(command)) {
-    level = command.substring(command.length - 2);
+  if (new RegExp(/l\d{1,2}$/).test(command)) {
+    level = command.match(/l(\d{1,2})$/)[1];
     command = command.substring(0, command.length - 3);
   }
 
