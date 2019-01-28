@@ -8,7 +8,7 @@ class StoneStrike extends Spell {
       name: 'Stone Strike',
       code: 'stoneStrike',
       type: C.damageSpell,
-      tier: C.Basic,
+      tier: C.Advanced,
       element: C.Earth,
       damage: 42,
       speed: C.Normal,
