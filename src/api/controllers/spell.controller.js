@@ -78,7 +78,7 @@ export default {
     spell.tier && fields.push({ name: 'Tier', value: spell.tier, inline: true });
     spell.element && fields.push({ name: 'Element', value: spell.element.display, inline: true });
     spell.damage && fields.push({ name: ':boom: Damage:', value: scaleToLevel(spell.damage, level), inline: true });
-    spell.heal && fields.push({ name: ':green_heart: Heal:', value: spell.heal, inline: true });
+    spell.heal && fields.push({ name: ':green_heart: Heal:', value: scaleToLevel(spell.heal, level), inline: true });
     spell.resistance && fields.push({ name: ':diamond_shape_with_a_dot_inside: Resistance:', value: scaleToLevel(spell.resistance, level), inline: true });
     spell.breakPower && fields.push({ name: ':diamond_shape_with_a_dot_inside: Break Power:', value: scaleToLevel(spell.breakPower, level), inline: true });
     spell.shield && fields.push({ name: ':shield: Shield:', value: scaleToLevel(spell.shield, level), inline: true });
