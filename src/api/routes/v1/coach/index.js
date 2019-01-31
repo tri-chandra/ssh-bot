@@ -5,7 +5,7 @@ async function route(discord, tokens) {
 
   const [command, coach1, coach2] = tokens;
 
-  CoachController.setCoach(command, coach1, coach2);
+  CoachController.setCoach(discord, command, coach1, coach2);
 }
 
 export default {

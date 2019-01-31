@@ -1,8 +1,9 @@
 import { set } from '../services/redisProvider';
-import { prefix } from '../../config/vars';
+import { owner } from '../../config/vars';
 
 export default {
-  async setCoach(command, coach1, coach2) {
-    await set(`coach:${command}`, JSON.stringify([coach1, coach2]));
+  async setCoach(discord, command, coach1, coach2) {
+    if (owner === discord.author.id)
+      await set(`coach:${command}`, JSON.stringify([coach1, coach2]));
   }
 }
