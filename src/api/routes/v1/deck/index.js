@@ -5,7 +5,7 @@ async function route(discord, tokens) {
 
   const [command, hashcode, ...rest] = tokens;
 
-  DeckController.getDeck(discord, command, hashcode)
+  DeckController.getDeck(discord, command, hashcode);
 }
 
 export default {

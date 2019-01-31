@@ -13,7 +13,6 @@ import VanRaven from '../models/VanRaven';
 import Ray from '../models/Ray';
 import Lua from '../models/Lua';
 import Asgard from '../models/Asgard';
-import { ReplaySubject } from 'rxjs';
 
 function getHero(command) {
   if (['zenron'].includes(command)) {
@@ -58,11 +57,12 @@ export default {
     const target = discord.mentions.members.first() ? discord.mentions.members.first().id : undefined;
 
     if (target) {
-      const hashcode = await get(`${target}:${hero.code}`);
+      let hashcode = await get(`${target}:${hero.code}`);
 
       if (!hashcode) {
-        discord.reply('You have not set a deck for the hero. Type `'+prefix+'deck [hero] [deck_code]` to set a deck.');
-        return;
+        // discord.reply('You have not set a deck for the hero. Type `'+prefix+'deck [hero] [deck_code]` to set a deck.');
+        // return;
+        hashcode = 'abcabcaba';
       }
       
       const authorTag = `${discord.mentions.members.first().user.tag}`;
@@ -86,6 +86,24 @@ export default {
       discord.channel.send('', {
         files: [img],
       });
+    } else if (hero) {
+      let coaches = JSON.parse(await get(`coach:${hero.code}`));
+
+      if (coaches) {
+        discord.channel.send(`${prefix}deck ${hero.code} ${coaches[0]}`);
+        discord.channel.send(`${prefix}deck ${hero.code} ${coaches[1]}`);
+      } else {
+        const authorTag = `${discord.author.username}#${discord.author.discriminator}`;
+        const hashcode = 'abcabcaba';
+        const jimpImg = await renderDeck(hero, hashcode, authorTag, '0');
+        const img = await jimpImg.getBufferAsync(Jimp.MIME_PNG);
+        
+        discord.channel.send('', {
+          files: [img],
+        });
+      }
+      
+      
     } else {
       discord.reply('the hero is unknown. Type `'+prefix+'help deck` for more information.');
     }

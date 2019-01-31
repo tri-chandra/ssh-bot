@@ -5,6 +5,7 @@ import deck from './deck';
 import help from './help';
 import win from './win';
 import lose from './lose';
+import coach from './coach';
 
 const routes = {
   open: open.route,
@@ -14,6 +15,7 @@ const routes = {
   help: help.route,
   win: win.route,
   lose: lose.route,
+  coach: coach.route,
   //who has [spell]
 };
 
