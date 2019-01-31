@@ -56,15 +56,40 @@ export default {
     const author = discord.author.id;
     const target = discord.mentions.members.first() ? discord.mentions.members.first().id : undefined;
 
+    // with mention
     if (target) {
       let hashcode = await get(`${target}:${hero.code}`);
 
       if (!hashcode) {
-        // discord.reply('You have not set a deck for the hero. Type `'+prefix+'deck [hero] [deck_code]` to set a deck.');
-        // return;
-        hashcode = 'abcabcaba';
+        if (target === author) {
+          let basics = hero.spells.basic.map((x, i) => `[${String.fromCharCode(i+97)}] ${x.name}`);
+          let advanceds = hero.spells.advanced.map((x, i) => `[${String.fromCharCode(i+97)}] ${x.name}`);
+          let elites = hero.spells.elite.map((x, i) => `[${String.fromCharCode(i+97)}] ${x.name}`);
+          let ultimates = hero.spells.ultimate.map((x, i) => `[${String.fromCharCode(i+97)}] ${x.name}`);
+  
+          discord.reply(
+`Set your deck with the following code:
+!deck [hero] [BBBAAAEEU]
+
+First 3 digits:
+  ${basics.join('\n  ')}
+
+Second 3 digits:
+  ${advanceds.join('\n  ')}
+
+Third 2 digits:
+  ${elites.join('\n  ')}
+
+Last digit:
+  ${ultimates.join('\n  ')}`
+          );
+  
+          return;
+        } else {
+          hashcode = 'abcabcaba';
+        }        
       }
-      
+
       const authorTag = `${discord.mentions.members.first().user.tag}`;
       const winrateString = await getWinrate(target, hero.code, hashcode);
       const jimpImg = await renderDeck(hero, hashcode, authorTag, winrateString);
@@ -73,10 +98,7 @@ export default {
       discord.channel.send('', {
         files: [img],
       });
-    } else if (hero && deckHash.length === 9) {
-      // redis set to author
-      await set(`${author}:${hero.code}`, deckHash);
-
+    } else if (hero && deckHash.length === 9) { // set deck with deck code
       const authorTag = `${discord.author.username}#${discord.author.discriminator}`;
       const hashcode = await get(`${author}:${hero.code}`);
       const winrateString = await getWinrate(author, hero.code, hashcode);
@@ -86,7 +108,10 @@ export default {
       discord.channel.send('', {
         files: [img],
       });
-    } else if (hero) {
+
+      // redis set to author
+      await set(`${author}:${hero.code}`, deckHash);
+    } else if (hero) { // invalid deck code
       let coaches = JSON.parse(await get(`coach:${hero.code}`));
 
       if (coaches) {
