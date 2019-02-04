@@ -9,7 +9,7 @@ class HealSnipe extends Spell {
       type: C.damageSpell,
       tier: C.Basic,
       element: C.Fire,
-      breakPower: 20,
+      breakPower: 5,
       fixedDamage: 50,
       speed: C.Fast,
       onHit: 'Destroys a healing spell on the opponent\'s playfield and then deals %dmg% damage.',
