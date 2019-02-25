@@ -69,7 +69,7 @@ export default {
   
           discord.reply(
 `Set your deck with the following code:
-!deck [hero] [BBBAAAEEU]
+${prefix}deck [hero] [BBBAAAEEU]
 
 First 3 digits:
   ${basics.join('\n  ')}
